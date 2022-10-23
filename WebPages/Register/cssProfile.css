@@ -1,0 +1,154 @@
+*{
+    font-family: 'Kanit', sans-serif;
+}
+
+.body{
+    width: 100%;
+    height: 100%;
+}
+
+.modal-dialog{
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 20%;
+    transform: translateY(20%);
+}
+
+.modal-header{
+    padding: 3%;
+}
+
+h1{
+    color: rgb(243, 188, 5);
+}
+
+.modal-content{
+    border-radius: 30px;
+    width: 100%px;
+    padding: 3%;
+}
+
+#name, #location, #number{
+    display: flex;
+    justify-content: center;
+}
+
+.form-control{
+    border: 1px solid rgb(174, 174, 174);
+    border-radius: 20px;
+    width: 100%;
+    height: 30px;
+}
+
+textarea{
+    resize: none;
+}
+
+input, label, textarea{
+    margin: 1%;
+    font-weight: 100;
+    font-size: 100%;
+}
+
+label{
+    display:inline-block; 
+}
+
+button{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 20%;
+    background-color: #F24822;
+    color: white;
+    font-size: large;
+    border: none;
+    border-radius: 50px;
+}
+
+/* //////////////////////////////////////////////////  NAV BAR  /////////////////////////////////////////////////////////// */
+
+.container-fluid {
+    /* background-color: black; */
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.header {
+    width: 94%;
+    height: 80px;
+    position: absolute;
+    background-color: white;
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.logo-img {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 70px;
+}
+.logo-word {
+    position: absolute;
+    top: 15px;
+    left: 95px;
+    width: 80px;
+}
+.line {
+    position: absolute;
+    top: 15px;
+    left: 200px;
+    border-left: 3px solid rgb(253 165 39);
+    height: 50px;
+}
+.nav {
+    position: absolute;
+    top: 30px;
+}
+.nav:link, .nav:visited {
+    color: black;
+    text-decoration: none;
+}
+.nav:hover {
+    color: rgb(136, 136, 136);
+}
+.logo-user {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    width: 33px;
+}
+.logo-basket {
+    position: absolute;
+    top: 28px;
+    right: 205px;
+    width: 25px;
+    filter: brightness(100);
+}
+.basket-bg {
+    position: absolute;
+    top: 22px;
+    right: 79px;
+    width: 170px;
+    height: 38px;
+    border-radius: 25px;
+    background-color: rgb(241 72 34);
+}
+.basket-num {
+    position: absolute;
+    top: 18px;
+    right: 235px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(253 165 39);
+    text-align: center;
+    font-size: 13.5px;
+}
