@@ -112,13 +112,6 @@
             font-size: 13.5px;
         }
 
-        .flexbox {
-            display: block;
-            position: relative;
-            margin-top: 150px;
-            margin-bottom: 150px;
-        }
-
         .container {
             display: block;
             margin: 7em;
@@ -140,23 +133,42 @@
         .price {
             color: rgb(248, 66, 26);
             text-align: center;
-            margin-left: 900px;
-            margin-top: 25px;
-            width: 95px;
-            height: 40px;
+            margin-left: 920px;
+            margin-top: 30px;
+            width: 170px;
+            padding-top: 5px;
             position: absolute;
             border-radius: 9px;
             background-color: rgb(245, 202, 187);
         }
 
-        .infomation{
+        .infomation {
             position: absolute;
             margin-top: 50px;
             margin-left: 500px;
         }
 
-        .set{
+        .pic-set {
             position: absolute;
+            margin-top: 25px;
+        }
+
+        .add {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            width: 250px;
+            height: 40px;
+            position: absolute;
+            border-radius: 50px;
+            background-color: rgb(241 72 34);
+            border: none;
+            margin-top: 320px;
+            margin-left: 900px;
+        }
+
+        .add:hover {
+            color: rgb(0, 0, 0);
+            background-color: rgb(246, 103, 71);
         }
     </style>
 
@@ -185,23 +197,31 @@
             </a>
         </div>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
 
-                    <div class="card">
-                        <div class="price">
-                            <h2>135</h2>
+                        <div class="card">
+                            <div class="price">
+                                <h2>125 บาท</h2>
+                            </div>
+                            <img class="pic-set"
+                                src="https://media.discordapp.net/attachments/1029750439866007613/1034127903627149462/kai_don_jai_3.png">
+
+                            <div class="infomation">
+                                <h2 style="color: rgb(253 165 39);">เซ็ต </h2>
+                                <p>รายละเอียดภายในชุดเซ็ต</p>
+                                <p></p>
+                                <p></p>
+                            </div>
+                            <div>
+                                <button class="add">เพิ่มลงตะกร้า</button>
+                            </div>
                         </div>
-                        <img class="set" src="https://media.discordapp.net/attachments/1029750439866007613/1034127903627149462/kai_don_jai_3.png">
-                        <div class="infomation">
-                            <h2 style="color: rgb(253 165 39);">ชื่อชุดเซ็ต</h2>
-                            <p>รายละเอียดภายในชุดเซ็ต</p>
-                            <p></p>
-                            <p></p>
-                        </div>
+
+
                     </div>
-
                 </div>
             </div>
         </div>
