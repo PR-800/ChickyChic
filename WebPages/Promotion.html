@@ -151,6 +151,7 @@
             position: absolute;
             margin-top: 50px;
             margin-left: 500px;
+            font-size: 20px;
         }
 
         .pic-set {
@@ -249,17 +250,48 @@
                                 src="https://media.discordapp.net/attachments/1029750439866007613/1034127903627149462/kai_don_jai_3.png">
 
                             <div class="infomation">
-                                <h2 style="color: rgb(253 165 39);">เซ็ต </h2>
+                                <h2 style="color: rgb(253 165 39);">เซ็ต ไก่กินคนเดียว</h2>
                                 <p>รายละเอียดภายในชุดเซ็ต</p>
-                                <p></p>
-                                <p></p>
+                                <p>• ไก่ทอด 2 ชิ้น</p>
+                                <p>• วิงซ์แซ่บ 3 ชิ้น</p>
+                                <p>• เป๊ปซี่ 1 ขวด</p>
                             </div>
                             <div class="minus"><button class='glyphicon glyphicon-minus'
-                                    style="color: rgb(255, 255, 255);" onclick="minus(this.id)"></button></div>
+                                    style="color: rgb(255, 255, 255);" onclick="minus(this.id)" id="set1"></button>
+                            </div>
                             <div id="num"></div>
                             <div class="plus"><button class='glyphicon glyphicon-plus'
-                                    style="color: rgb(255, 255, 255);" onclick="plus(this.id)"></button></div>
-                            <div><button class="add">เพิ่มลงตะกร้า</button></div>
+                                    style="color: rgb(255, 255, 255);" onclick="plus(this.id)" id="set1"></button></div>
+                            <div><button class="add" onclick="">เพิ่มลงตะกร้า</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="price">
+                                <p>125 บาท</p>
+                            </div>
+                            <img class="pic-set"
+                                src="https://media.discordapp.net/attachments/1029750439866007613/1034127903627149462/kai_don_jai_3.png">
+
+                            <div class="infomation">
+                                <h2 style="color: rgb(253 165 39);">เซ็ต ไก่กินคนเดียว</h2>
+                                <p>รายละเอียดภายในชุดเซ็ต</p>
+                                <p>• ไก่ทอด 2 ชิ้น</p>
+                                <p>• วิงซ์แซ่บ 3 ชิ้น</p>
+                                <p>• เป๊ปซี่ 1 ขวด</p>
+                            </div>
+                            <div class="minus"><button class='glyphicon glyphicon-minus'
+                                    style="color: rgb(255, 255, 255);" onclick="minus(this.id)" id="set2"></button>
+                            </div>
+                            <div id="num"></div>
+                            <div class="plus"><button class='glyphicon glyphicon-plus'
+                                    style="color: rgb(255, 255, 255);" onclick="plus(this.id)" id="set2"></button></div>
+                            <div><button class="add" onclick="">เพิ่มลงตะกร้า</button></div>
                         </div>
                     </div>
                 </div>
@@ -274,14 +306,19 @@
             num = 1;
 
             function plus(clicked_id) {
-                num += 1;
-                document.getElementById("num").innerHTML = num;
+                if (clicked_id == "set1") {
+                    num += 1;
+                    document.getElementById("num").innerHTML = num;
+                }
+
             }
 
             function minus(clicked_id) {
                 if (num > 1) {
-                    num -= 1;
-                    document.getElementById("num").innerHTML = num;
+                    if (clicked_id == "set1") {
+                        num -= 1;
+                        document.getElementById("num").innerHTML = num;
+                    }
                 }
             }
         </script>
