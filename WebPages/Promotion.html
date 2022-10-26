@@ -15,6 +15,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <style>
         body {
             font-family: 'Kanit', sans-serif;
@@ -133,13 +137,14 @@
         .price {
             color: rgb(248, 66, 26);
             text-align: center;
-            margin-left: 940px;
-            margin-top: 50px;
-            width: 170px;
-            padding-top: 5px;
+            padding-top: 10px;
+            right: 65px;
+            top: 35px;
+            font-size: 35px;
+            width: 150px;
             position: absolute;
-            border-radius: 9px;
-            background-color: rgb(245, 202, 187);
+            border-radius: 15px;
+            background-color: rgb(255, 225, 187);
         }
 
         .infomation {
@@ -157,18 +162,45 @@
             color: rgb(255, 255, 255);
             text-align: center;
             width: 250px;
-            height: 40px;
+            height: 50px;
             position: absolute;
             border-radius: 50px;
             background-color: rgb(241 72 34);
+            font-size: 25px;
             border: none;
-            margin-top: 320px;
-            margin-left: 900px;
+            right: 85px;
+            top: 320px;
         }
 
         .add:hover {
             color: rgb(0, 0, 0);
-            background-color: rgb(246, 103, 71);
+        }
+
+        .plus{
+            position: absolute;
+            right: 360px;
+            top: 330;
+        }
+
+        .minus{
+            position: absolute;
+            right: 520px;
+            top: 330;
+        }
+
+        .glyphicon{
+            border-radius: 50%;
+            background-color: rgb(253 165 39);
+            border: none;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .glyphicon:hover{
+            color: white;
+            text-decoration: none;
         }
     </style>
 
@@ -197,14 +229,14 @@
             </a>
         </div>
 
-        <div>
+        <div class="content">
+
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-
                         <div class="card">
                             <div class="price">
-                                <h2>125 บาท</h2>
+                                <p>125 บาท</p>
                             </div>
                             <img class="pic-set"
                                 src="https://media.discordapp.net/attachments/1029750439866007613/1034127903627149462/kai_don_jai_3.png">
@@ -215,15 +247,15 @@
                                 <p></p>
                                 <p></p>
                             </div>
-                            <div>
-                                <button class="add">เพิ่มลงตะกร้า</button>
-                            </div>
+                            <div class="minus"><button class='glyphicon glyphicon-minus' style="color: rgb(255, 255, 255);"></button></div>
+                            <div id="num"></div>
+                            <div class="plus"><button class='glyphicon glyphicon-plus' style="color: rgb(255, 255, 255);"></button></div>
+                            <div><button class="add">เพิ่มลงตะกร้า</button></div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
+
         </div>
 
 </body>
