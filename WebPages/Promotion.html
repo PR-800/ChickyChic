@@ -197,14 +197,14 @@
             text-decoration: none;
         }
 
-        #num {
+        #set-count-1 {
             position: absolute;
             font-size: 25px;
             top: 330;
             right: 455px;
         }
 
-        #num2 {
+        #set-count-2 {
             position: absolute;
             font-size: 25px;
             top: 330;
@@ -259,7 +259,7 @@
                             <div class="minus"><button class='glyphicon glyphicon-minus'
                                     style="color: rgb(255, 255, 255);" onclick="minus(this.id)" id="set1"></button>
                             </div>
-                            <div id="num"></div>
+                            <div id="set-count-1"></div>
                             <div class="plus"><button class='glyphicon glyphicon-plus'
                                     style="color: rgb(255, 255, 255);" onclick="plus(this.id)" id="set1"></button></div>
                             <div><button class="add" onclick="">เพิ่มลงตะกร้า</button></div>
@@ -285,11 +285,11 @@
                                 <p>• เป๊ปซี่ 1 ขวด</p>
                             </div>
                             <div class="minus"><button class='glyphicon glyphicon-minus'
-                                    style="color: rgb(255, 255, 255);" onclick="minus(this.id)" id="set2"></button>
+                                    style="color: rgb(255, 255, 255);" onclick="minus(this.id)"></button>
                             </div>
-                            <div id="num2"></div>
+                            <div id="set-count-2"></div>
                             <div class="plus"><button class='glyphicon glyphicon-plus'
-                                    style="color: rgb(255, 255, 255);" onclick="plus(this.id)" id="set2"></button></div>
+                                    style="color: rgb(255, 255, 255);" onclick="plus(this.id)"></button></div>
                             <div><button class="add" onclick="">เพิ่มลงตะกร้า</button></div>
                         </div>
                     </div>
@@ -300,34 +300,34 @@
 
         <script>
 
-            document.getElementById("num").innerHTML = 1;
-            document.getElementById("num2").innerHTML = 1;
-            let num = document.getElementById("num");
-            let num2 = document.getElementById("num2");
-            num = 1;
-            num2 = 1;
+            document.getElementById("set-count-1").innerHTML = 1;
+            document.getElementById("set-count-2").innerHTML = 1;
+            let set_count_1 = document.getElementById("set-count-1");
+            let set_count_2 = document.getElementById("set-count-2");
+            set_count_1 = 1;
+            set_count_2 = 1;
 
             function plus(clicked_id) {
                 if (clicked_id == "set1") {
-                    num += 1;
-                    document.getElementById("num").innerHTML = num;
+                    set_count_1 += 1;
+                    document.getElementById("set-count-1").innerHTML = set_count_1;
                 }
 
                 else if (clicked_id == "set2") {
-                    num2 += 1;
-                    document.getElementById("num2").innerHTML = num2;
+                    set_count_2 += 1;
+                    document.getElementById("set-count-2").innerHTML = set_count_2;
                 }
 
             }
 
             function minus(clicked_id) {
-                if (num > 1) {
-                    num -= 1;
-                    document.getElementById("num").innerHTML = num;
+                if (set_count_1 > 1) {
+                    set_count_1 -= 1;
+                    document.getElementById("set-count-1").innerHTML = set_count_1;
                 }
-                else if (num2 > 1) {
-                    num2 -= 1;
-                    document.getElementById("num2").innerHTML = num2;
+                else if (set_count_2 > 1) {
+                    set_count_2 -= 1;
+                    document.getElementById("set-count-2").innerHTML = set_count_2;
 
                 }
             }
