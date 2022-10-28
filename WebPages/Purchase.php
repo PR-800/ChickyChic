@@ -20,22 +20,37 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="header-area">
+    <div class="header-area">
             <div class="header">
                 <img class="logo-img" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033040544206692372/logo.png">
                 <img class="logo-word" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033040544605143090/logo-word.png">
-                <a class="line"></a>
-                <a class="nav" href="Home.html" style="left: 235px; color: rgb(253 165 39);">หน้าหลัก</a>
-                <a class="nav" href="Menu.html" style="left: 320px;">เมนู</a>
-                <a class="nav" href="Promotion.html" style="left: 380px;">โปรโมชั่น</a>
-                <a class="basket-bg"></a>
-                <img class="logo-basket" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033047007151013888/logo-basket.png">
-                <a class="nav" href="Purchase.html" style="right: 95px; color: white;">ออเดอร์ของคุณ</a>
+                <div class="bar">
+                    <a class="line"></a>
+                    <a class="nav" href="Home.html" style="left: 235px; color: rgb(253 165 39);">หน้าหลัก</a>
+                    <a class="nav" href="Menu.html" style="left: 320px;">เมนู</a>
+                    <a class="nav" href="Promotion.html" style="left: 380px;">โปรโมชั่น</a>
+                </div>
+                <div class="bar-basket">
+                    <a class="basket-bg"></a>
+                    <img class="logo-basket" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033047007151013888/logo-basket.png">
+                    <a class="nav" href="Purchase.php" style="right: 95px; color: white;">ออเดอร์ของคุณ</a>
+                    <a class="basket-num"><p style="color: white;">55</p></a>
+                </div>
+                <div class="bar-dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="Home.html" style="color: rgb(253 165 39);">หน้าหลัก</a>
+                        <a class="dropdown-item" href="Menu.html">เมนู</a>
+                        <a class="dropdown-item" href="Promotion.html">โปรโมชั่น</a>
+                        <div class="bar-dropdown-plus">
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="Purchase.php">ออเดอร์ของคุณ</a>
+                        </div>
+                    </div>
+                </div>
                 <img class="logo-user" href="User.html" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png">
-                <a class="basket-num"><p style="color: white;">55</p></a>
             </div>
         </div>
-
 
         <?php
             class SelectMenu extends SQLite3{
