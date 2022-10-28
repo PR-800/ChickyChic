@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <link rel="stylesheet" href="menu.css"> -->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -19,8 +20,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <style>
-        body {
-            font-family: 'Kanit', sans-serif;
+        * {
+    font-family: 'Kanit', sans-serif;
         }
         .container-fluid {
             /* background-color: black; */
@@ -103,6 +104,7 @@
         .menu-bar {
             position: absolute;
             background-color: rgb(253 165 39);
+            color: white;
             top: 13%;
             left: 2%;
             height: 60px;
@@ -112,7 +114,7 @@
             position: absolute;
             top:20px;
             text-decoration: none;
-            color: black;
+            color: white;
             padding: 10px;
             padding-inline: 25px;
         }
@@ -123,8 +125,67 @@
         .menu-nav:after {
             background-color: aliceblue;
         }
+        .card-group {
+            display: flex;
+            position: absolute;
+            top:200px;
+            left:460px;
+            width: 1000px;
+        }
+        .card {
+            text-align: center;
+            align-items: center;
+            margin: 30px
+        }
+        #cardd {
+            border-radius: 30px;
+        }
+        .card-img-top {
+            width:250px;
+        }
+        .card-text {
+            font-size: 18px;
+            color:grey;
+        }
+        .btn {
+            width: 200px;
+            border-radius: 30px;
+            background-color: rgb(241 72 34);
+            font-size: 16px;
+        }
+        .btn:active {
+            transform: translateY(2px);
+        }
+        .amount span{
+            font-size: 30px;
+            text-align: center;
+            margin: 22px;
+        }
+        .amount span.plus,span.minus {
+            display: inline-block;
+            background-color:rgb(253 165 39);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .amount span.num {
+            pointer-events: none;
+            font-size: 25px;
+        }
+        .butt {
+            background-color: rgb(253 165 39);
+            color:white;
+            border:none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            justify-content: center;
+            font-size: 25px;
+        }
     </style>
-
 </head>
 <body>
     <div class="container-fluid">
@@ -141,12 +202,111 @@
             <img class="logo-user" href="User.html" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png">
             <a class="basket-num"><p style="color: white;">55</p></a>
         </div>
-        <div class="menu-bar">
-            <a class="menu-nav" href="Menu.html" style="left: 50px; background-color: white;">ไก่ทอด</a>
-            <a class="menu-nav" href="rice.html" style="left: 150px;">ข้าว</a>
-            <a class="menu-nav" href="burger.html" style="left: 230px;">เบอร์เกอร์</a>
-            <a class="menu-nav" href="salad.html" style="left: 350px;">สลัด</a>
-            <a class="menu-nav" href="drink.html" style="left: 440px;">เครื่องดื่ม</a>
+        <div class="menu">
+            <div class="menu-bar">
+                <a class="menu-nav" href="#chicken" style="left: 50px; background-color: white;color:black">ไก่ทอด</a>
+                <a class="menu-nav" href="#rice" style="left: 150px;">ข้าว</a>
+                <a class="menu-nav" href="#burger" style="left: 230px;">เบอร์เกอร์</a>
+                <a class="menu-nav" href="#salad" style="left: 350px;">สลัด</a>
+                <a class="menu-nav" href="#drink" style="left: 440px;">เครื่องดื่ม</a>
+            </div>
+            <section id="chicken">
+                <div class="card-group">
+                    <div class="card" id="cardd">
+                        <img class="card-img-top" src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png">
+                        <div class="card-body">
+                            <h3 class="card-title">ไก่ทอด</h3>
+                            <p class="card-text">40 บาท</p>
+                            <div><br>
+                                <div class="amount">
+                                    <span class="chickde">
+                                        <button type="button" class="butt">-</button>
+                                    </span>
+                                    <span class="chicknum">1</span>
+                                    <span class="chickin">
+                                        <button type="button" class="butt">+</button>
+                                    </span>
+                                </div><br>
+                                <script>
+                                    const chickin = document.querySelector(".chickin"),
+                                    chickde = document.querySelector(".chickde"),
+                                    chicknum = document.querySelector(".chicknum")
+
+                                    let chick_amount = 1;
+
+                                    chickin.addEventListener("click", ()=>{
+                                        chick_amount++;
+                                        chicknum.innerText = chick_amount;
+                                        console.log(chick_amount)
+                                    });
+                                    chickde.addEventListener("click", ()=>{
+                                        if (chick_amount > 1) {
+                                            chick_amount--;
+                                            chicknum.innerText = chick_amount;
+                                        }
+                                    });
+                                </script>
+                                <button type="button" class="btn btn-danger">เพิ่มลงตะกร้า</button>
+                            </div><br><br>
+                        </div>
+                    </div>
+                    <div class="card" id="cardd">
+                        <!-- alt="Card img cap" -->
+                        <img class="card-img-top" src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png">
+                        <div class="card-body">
+                            <h3 class="card-title">วิงซ์แซ่บ</h3>
+                            <p class="card-text">60 บาท</p>
+                            <div>
+                                <div class="amount">
+                                    <span class="minus">-</span>
+                                    <span class="num">1</span>
+                                    <span class="plus">+</span>
+                                </div><br>
+                                <script>
+                                    const plus2 = document.querySelector(".plus"),
+                                    minus2 = document.querySelector(".minus"),
+                                    num2 = document.querySelector(".num")
+
+                                    let aa = 1;
+
+                                    plus2.addEventListener("click", ()=>{
+                                        aa++;
+                                        num2.innerText = aa;
+                                    });
+                                    minus2.addEventListener("click", ()=>{
+                                        if (aa > 1) {
+                                            aa--;
+                                            num2.innerText = aa;
+                                        }
+                                    });
+                                </script>
+                                <button type="button" class="btn btn-danger">เพิ่มลงตะกร้า</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" id="cardd">
+                        <img class="card-img-top" src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png">
+                        <div class="card-body">
+                            <h3 class="card-title">วิงซ์แซ่บ</h3>
+                            <p class="card-text">60 บาท</p>
+                            <div>
+                                <div class="amount">
+                                    <span class="minus">-</span>
+                                    <span class="num">1</span>
+                                    <span class="plus">+</span>
+                                </div><br>
+                                <button type="button" class="btn btn-danger">เพิ่มลงตะกร้า</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- <section id="rice">
+                <div class="card">
+
+                </div>
+            </section> -->
         </div>
     </div>
 </body>
