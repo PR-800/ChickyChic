@@ -34,9 +34,10 @@
             height: 80px;
             position: absolute;
             background-color: white;
-            top: 4%;
+            top: 2%;
             left: 50%;
             transform: translate(-50%, 0%);
+            font-size: 16px;
         }
         .logo-img {
             position: absolute;
@@ -60,6 +61,7 @@
         .nav {
             position: absolute;
             top: 30px;
+            /* font-size: 16px; */
         }
         .nav:link, .nav:visited {
             color: black;
@@ -233,12 +235,37 @@
                     <div class="card" id="cardd">
                         <img class="card-img-top" src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png">
                         <div class="card-body">
-                            <h3 class="card-title">ไก่ทอด</h3>
-                            <p class="card-text">40 บาท</p>
+                            <!-- <h3 class="card-title">ไก่ทอด</h3>
+                            <p class="card-text">40 บาท</p> -->
+                            
+                            <script>
+                                let requestURL = 'menu.json';
+                                let request = new XMLHttpRequest();
+                                request.onreadystatechange = function () {
+                                    if (request.readyState == 4 && request.status == 200) {
+                                        ExtractData(JSON.parse(request.responseText));
+                                        // ExtractData(JSON.stringify(request.responseText));           
+                                    }
+                                };
+                                request.open("GET", requestURL, true);
+                                request.send();
+                        
+                                function ExtractData(data) {
+                                    for (let o of data.chicken) {
+                                        document.write('<h3 class="card-title">');
+                                            document.write(i.name);
+                                        document.write('</h3>');
+                                        document.write('<p class="card-text">');
+                                            document.write(i.price);
+                                        document.write('</p>')
+                                    }
+                                }
+                            </script>
+
                             <div><br>
                                 <div class="chick_amount">
                                     <span class="chickde"><button type="button" class="butt" style="position:absolute;left:60px;">-</button></span>
-                                    <span class="chicknum" style="font-size:23px">1</span>
+                                    <span class="chicknum" style="font-size:22px">1</span>
                                     <span class="chickin"><button type="button" class="butt" style="position:absolute;left:200px">+</button></span>
                                 </div><br>
                                 <script>
@@ -272,7 +299,7 @@
                             <div><br>
                                 <div class="wing_amount">
                                     <span class="wingde"><button type="button" class="butt" style="position:absolute;left:60px;">-</button></span>
-                                    <span class="wingnum" style="font-size:23px">1</span>
+                                    <span class="wingnum" style="font-size:22px">1</span>
                                     <span class="wingin"><button type="button" class="butt" style="position:absolute;left:200px">+</button></span>
                                 </div><br>
                                 <script>
@@ -306,7 +333,7 @@
                             <div><br>
                                 <div class="spicywing_amount">
                                     <span class="spicywingde"><button type="button" class="butt" style="position:absolute;left:60px;">-</button></span>
-                                    <span class="spicywingnum" style="font-size:23px">1</span>
+                                    <span class="spicywingnum" style="font-size:22px">1</span>
                                     <span class="spicywingin"><button type="button" class="butt" style="position:absolute;left:200px">+</button></span>
                                 </div><br>
                                 <script>
@@ -341,7 +368,7 @@
                             <div><br>
                                 <div class="chick_amount">
                                     <span class="chickde"><button type="button" class="butt" style="position:absolute;left:60px;bottom:90px;">-</button></span>
-                                    <span class="chicknum" style="font-size:23px">1</span>
+                                    <span class="chicknum" style="font-size:22px">1</span>
                                     <span class="chickin"><button type="button" class="butt" style="position:absolute;left:200px">+</button></span>
                                 </div><br>
                                 <script>
@@ -358,7 +385,7 @@
                             <div><br>
                                 <div class="wing_amount">
                                     <span class="wingde"><button type="button" class="butt" style="position:absolute;left:60px;bottom:90px;">-</button></span>
-                                    <span class="wingnum" style="font-size:23px">1</span>
+                                    <span class="wingnum" style="font-size:22px">1</span>
                                     <span class="wingin"><button type="button" class="butt" style="position:absolute;left:200px">+</button></span>
                                 </div><br>
                                 <script>
@@ -376,7 +403,7 @@
                             <div><br>
                                 <div class="spicywing_amount">
                                     <span class="spicywingde"><button type="button" class="butt" style="position:absolute;left:60px;bottom:90px;">-</button></span>
-                                    <span class="spicywingnum" style="font-size:23px">1</span>
+                                    <span class="spicywingnum" style="font-size:22px">1</span>
                                     <span class="spicywingin"><button type="button" class="butt" style="position:absolute;left:200px">+</button></span>
                                 </div><br>
                                 <script>
@@ -396,7 +423,7 @@
                             <div><br>
                                 <div class="chick_amount">
                                     <span class="chickde"><button type="button" class="butt" style="position:absolute;left:60px;bottom:90px;">-</button></span>
-                                    <span class="chicknum" style="font-size:23px">1</span>
+                                    <span class="chicknum" style="font-size:22px">1</span>
                                     <span class="chickin"><button type="button" class="butt" style="position:absolute;left:200px">+</button></span>
                                 </div><br>
                                 <script>
@@ -413,7 +440,7 @@
                             <div><br>
                                 <div class="wing_amount">
                                     <span class="wingde"><button type="button" class="butt" style="position:absolute;left:60px;bottom:90px;">-</button></span>
-                                    <span class="wingnum" style="font-size:23px">1</span>
+                                    <span class="wingnum" style="font-size:22px">1</span>
                                     <span class="wingin"><button type="button" class="butt" style="position:absolute;left:200px">+</button></span>
                                 </div><br>
                                 <script>
@@ -431,7 +458,7 @@
                             <div><br>
                                 <div class="spicywing_amount">
                                     <span class="spicywingde"><button type="button" class="butt" style="position:absolute;left:60px;bottom:90px;">-</button></span>
-                                    <span class="spicywingnum" style="font-size:23px">1</span>
+                                    <span class="spicywingnum" style="font-size:22px">1</span>
                                     <span class="spicywingin"><button type="button" class="butt" style="position:absolute;left:200px">+</button></span>
                                 </div><br>
                                 <script>
