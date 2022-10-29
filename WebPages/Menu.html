@@ -4,7 +4,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="menu.css"> -->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -15,95 +14,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="menu.css">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 
     <style>
-        * {
-    font-family: 'Kanit', sans-serif;
-        }
-        .container-fluid {
-            /* background-color: black; */
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-        .header {
-            width: 94%;
-            height: 80px;
-            position: absolute;
-            background-color: white;
-            top: 2%;
-            left: 50%;
-            transform: translate(-50%, 0%);
-            font-size: 16px;
-        }
-        .logo-img {
-            position: absolute;
-            top: 5px;
-            left: 5px;
-            width: 70px;
-        }
-        .logo-word {
-            position: absolute;
-            top: 15px;
-            left: 95px;
-            width: 80px;
-        }
-        .line {
-            position: absolute;
-            top: 15px;
-            left: 200px;
-            border-left: 3px solid rgb(253 165 39);
-            height: 50px;
-        }
-        .nav {
-            position: absolute;
-            top: 30px;
-            /* font-size: 16px; */
-        }
-        .nav:link, .nav:visited {
-            color: black;
-            text-decoration: none;
-        }
-        .nav:hover {
-            color: rgb(136, 136, 136);
-        }
-        .logo-user {
-            position: absolute;
-            top: 25px;
-            right: 15px;
-            width: 33px;
-        }
-        .logo-basket {
-            position: absolute;
-            top: 28px;
-            right: 205px;
-            width: 25px;
-            filter: brightness(100);
-        }
-        .basket-bg {
-            position: absolute;
-            top: 22px;
-            right: 79px;
-            width: 170px;
-            height: 38px;
-            border-radius: 25px;
-            background-color: rgb(241 72 34);
-        }
-        .basket-num {
-            position: absolute;
-            top: 18px;
-            right: 235px;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: rgb(253 165 39);
-            text-align: center;
-            font-size: 13.5px;
-        }
-        .menu-bar {
+        /* .menu-bar {
             position: absolute;
             background-color: rgb(253 165 39);
             color: white;
@@ -128,15 +47,15 @@
             background-color: aliceblue;
         }
         .card-group {
-            display: flex;
+            display: flex; */
             /* display: block; */
             /* position: absolute; */
-            position: fixed;
+            /* position: fixed;
             top:200px;
             left:460px;
             width: 1000px;
-        }
-        .card {
+        } */
+        /* .card {
             text-align: center;
             align-items: center;
             margin: 30px
@@ -166,10 +85,10 @@
             border:none;
             border-radius: 50%;
             width: 35px;
-            height: 35px;
+            height: 35px; */
             /* text-align: center;
             justify-content: center; */
-            font-size: 25px;
+            /* font-size: 25px;
         }
         .butt:focus {
             border: none;
@@ -184,33 +103,90 @@
             color: white;
             border: none;
             text-decoration: none;
-        }
-        
+        } */
+
     </style>
 </head>
 <body>
     <div class="container-fluid">
-        <div class="header">
-            <img class="logo-img" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033040544206692372/logo.png">
-            <img class="logo-word" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033040544605143090/logo-word.png">
-            <a class="line"></a>
-            <a class="nav" href="Home.html" style="left: 235px;">หน้าหลัก</a>
-            <a class="nav" href="Menu.html" style="left: 320px; color: rgb(253 165 39);">เมนู</a>
-            <a class="nav" href="Promotion.html" style="left: 380px;">โปรโมชั่น</a>
-            <a class="basket-bg"></a>
-            <img class="logo-basket" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033047007151013888/logo-basket.png">
-            <a class="nav" href="Purchase.html" style="right: 95px; color: white;">ออเดอร์ของคุณ</a>
-            <img class="logo-user" href="User.html" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png">
-            <a class="basket-num"><p style="color: white;">55</p></a>
+        <div class="header-area">
+            <div class="header">
+                <img class="logo-img" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033040544206692372/logo.png">
+                <img class="logo-word" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033040544605143090/logo-word.png">
+                <div class="bar">
+                    <a class="line"></a>
+                    <a class="nav" href="Home.html" style="left: 235px;">หน้าหลัก</a>
+                    <a class="nav" href="Menu.html" style="left: 320px; color: rgb(253 165 39);">เมนู</a>
+                    <a class="nav" href="Promotion.html" style="left: 380px;">โปรโมชั่น</a>
+                </div>
+                <div class="bar-basket">
+                    <a class="basket-bg"></a>
+                    <img class="logo-basket" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033047007151013888/logo-basket.png">
+                    <a class="nav" href="Purchase.php" style="right: 95px; color: white;">ออเดอร์ของคุณ</a>
+                    <a class="basket-num"><p style="color: white;">55</p></a>
+                </div>
+                <div class="bar-dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="Home.html" style="color: rgb(253 165 39);">หน้าหลัก</a>
+                        <a class="dropdown-item" href="Menu.html">เมนู</a>
+                        <a class="dropdown-item" href="Promotion.html">โปรโมชั่น</a>
+                        <div class="bar-dropdown-plus">
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="Purchase.php">ออเดอร์ของคุณ</a>
+                        </div>
+                    </div>
+                </div>
+                <img class="logo-user" href="User.html" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png">
+            </div>
         </div>
+
         <div class="menu">
-            <div class="menu-bar">
+            <div class="menu-nav">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="chicken-tab" data-toggle="tab" href="#chicken" role="tab" aria-controls="menu" aria-selected="false">ไก่ทอด</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="rice-tab" data-toggle="tab" href="#rice" role="tab" aria-controls="menu" aria-selected="false">ข้าว</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="burger-tab" data-toggle="tab" href="#burger" role="tab" aria-controls="menu" aria-selected="false">เบอร์เกอร์</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="salad-tab" data-toggle="tab" href="#salad" role="tab" aria-controls="menu" aria-selected="false">สลัด</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="drink-tab" data-toggle="tab" href="#drink" role="tab" aria-controls="menu" aria-selected="false">เครื่องดื่ม</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="chicken" role="tabpanel" aria-labelledby="chicken-tab">
+
+                </div>
+                <div class="tab-pane fade" id="rice" role="tabpanel" aria-labelledby="rice-tab">
+
+                </div>
+                <div class="tab-pane fade" id="burger" role="tabpanel" aria-labelledby="burger-tab">
+
+                </div>
+                <div class="tab-pane fade" id="salad" role="tabpanel" aria-labelledby="salad-tab">
+
+                </div>
+                <div class="tab-pane fade" id="drink" role="tabpanel" aria-labelledby="drink-tab">
+
+                </div>
+            </div>
+
+            <!-- <div class="menu-bar">
                 <a class="menu-nav" href="#chicken" style="left: 50px; background-color: white;color:black">ไก่ทอด</a>
                 <a class="menu-nav" href="#rice" style="left: 150px;">ข้าว</a>
                 <a class="menu-nav" href="#burger" style="left: 230px;">เบอร์เกอร์</a>
                 <a class="menu-nav" href="#salad" style="left: 350px;">สลัด</a>
                 <a class="menu-nav" href="#drink" style="left: 440px;">เครื่องดื่ม</a>
-            </div>
+            </div> -->
 
             <!-- <ul class="nav nav-tabs nav-tabs-justified">
                 <li role="presentation" id="menu-bar">
@@ -230,26 +206,26 @@
                 </li>
             </ul> -->
 
-            <section id="chicken">
+            <!-- <section id="chicken">
                 <div class="card-group group1">
                     <div class="card" id="cardd">
                         <img class="card-img-top" src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png">
-                        <div class="card-body">
+                        <div class="card-body"> -->
                             <!-- <h3 class="card-title">ไก่ทอด</h3>
                             <p class="card-text">40 บาท</p> -->
-                            
-                            <script>
+
+                            <!-- <script>
                                 let requestURL = 'menu.json';
                                 let request = new XMLHttpRequest();
                                 request.onreadystatechange = function () {
                                     if (request.readyState == 4 && request.status == 200) {
                                         ExtractData(JSON.parse(request.responseText));
-                                        // ExtractData(JSON.stringify(request.responseText));           
+                                        // ExtractData(JSON.stringify(request.responseText));
                                     }
                                 };
                                 request.open("GET", requestURL, true);
                                 request.send();
-                        
+
                                 function ExtractData(data) {
                                     for (let o of data.chicken) {
                                         document.write('<h3 class="card-title">');
@@ -286,8 +262,8 @@
                                             chicknum.innerText = chick_amount;
                                         }
                                     });
-                                </script>
-                                <button type="button" class="btn btn-danger" onclick="">เพิ่มลงตะกร้า</button>
+                                </script> -->
+                                <!-- <button type="button" class="btn btn-danger" onclick="">เพิ่มลงตะกร้า</button>
                             </div><br>
                         </div>
                     </div>
@@ -320,8 +296,8 @@
                                             wingnum.innerText = wing_amount;
                                         }
                                     });
-                                </script>
-                                <button type="button" class="btn btn-danger" onclick="">เพิ่มลงตะกร้า</button>
+                                </script> -->
+                                <!-- <button type="button" class="btn btn-danger" onclick="">เพิ่มลงตะกร้า</button>
                             </div><br>
                         </div>
                     </div>
@@ -358,7 +334,9 @@
                                 <button type="button" class="btn btn-danger" onclick="">เพิ่มลงตะกร้า</button>
                             </div><br>
                         </div>
-                    </div>
+                    </div> -->
+
+
                 <!-- <div class="card-group group2">
                     <div class="card" id="cardd">
                         <img class="card-img-top" src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png">
@@ -469,7 +447,7 @@
                         </div>
                     </div>
                 </div> -->
-                    
+
 
             </div>
             </section>
