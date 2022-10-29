@@ -84,7 +84,8 @@
                                 </script>
                             </div>
                             <div class="plus"><button class='glyphicon glyphicon-plus'
-                                    style="color: rgb(255, 255, 255);" onclick="set1plus(this.id)" id="set-1-plus"></button>
+                                    style="color: rgb(255, 255, 255);" onclick="set1plus(this.id)"
+                                    id="set-1-plus"></button>
                                 <script>
                                     function set1plus(clicked_id) {
                                         if (clicked_id == "set-1-plus") {
@@ -135,7 +136,8 @@
                                 </script>
                             </div>
                             <div class="plus"><button class='glyphicon glyphicon-plus'
-                                    style="color: rgb(255, 255, 255);" onclick="set2plus(this.id)" id="set-2-plus"></button>
+                                    style="color: rgb(255, 255, 255);" onclick="set2plus(this.id)"
+                                    id="set-2-plus"></button>
                                 <script>
                                     function set2plus(clicked_id) {
                                         if (clicked_id == "set-2-plus") {
@@ -145,47 +147,43 @@
                                     }
                                 </script>
                             </div>
-                            <div><button class="add" onclick="">เพิ่มลงตะกร้า</button></div>
+                            <div><button class="add" onclick="">เพิ่มลงตะกร้า</button>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
             </div>
         </div>
-        <!-- 
-        <script>
 
-            document.getElementById("set-count-1").innerHTML = 1;
-            document.getElementById("set-count-2").innerHTML = 1;
-            let set_count_1 = document.getElementById("set-count-1");
-            let set_count_2 = document.getElementById("set-count-2");
-            set_count_1 = 1;
-            set_count_2 = 1;
+        <!-- <?php
+class MyDB extends SQLite3 {
+  function __construct() {
+        $this->open('selectMenu.db');
+    }
+}
 
-            function plus(clicked_id) {
-                if (clicked_id == "set1") {
-                    set_count_1 += 1;
-                    document.getElementById("set-count-1").innerHTML = set_count_1;
-                }
-                else if (clicked_id == "set2") {
-                    set_count_2 += 1;
-                    document.getElementById("set-count-2").innerHTML = set_count_2;
-                }
+$db = new MyDB();
+if(!$db) {
+  echo $db->lastErrorMsg();
+}
 
-            }
+$sql =<<<EOF
+      CREATE TABLE selectMenu
+      (ORDER INT PRIMARY KEY     NOT NULL,
+      MENU           TEXT    NOT NULL
+    );
+    EOF;
 
-            function minus(clicked_id) {
-                if (set_count_1 > 1) {
-                    set_count_1 -= 1;
-                    document.getElementById("set-count-1").innerHTML = set_count_1;
-                }
-                else if (set_count_2 > 1) {
-                    set_count_2 -= 1;
-                    document.getElementById("set-count-2").innerHTML = set_count_2;
-
-                }
-            }
-        </script> -->
+   $ret = $db->exec($sql);
+   if(!$ret){
+      echo $db->lastErrorMsg();
+   } else {
+      echo "Table created successfully<br>";
+   }
+   
+?> -->
 
 </body>
 
