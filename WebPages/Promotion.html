@@ -64,12 +64,36 @@
                                 <p>• วิงซ์แซ่บ 3 ชิ้น</p>
                                 <p>• เป๊ปซี่ 1 ขวด</p>
                             </div>
-                            <div class="minus"><button class='glyphicon glyphicon-minus'
-                                    style="color: rgb(255, 255, 255);" onclick="minus(this.id)" id="set1"></button>
-                            </div>
                             <div id="set-count-1"></div>
+                            <div class="minus"><button class='glyphicon glyphicon-minus'
+                                    style="color: rgb(255, 255, 255);" onclick="set1minus(this.id)"
+                                    id="set-1-minus"></button>
+                                <script>
+                                    document.getElementById("set-count-1").innerHTML = 1;
+                                    let set_count_1 = document.getElementById("set-count-1");
+                                    set_count_1 = 1;
+
+                                    function set1minus(clicked_id) {
+                                        if (clicked_id == "set-1-minus") {
+                                            if (set_count_1 > 1) {
+                                                set_count_1--;
+                                                document.getElementById("set-count-1").innerHTML = set_count_1;
+                                            }
+                                        }
+                                    }
+                                </script>
+                            </div>
                             <div class="plus"><button class='glyphicon glyphicon-plus'
-                                    style="color: rgb(255, 255, 255);" onclick="plus(this.id)" id="set1"></button></div>
+                                    style="color: rgb(255, 255, 255);" onclick="set1plus(this.id)" id="set-1-plus"></button>
+                                <script>
+                                    function set1plus(clicked_id) {
+                                        if (clicked_id == "set-1-plus") {
+                                            set_count_1++;
+                                            document.getElementById("set-count-1").innerHTML = set_count_1;
+                                        }
+                                    }
+                                </script>
+                            </div>
                             <div><button class="add" onclick="">เพิ่มลงตะกร้า</button></div>
                         </div>
                     </div>
@@ -91,12 +115,36 @@
                                 <p>• วิงซ์แซ่บ 3 ชิ้น</p>
                                 <p>• เป๊ปซี่ 1 ขวด</p>
                             </div>
-                            <div class="minus"><button class='glyphicon glyphicon-minus'
-                                    style="color: rgb(255, 255, 255);" onclick="minus(this.id)" id="set1"></button>
-                            </div>
                             <div id="set-count-2"></div>
+                            <div class="minus"><button class='glyphicon glyphicon-minus'
+                                    style="color: rgb(255, 255, 255);" onclick="set2minus(this.id)"
+                                    id="set-2-minus"></button>
+                                <script>
+                                    document.getElementById("set-count-2").innerHTML = 1;
+                                    let set_count_2 = document.getElementById("set-count-2");
+                                    set_count_2 = 1;
+
+                                    function set2minus(clicked_id) {
+                                        if (clicked_id == "set-2-minus") {
+                                            if (set_count_2 > 1) {
+                                                set_count_2--;
+                                                document.getElementById("set-count-2").innerHTML = set_count_2;
+                                            }
+                                        }
+                                    }
+                                </script>
+                            </div>
                             <div class="plus"><button class='glyphicon glyphicon-plus'
-                                    style="color: rgb(255, 255, 255);" onclick="plus(this.id)" id="set2"></button></div>
+                                    style="color: rgb(255, 255, 255);" onclick="set2plus(this.id)" id="set-2-plus"></button>
+                                <script>
+                                    function set2plus(clicked_id) {
+                                        if (clicked_id == "set-2-plus") {
+                                            set_count_2++;
+                                            document.getElementById("set-count-2").innerHTML = set_count_2;
+                                        }
+                                    }
+                                </script>
+                            </div>
                             <div><button class="add" onclick="">เพิ่มลงตะกร้า</button></div>
                         </div>
                     </div>
@@ -104,7 +152,7 @@
 
             </div>
         </div>
-
+        <!-- 
         <script>
 
             document.getElementById("set-count-1").innerHTML = 1;
@@ -119,7 +167,6 @@
                     set_count_1 += 1;
                     document.getElementById("set-count-1").innerHTML = set_count_1;
                 }
-
                 else if (clicked_id == "set2") {
                     set_count_2 += 1;
                     document.getElementById("set-count-2").innerHTML = set_count_2;
@@ -138,7 +185,7 @@
 
                 }
             }
-        </script>
+        </script> -->
 
 </body>
 
