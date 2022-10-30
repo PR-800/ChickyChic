@@ -144,8 +144,13 @@ body {
     top: 320px;
 }
 
-.add:hover {
-    color: rgb(0, 0, 0);
+.add:focus {
+    border: none;
+    outline: none;
+}
+
+.add:active {
+    transform: translateY(2px);
 }
 
 .plus {
@@ -167,13 +172,12 @@ body {
     width: 35px;
     height: 35px;
     text-align: center;
-    font-size: 16px;
-    
+    font-size: 16px; 
 }
 
-.glyphicon:hover {
-    color: white;
-    text-decoration: none;
+.glyphicon:focus{
+    border: none;
+    outline: none;
 }
 
 #set-count-1 {
@@ -189,7 +193,7 @@ body {
     top: 330;
     right: 455px;
 }
-
+/* 
 #set-count-3 {
     position: absolute;
     font-size: 25px;
@@ -223,4 +227,4 @@ body {
     font-size: 25px;
     top: 330;
     right: 455px;
-}
+} */
