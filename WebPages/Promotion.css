@@ -52,6 +52,10 @@
     outline: none;
 }
 
+.add:hover{
+    background-color: rgb(242, 100, 68);
+}
+
 .add:active {
     transform: translateY(2px);
 }
@@ -80,6 +84,14 @@
 .glyphicon:focus{
     border: none;
     outline: none;
+}
+
+.glyphicon:hover{
+    background-color: rgb(248, 178, 81);
+}
+
+.glyphicon:active {
+    transform: translateY(2px);
 }
 
 #set-count-1 {
