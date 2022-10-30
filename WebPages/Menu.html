@@ -55,16 +55,18 @@
             left:460px;
             width: 1000px;
         } */
-        /* .card {
+        .card {
             text-align: center;
             align-items: center;
-            margin: 30px
+            border-radius: 40px;
+            margin: 20px
         }
         #cardd {
             border-radius: 30px;
         }
         .card-img-top {
-            width:250px;
+            margin-top: 20px;
+            width:230px;
         }
         .card-text {
             font-size: 18px;
@@ -85,25 +87,30 @@
             border:none;
             border-radius: 50%;
             width: 35px;
-            height: 35px; */
+            height: 35px;
             /* text-align: center;
             justify-content: center; */
-            /* font-size: 25px;
+            font-size: 25px;
         }
         .butt:focus {
             border: none;
             outline: none;
         }
-        .nav-tabs {
+        /* .nav-tabs {
             position: absolute;
             width: 1800px;
-            top:120px;
+            top:50px;
             left:50px;
             background-color: rgb(253 165 39);
             color: white;
             border: none;
             text-decoration: none;
         } */
+        .page {
+            position: absolute;
+            top:100px;
+            left:350px;
+        }
 
     </style>
 </head>
@@ -180,278 +187,157 @@
                 </div>
             </div>
 
-            <!-- <div class="menu-bar">
-                <a class="menu-nav" href="#chicken" style="left: 50px; background-color: white;color:black">ไก่ทอด</a>
-                <a class="menu-nav" href="#rice" style="left: 150px;">ข้าว</a>
-                <a class="menu-nav" href="#burger" style="left: 230px;">เบอร์เกอร์</a>
-                <a class="menu-nav" href="#salad" style="left: 350px;">สลัด</a>
-                <a class="menu-nav" href="#drink" style="left: 440px;">เครื่องดื่ม</a>
-            </div> -->
-
-            <!-- <ul class="nav nav-tabs nav-tabs-justified">
-                <li role="presentation" id="menu-bar">
-                    <a href="#chicken">ไก่ทอด</a>
-                </li>
-                <li role="presentation" id="menu-bar">
-                    <a href="#rice">ข้าว</a>
-                </li>
-                <li role="presentation" id="menu-bar">
-                    <a href="#burger">เบอร์เกอร์</a>
-                </li>
-                <li role="presentation" id="menu-bar">
-                    <a href="#salad">สลัด</a>
-                </li>
-                <li role="presentation" id="menu-bar">
-                    <a href="#drink">เครื่องดื่ม</a>
-                </li>
-            </ul> -->
-
-            <!-- <section id="chicken">
-                <div class="card-group group1">
-                    <div class="card" id="cardd">
-                        <img class="card-img-top" src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png">
-                        <div class="card-body"> -->
-                            <!-- <h3 class="card-title">ไก่ทอด</h3>
-                            <p class="card-text">40 บาท</p> -->
-
-                            <!-- <script>
-                                let requestURL = 'menu.json';
-                                let request = new XMLHttpRequest();
-                                request.onreadystatechange = function () {
-                                    if (request.readyState == 4 && request.status == 200) {
-                                        ExtractData(JSON.parse(request.responseText));
-                                        // ExtractData(JSON.stringify(request.responseText));
-                                    }
-                                };
-                                request.open("GET", requestURL, true);
-                                request.send();
-
-                                function ExtractData(data) {
-                                    for (let o of data.chicken) {
-                                        document.write('<h3 class="card-title">');
-                                            document.write(i.name);
-                                        document.write('</h3>');
-                                        document.write('<p class="card-text">');
-                                            document.write(i.price);
-                                        document.write('</p>')
-                                    }
-                                }
-                            </script>
-
-                            <div><br>
-                                <div class="chick_amount">
-                                    <span class="chickde"><button type="button" class="butt" style="position:absolute;left:60px;">-</button></span>
-                                    <span class="chicknum" style="font-size:22px">1</span>
-                                    <span class="chickin"><button type="button" class="butt" style="position:absolute;left:200px">+</button></span>
-                                </div><br>
-                                <script>
-                                    const chickin = document.querySelector(".chickin"),
-                                    chickde = document.querySelector(".chickde"),
-                                    chicknum = document.querySelector(".chicknum")
-
-                                    let chick_amount = 1;
-
-                                    chickin.addEventListener("click", ()=>{
-                                        chick_amount++;
-                                        chicknum.innerText = chick_amount;
-                                        console.log(chick_amount)
-                                    });
-                                    chickde.addEventListener("click", ()=>{
-                                        if (chick_amount > 1) {
-                                            chick_amount--;
+            <section id="chicken">
+                <div class="chicken-page page">
+                <div class="container mx-auto mt-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card" style="width: 20rem;">
+                            <img src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-title">ไก่ทอด</h3>
+                                <h6 class="card-subtitle mb-2 text-muted">40 บาท</h6>
+                                <div><br>
+                                    <div class="chick_amount">
+                                        <span class="chickde"><button type="button" class="butt" style="position:absolute;left:75px;">-</button></span>
+                                        <span class="chicknum" style="font-size:22px">1</span>
+                                        <span class="chickin"><button type="button" class="butt" style="position:absolute;left:215px">+</button></span>
+                                    </div><br>
+                                    <script>
+                                        const chickin = document.querySelector(".chickin"),
+                                        chickde = document.querySelector(".chickde"),
+                                        chicknum = document.querySelector(".chicknum")
+                
+                                        let chick_amount = 1;
+                
+                                        chickin.addEventListener("click", ()=>{
+                                            chick_amount++;
                                             chicknum.innerText = chick_amount;
-                                        }
-                                    });
-                                </script> -->
-                                <!-- <button type="button" class="btn btn-danger" onclick="">เพิ่มลงตะกร้า</button>
-                            </div><br>
-                        </div>
-                    </div>
-                    <div class="card" id="cardd">
-                        <img class="card-img-top" src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png">
-                        <div class="card-body">
-                            <h3 class="card-title">วิงซ์แซ่บ (ไม่เผ็ด) 3 ชิ้น</h3>
-                            <p class="card-text">60 บาท</p>
-                            <div><br>
-                                <div class="wing_amount">
-                                    <span class="wingde"><button type="button" class="butt" style="position:absolute;left:60px;">-</button></span>
-                                    <span class="wingnum" style="font-size:22px">1</span>
-                                    <span class="wingin"><button type="button" class="butt" style="position:absolute;left:200px">+</button></span>
+                                            console.log(chick_amount)
+                                        });
+                                        chickde.addEventListener("click", ()=>{
+                                            if (chick_amount > 1) {
+                                                chick_amount--;
+                                                chicknum.innerText = chick_amount;
+                                            }
+                                        });
+                                    </script>
+                                    <button type="button" class="btn btn-danger" onclick="">เพิ่มลงตะกร้า</button>
                                 </div><br>
-                                <script>
-                                    const wingin = document.querySelector(".wingin"),
-                                    wingde = document.querySelector(".wingde"),
-                                    wingnum = document.querySelector(".wingnum")
-
-                                    let wing_amount = 1;
-
-                                    wingin.addEventListener("click", ()=>{
-                                        wing_amount++;
-                                        wingnum.innerText = wing_amount;
-                                        console.log(wing_amount)
-                                    });
-                                    wingde.addEventListener("click", ()=>{
-                                        if (wing_amount > 1) {
-                                            wing_amount--;
-                                            wingnum.innerText = wing_amount;
-                                        }
-                                    });
-                                </script> -->
-                                <!-- <button type="button" class="btn btn-danger" onclick="">เพิ่มลงตะกร้า</button>
-                            </div><br>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card" id="cardd">
-                        <img class="card-img-top" src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png">
-                        <div class="card-body">
-                            <h3 class="card-title">วิงซ์แซ่บ 3 ชิ้น</h3>
-                            <p class="card-text">60 บาท</p>
-                            <div><br>
-                                <div class="spicywing_amount">
-                                    <span class="spicywingde"><button type="button" class="butt" style="position:absolute;left:60px;">-</button></span>
-                                    <span class="spicywingnum" style="font-size:22px">1</span>
-                                    <span class="spicywingin"><button type="button" class="butt" style="position:absolute;left:200px">+</button></span>
+                    </div>    
+                    <div class="col-md-4">
+                        <div class="card" style="width: 20rem;">
+                            <img src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-title">ไก่ทอด</h3>
+                                <h6 class="card-subtitle mb-2 text-muted">40 บาท</h6>
+                                <div><br>
+                                    <div class="chick_amount">
+                                        <span class="chickde"><button type="button" class="butt" style="position:absolute;left:75px;">-</button></span>
+                                        <span class="chicknum" style="font-size:22px">1</span>
+                                        <span class="chickin"><button type="button" class="butt" style="position:absolute;left:215px">+</button></span>
+                                    </div><br>
+                                    <script>
+                                       
+                                    </script>
+                                    <button type="button" class="btn btn-danger" onclick="">เพิ่มลงตะกร้า</button>
                                 </div><br>
-                                <script>
-                                    const spicywingin = document.querySelector(".spicywingin"),
-                                    spicywingde = document.querySelector(".spicywingde"),
-                                    spicywingnum = document.querySelector(".spicywingnum")
-
-                                    let spicywing_amount = 1;
-
-                                    spicywingin.addEventListener("click", ()=>{
-                                        spicywing_amount++;
-                                        spicywingnum.innerText = spicywing_amount;
-                                        console.log(spicywing_amount)
-                                    });
-                                    spicywingde.addEventListener("click", ()=>{
-                                        if (spicywing_amount > 1) {
-                                            spicywing_amount--;
-                                            spicywingnum.innerText = spicywing_amount;
-                                        }
-                                    });
-                                </script>
-                                <button type="button" class="btn btn-danger" onclick="">เพิ่มลงตะกร้า</button>
-                            </div><br>
+                            </div>
                         </div>
-                    </div> -->
-
-
-                <!-- <div class="card-group group2">
-                    <div class="card" id="cardd">
-                        <img class="card-img-top" src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png">
-                        <div class="card-body">
-                            <h3 class="card-title">ไก่ทอด</h3>
-                            <p class="card-text">40 บาท</p>
-                            <div><br>
-                                <div class="chick_amount">
-                                    <span class="chickde"><button type="button" class="butt" style="position:absolute;left:60px;bottom:90px;">-</button></span>
-                                    <span class="chicknum" style="font-size:22px">1</span>
-                                    <span class="chickin"><button type="button" class="butt" style="position:absolute;left:200px">+</button></span>
+                    </div>  
+                    <div class="col-md-4">
+                        <div class="card" style="width: 20rem;">
+                            <img src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-title">ไก่ทอด</h3>
+                                <h6 class="card-subtitle mb-2 text-muted">40 บาท</h6>
+                                <div><br>
+                                    <div class="chick_amount">
+                                        <span class="chickde"><button type="button" class="butt" style="position:absolute;left:75px;">-</button></span>
+                                        <span class="chicknum" style="font-size:22px">1</span>
+                                        <span class="chickin"><button type="button" class="butt" style="position:absolute;left:215px">+</button></span>
+                                    </div><br>
+                                    <script>
+                                       
+                                    </script>
+                                    <button type="button" class="btn btn-danger" onclick="">เพิ่มลงตะกร้า</button>
                                 </div><br>
-                                <script>
-                                </script>
-                                <button type="button" class="btn btn-danger" onclick="">เพิ่มลงตะกร้า</button>
-                            </div><br>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card" id="cardd">
-                        <img class="card-img-top" src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png">
-                        <div class="card-body">
-                            <h3 class="card-title">วิงซ์แซ่บ (ไม่เผ็ด) 3 ชิ้น</h3>
-                            <p class="card-text">60 บาท</p>
-                            <div><br>
-                                <div class="wing_amount">
-                                    <span class="wingde"><button type="button" class="butt" style="position:absolute;left:60px;bottom:90px;">-</button></span>
-                                    <span class="wingnum" style="font-size:22px">1</span>
-                                    <span class="wingin"><button type="button" class="butt" style="position:absolute;left:200px">+</button></span>
+                    </div>  
+                    <div class="col-md-4">
+                        <div class="card" style="width: 20rem;">
+                            <img src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-title">ไก่ทอด</h3>
+                                <h6 class="card-subtitle mb-2 text-muted">40 บาท</h6>
+                                <div><br>
+                                    <div class="chick_amount">
+                                        <span class="chickde"><button type="button" class="butt" style="position:absolute;left:75px;">-</button></span>
+                                        <span class="chicknum" style="font-size:22px">1</span>
+                                        <span class="chickin"><button type="button" class="butt" style="position:absolute;left:215px">+</button></span>
+                                    </div><br>
+                                    <script>
+                                       
+                                    </script>
+                                    <button type="button" class="btn btn-danger" onclick="">เพิ่มลงตะกร้า</button>
                                 </div><br>
-                                <script>
-
-                                </script>
-                                <button type="button" class="btn btn-danger" onclick="">เพิ่มลงตะกร้า</button>
-                            </div><br>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card" id="cardd">
-                        <img class="card-img-top" src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png">
-                        <div class="card-body">
-                            <h3 class="card-title">วิงซ์แซ่บ 3 ชิ้น</h3>
-                            <p class="card-text">60 บาท</p>
-                            <div><br>
-                                <div class="spicywing_amount">
-                                    <span class="spicywingde"><button type="button" class="butt" style="position:absolute;left:60px;bottom:90px;">-</button></span>
-                                    <span class="spicywingnum" style="font-size:22px">1</span>
-                                    <span class="spicywingin"><button type="button" class="butt" style="position:absolute;left:200px">+</button></span>
+                    </div>  
+                    <div class="col-md-4">
+                        <div class="card" style="width: 20rem;">
+                            <img src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-title">ไก่ทอด</h3>
+                                <h6 class="card-subtitle mb-2 text-muted">40 บาท</h6>
+                                <div><br>
+                                    <div class="chick_amount">
+                                        <span class="chickde"><button type="button" class="butt" style="position:absolute;left:75px;">-</button></span>
+                                        <span class="chicknum" style="font-size:22px">1</span>
+                                        <span class="chickin"><button type="button" class="butt" style="position:absolute;left:215px">+</button></span>
+                                    </div><br>
+                                    <script>
+                                       
+                                    </script>
+                                    <button type="button" class="btn btn-danger" onclick="">เพิ่มลงตะกร้า</button>
                                 </div><br>
-                                <script>
-
-                                </script>
-                                <button type="button" class="btn btn-danger" onclick="">เพิ่มลงตะกร้า</button>
-                            </div><br>
+                            </div>
                         </div>
-                    </div>
+                    </div>  
+                    <div class="col-md-4">
+                        <div class="card" style="width: 20rem;">
+                            <img src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-title">ไก่ทอด</h3>
+                                <h6 class="card-subtitle mb-2 text-muted">40 บาท</h6>
+                                <div><br>
+                                    <div class="chick_amount">
+                                        <span class="chickde"><button type="button" class="butt" style="position:absolute;left:75px;">-</button></span>
+                                        <span class="chicknum" style="font-size:22px">1</span>
+                                        <span class="chickin"><button type="button" class="butt" style="position:absolute;left:215px">+</button></span>
+                                    </div><br>
+                                    <script>
+                                       
+                                    </script>
+                                    <button type="button" class="btn btn-danger" onclick="">เพิ่มลงตะกร้า</button>
+                                </div><br>
+                            </div>
+                        </div>
+                    </div>  
+
+
+
+
+
                 </div>
-                <div class="card-group group3">
-                    <div class="card" id="cardd">
-                        <img class="card-img-top" src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png">
-                        <div class="card-body">
-                            <h3 class="card-title">ไก่ทอด</h3>
-                            <p class="card-text">40 บาท</p>
-                            <div><br>
-                                <div class="chick_amount">
-                                    <span class="chickde"><button type="button" class="butt" style="position:absolute;left:60px;bottom:90px;">-</button></span>
-                                    <span class="chicknum" style="font-size:22px">1</span>
-                                    <span class="chickin"><button type="button" class="butt" style="position:absolute;left:200px">+</button></span>
-                                </div><br>
-                                <script>
-                                </script>
-                                <button type="button" class="btn btn-danger" onclick="">เพิ่มลงตะกร้า</button>
-                            </div><br>
-                        </div>
-                    </div>
-                    <div class="card" id="cardd">
-                        <img class="card-img-top" src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png">
-                        <div class="card-body">
-                            <h3 class="card-title">วิงซ์แซ่บ (ไม่เผ็ด) 3 ชิ้น</h3>
-                            <p class="card-text">60 บาท</p>
-                            <div><br>
-                                <div class="wing_amount">
-                                    <span class="wingde"><button type="button" class="butt" style="position:absolute;left:60px;bottom:90px;">-</button></span>
-                                    <span class="wingnum" style="font-size:22px">1</span>
-                                    <span class="wingin"><button type="button" class="butt" style="position:absolute;left:200px">+</button></span>
-                                </div><br>
-                                <script>
-
-                                </script>
-                                <button type="button" class="btn btn-danger" onclick="">เพิ่มลงตะกร้า</button>
-                            </div><br>
-                        </div>
-                    </div>
-                    <div class="card" id="cardd">
-                        <img class="card-img-top" src="https://media.discordapp.net/attachments/1029749479265542214/1030525080045879366/unknown.png">
-                        <div class="card-body">
-                            <h3 class="card-title">วิงซ์แซ่บ 3 ชิ้น</h3>
-                            <p class="card-text">60 บาท</p>
-                            <div><br>
-                                <div class="spicywing_amount">
-                                    <span class="spicywingde"><button type="button" class="butt" style="position:absolute;left:60px;bottom:90px;">-</button></span>
-                                    <span class="spicywingnum" style="font-size:22px">1</span>
-                                    <span class="spicywingin"><button type="button" class="butt" style="position:absolute;left:200px">+</button></span>
-                                </div><br>
-                                <script>
-
-                                </script>
-                                <button type="button" class="btn btn-danger" onclick="">เพิ่มลงตะกร้า</button>
-                            </div><br>
-                        </div>
-                    </div>
-                </div> -->
-
-
-            </div>
+                </div>
+                </div>
             </section>
             <section id="rice">
+                
             </section>
         </div>
     </div>
