@@ -1,108 +1,11 @@
-body {
-    font-family: 'Kanit', sans-serif;
-}
-
-.container-fluid {
-    /* background-color: black; */
-
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.header {
-    width: 94%;
-    height: 80px;
-    position: absolute;
-    background-color: white;
-    top: 4%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-}
-
-.logo-img {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 70px;
-}
-
-.logo-word {
-    position: absolute;
-    top: 15px;
-    left: 95px;
-    width: 80px;
-}
-
-.line {
-    position: absolute;
-    top: 15px;
-    left: 200px;
-    border-left: 3px solid rgb(253 165 39);
-    height: 50px;
-}
-
-.nav {
-    position: absolute;
-    top: 30px;
-}
-
-.nav:link,
-.nav:visited {
-    color: black;
-    text-decoration: none;
-}
-
-.nav:hover {
-    color: rgb(136, 136, 136);
-}
-
-.logo-user {
-    position: absolute;
-    top: 25px;
-    right: 15px;
-    width: 33px;
-}
-
-.logo-basket {
-    position: absolute;
-    top: 28px;
-    right: 205px;
-    width: 25px;
-    filter: brightness(100);
-}
-
-.basket-bg {
-    position: absolute;
-    top: 22px;
-    right: 79px;
-    width: 170px;
-    height: 38px;
-    border-radius: 25px;
-    background-color: rgb(241 72 34);
-}
-
-.basket-num {
-    position: absolute;
-    top: 18px;
-    right: 235px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: rgb(253 165 39);
-    text-align: center;
-    font-size: 13.5px;
-}
-
 .card {
-    box-shadow: 0 15px 30px 1px grey;
     background: rgba(255, 255, 255, 0.9);
     display: block;
-    border-radius: 50px;
-    top: 130px;
+    border-radius: 30px;
     margin-bottom: 50px;
     height: 450px;
     width: 1200px;
+    color: grey;
 }
 
 .price {
@@ -114,7 +17,7 @@ body {
     font-size: 35px;
     width: 150px;
     position: absolute;
-    border-radius: 15px;
+    border-radius: 30px;
     background-color: rgb(255, 225, 187);
 }
 
@@ -144,8 +47,17 @@ body {
     top: 320px;
 }
 
-.add:hover {
-    color: rgb(0, 0, 0);
+.add:focus {
+    border: none;
+    outline: none;
+}
+
+.add:hover{
+    background-color: rgb(242, 100, 68);
+}
+
+.add:active {
+    transform: translateY(2px);
 }
 
 .plus {
@@ -166,14 +78,22 @@ body {
     border: none;
     width: 35px;
     height: 35px;
+    font-size: 25px;
     text-align: center;
-    font-size: 16px;
-    
+
 }
 
-.glyphicon:hover {
-    color: white;
-    text-decoration: none;
+.glyphicon:focus{
+    border: none;
+    outline: none;
+}
+
+.glyphicon:hover{
+    background-color: rgb(248, 178, 81);
+}
+
+.glyphicon:active {
+    transform: translateY(2px);
 }
 
 #set-count-1 {
@@ -184,6 +104,41 @@ body {
 }
 
 #set-count-2 {
+    position: absolute;
+    font-size: 25px;
+    top: 330;
+    right: 455px;
+}
+
+#set-count-3 {
+    position: absolute;
+    font-size: 25px;
+    top: 330;
+    right: 455px;
+}
+
+#set-count-4 {
+    position: absolute;
+    font-size: 25px;
+    top: 330;
+    right: 455px;
+}
+
+#set-count-5 {
+    position: absolute;
+    font-size: 25px;
+    top: 330;
+    right: 455px;
+}
+
+#set-count-6 {
+    position: absolute;
+    font-size: 25px;
+    top: 330;
+    right: 455px;
+}
+
+#set-count-7 {
     position: absolute;
     font-size: 25px;
     top: 330;
