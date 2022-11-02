@@ -94,9 +94,9 @@
                 <img class="logo-word" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033040544605143090/logo-word.png">
                 <div class="bar">
                     <a class="line"></a>
-                    <a class="nav" href="Home.html" style="left: 235px;">หน้าหลัก</a>
+                    <a class="nav" href="Home.php" style="left: 235px;">หน้าหลัก</a>
                     <a class="nav" href="Menu.php" style="left: 320px; color: rgb(253 165 39);">เมนู</a>
-                    <a class="nav" href="Promotion.html" style="left: 380px;">โปรโมชั่น</a>
+                    <a class="nav" href="Promotion.php" style="left: 380px;">โปรโมชั่น</a>
                 </div>
                 <div class="bar-basket">
                     <a class="basket-bg"></a>
