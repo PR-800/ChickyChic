@@ -21,6 +21,74 @@
 
 </head>
 
+<style>
+    .half-top-content {
+        position: relative;
+        display: flex;
+        background-image: url('https://img.freepik.com/premium-photo/karaage-japanese-fried-chicken-plate_261158-50.jpg?w=2000');
+        background-position: center;
+        background-size: cover;
+        left: 150px;
+        width: 1600px;
+        height: 800px;
+    }
+
+    .half-top-left-content {
+        position: absolute;
+        right: 0px;
+        background-color: rgb(255, 255, 255);
+        opacity: 0.85;
+        width: 500px;
+        height: 800px;
+    }
+
+    .logo-img-content {
+        width: 250px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+
+    }
+
+    .logo-word-content {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
+
+    .slogan {
+        position: relative;
+        top: 80px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .half-bottom-content {
+        position: relative;
+        display: flex;
+        /* border: 1px solid black; */
+        top: 40px;
+        left: 310px;
+        width: 1300px;
+        height: 600px;
+    }
+
+    .carousel {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .d-block {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
 <body>
     <div class="container-fluid">
         <div class="header-area">
@@ -77,7 +145,7 @@
                 </div>
             </div>
 
-            <!-- <div class="half-bottom-content">
+            <div class="half-bottom-content">
 
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -87,13 +155,19 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block" src="https://img.freepik.com/premium-photo/karaage-japanese-fried-chicken-plate_261158-50.jpg?" alt="First slide">
+                            <img class="d-block"
+                                src="https://img.freepik.com/premium-photo/karaage-japanese-fried-chicken-plate_261158-50.jpg?w=2000"
+                                alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block" src="https://img.freepik.com/premium-photo/karaage-japanese-fried-chicken-plate_261158-50.jpg?" alt="Second slide">
+                            <img class="d-block"
+                                src="https://img.freepik.com/premium-photo/karaage-japanese-fried-chicken-plate_261158-50.jpg?w=2000"
+                                alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block" src="https://img.freepik.com/premium-photo/karaage-japanese-fried-chicken-plate_261158-50.jpg?" alt="Third slide">
+                            <img class="d-block"
+                                src="https://img.freepik.com/premium-photo/karaage-japanese-fried-chicken-plate_261158-50.jpg?w=2000"
+                                alt="Third slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -104,10 +178,11 @@
                     </a>
                 </div>
 
-            </div> -->
-
+            </div>
         </div>
+
     </div>
+
 </body>
 
 </html>
