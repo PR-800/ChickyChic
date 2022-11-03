@@ -33,8 +33,8 @@
                 <div class="bar">
                     <a class="line"></a>
                     <a class="nav" href="Home.html" style="left: 235px;">หน้าหลัก</a>
-                    <a class="nav" href="Menu.html" style="left: 320px;">เมนู</a>
-                    <a class="nav" href="Promotion.html" style="left: 380px; color: rgb(253 165 39)">โปรโมชั่น</a>
+                    <a class="nav" href="Menu.php" style="left: 320px;">เมนู</a>
+                    <a class="nav" href="Promotion.php" style="left: 380px; color: rgb(253 165 39)">โปรโมชั่น</a>
                 </div>
                 <div class="bar-basket">
                     <a class="basket-bg"></a>
@@ -50,8 +50,8 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                     <div class="dropdown-menu dropdown-menu-right">
                         <a class="dropdown-item" href="Home.html" style="color: rgb(253 165 39);">หน้าหลัก</a>
-                        <a class="dropdown-item" href="Menu.html">เมนู</a>
-                        <a class="dropdown-item" href="Promotion.html">โปรโมชั่น</a>
+                        <a class="dropdown-item" href="Menu.php">เมนู</a>
+                        <a class="dropdown-item" href="Promotion.php">โปรโมชั่น</a>
                         <div class="bar-dropdown-plus">
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="Purchase.php">ออเดอร์ของคุณ</a>
@@ -67,6 +67,10 @@
             <div class="content">
 
                 <div class="row">
+
+
+
+                    
                     <div class="col-md-8">
                         <div class="card">
                             <div class="price">
@@ -75,8 +79,7 @@
                             <img class="pic-set"
                                 src="https://media.discordapp.net/attachments/1029750439866007613/1034127903627149462/kai_don_jai_3.png">
                             <div class="infomation">
-                                <h2 style="color: rgb(253 165 39);">เซ็ต ไก่กินคนเดียว</h2>
-                                <p>รายละเอียดภายในชุดเซ็ต</p>
+                                <h2 style="color: rgb(253 165 39);">เซ็ต ไก่กินคนเดียว</h2><br>
                                 <p>• ไก่ทอด 2 ชิ้น</p>
                                 <p>• วิงซ์แซ่บ 3 ชิ้น</p>
                                 <p>• เป๊ปซี่ 1 ขวด</p>
@@ -86,7 +89,7 @@
                                     style="color: rgb(255, 255, 255);" onclick="set1minus(this.id)"
                                     id="set-1-minus">-</button>
                                 <script>
-                                    document.getElementById("set-count-1").innerHTML = 1;
+                                    document.getElementById("set-count-1").innerHTML = 0;
                                     let set_count_1 = document.getElementById("set-count-1");
                                     set_count_1 = 1;
 

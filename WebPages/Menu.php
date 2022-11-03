@@ -90,17 +90,17 @@
     <div class="container-fluid">
         <div class="header-area">
             <div class="header">
-                <img class="logo-img" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033040544206692372/logo.png">
-                <img class="logo-word" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033040544605143090/logo-word.png">
+                <img class="logo-img" src="./IMG/logo/logo-img.png">
+                <img class="logo-word" src="./IMG/logo/logo-word.png">
                 <div class="bar">
                     <a class="line"></a>
                     <a class="nav" href="Home.html" style="left: 235px;">หน้าหลัก</a>
                     <a class="nav" href="Menu.php" style="left: 320px; color: rgb(253 165 39);">เมนู</a>
-                    <a class="nav" href="Promotion.html" style="left: 380px;">โปรโมชั่น</a>
+                    <a class="nav" href="Promotion.php" style="left: 380px;">โปรโมชั่น</a>
                 </div>
                 <div class="bar-basket">
                     <a class="basket-bg"></a>
-                    <img class="logo-basket" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033047007151013888/logo-basket.png">
+                    <img class="logo-basket" src="./IMG/logo/logo-basket.png">
                     <a class="nav" href="Purchase.php" style="right: 95px; color: white;">ออเดอร์ของคุณ</a>
                     <a class="basket-num">
                         <p style="color: white;">55</p>
@@ -110,15 +110,15 @@
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                     <div class="dropdown-menu dropdown-menu-right">
                         <a class="dropdown-item" href="Home.html" style="color: rgb(253 165 39);">หน้าหลัก</a>
-                        <a class="dropdown-item" href="Menu.html">เมนู</a>
-                        <a class="dropdown-item" href="Promotion.html">โปรโมชั่น</a>
+                        <a class="dropdown-item" href="Menu.php">เมนู</a>
+                        <a class="dropdown-item" href="Promotion.php">โปรโมชั่น</a>
                         <div class="bar-dropdown-plus">
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="Purchase.php">ออเดอร์ของคุณ</a>
                         </div>
                     </div>
                 </div>
-                <img class="logo-user" href="User.html" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png">
+                <img class="logo-user" href="User.html" src="./IMG/logo/logo-user.png">
             </div>
         </div>
 
@@ -176,11 +176,11 @@
               <h3 class='card-title'>{$row['NAME']}</h3>
               <h6 class='card-subtitle mb-2 text-muted'>{$row['PRICE']} บาท</h6>
               <div><br>
-                  <div class='chick_amount'>
-                      <span class='chickde'><button type='button' class='butt'
+                  <div class='amount'>
+                      <span class='decrease'><button type='button' class='butt'
                               style='position:absolute;left:22%;' onclick='decrease({$row['ID']}, `chicken`)'>-</button></span>
-                      <span class='chicknum' style='font-size:22px' id='chicken-{$row['ID']}'>{$row['AMOUNT']}</span>
-                      <span class='chickin'><button type='button' class='butt'
+                      <span class='num' style='font-size:22px' id='chicken-{$row['ID']}'>{$row['AMOUNT']}</span>
+                      <span class='increase'><button type='button' class='butt'
                               style='position:absolute;right:22%' onclick='increase({$row['ID']}, `chicken`)'>+</button></span>
                   </div><br>
                   <button type='button' class='btn btn-danger'
@@ -220,11 +220,11 @@
               <h3 class='card-title'>{$row['NAME']}</h3>
               <h6 class='card-subtitle mb-2 text-muted'>{$row['PRICE']} บาท</h6>
               <div><br>
-                  <div class='chick_amount'>
-                      <span class='chickde'><button type='button' class='butt'
+                  <div class='amount'>
+                      <span class='decrease'><button type='button' class='butt'
                               style='position:absolute;left:22%;' onclick='decrease({$row['ID']}, `burger`)'>-</button></span>
-                      <span class='chicknum' style='font-size:22px' id='burger-{$row['ID']}'>{$row['AMOUNT']}</span>
-                      <span class='chickin'><button type='button' class='butt'
+                      <span class='num' style='font-size:22px' id='burger-{$row['ID']}'>{$row['AMOUNT']}</span>
+                      <span class='increase'><button type='button' class='butt'
                               style='position:absolute;right:22%' onclick='increase({$row['ID']}, `burger`)'>+</button></span>
                   </div><br>
                   <button type='button' class='btn btn-danger'
@@ -265,11 +265,11 @@
               <h3 class='card-title'>{$row['NAME']}</h3>
               <h6 class='card-subtitle mb-2 text-muted'>{$row['PRICE']} บาท</h6>
               <div><br>
-                  <div class='chick_amount'>
-                      <span class='chickde'><button type='button' class='butt'
+                  <div class='amount'>
+                      <span class='decrease'><button type='button' class='butt'
                               style='position:absolute;left:22%;' onclick='decrease({$row['ID']}, `rice`)'>-</button></span>
-                      <span class='chicknum' style='font-size:22px' id='rice-{$row['ID']}'>{$row['AMOUNT']}</span>
-                      <span class='chickin'><button type='button' class='butt'
+                      <span class='num' style='font-size:22px' id='rice-{$row['ID']}'>{$row['AMOUNT']}</span>
+                      <span class='increase'><button type='button' class='butt'
                               style='position:absolute;right:22%' onclick='increase({$row['ID']}, `rice`)'>+</button></span>
                   </div><br>
                   <button type='button' class='btn btn-danger'
@@ -310,11 +310,11 @@
               <h3 class='card-title'>{$row['NAME']}</h3>
               <h6 class='card-subtitle mb-2 text-muted'>{$row['PRICE']} บาท</h6>
               <div><br>
-                  <div class='chick_amount'>
-                      <span class='chickde'><button type='button' class='butt'
+                  <div class='amount'>
+                      <span class='decrease'><button type='button' class='butt'
                               style='position:absolute;left:22%;' onclick='decrease({$row['ID']}, `salad`)'>-</button></span>
-                      <span class='chicknum' style='font-size:22px' id='salad-{$row['ID']}'>{$row['AMOUNT']}</span>
-                      <span class='chickin'><button type='button' class='butt'
+                      <span class='num' style='font-size:22px' id='salad-{$row['ID']}'>{$row['AMOUNT']}</span>
+                      <span class='increase'><button type='button' class='butt'
                               style='position:absolute;right:22%' onclick='increase({$row['ID']}, `salad`)'>+</button></span>
                   </div><br>
                   <button type='button' class='btn btn-danger'
@@ -354,11 +354,11 @@
               <h3 class='card-title'>{$row['NAME']}</h3>
               <h6 class='card-subtitle mb-2 text-muted'>{$row['PRICE']} บาท</h6>
               <div><br>
-                  <div class='chick_amount'>
-                      <span class='chickde'><button type='button' class='butt'
+                  <div class='amount'>
+                      <span class='decrease'><button type='button' class='butt'
                               style='position:absolute;left:22%;' onclick='decrease({$row['ID']}, `drink`)'>-</button></span>
-                      <span class='chicknum' style='font-size:22px' id='drink-{$row['ID']}'>{$row['AMOUNT']}</span>
-                      <span class='chickin'><button type='button' class='butt'
+                      <span class='num' style='font-size:22px' id='drink-{$row['ID']}'>{$row['AMOUNT']}</span>
+                      <span class='increase'><button type='button' class='butt'
                               style='position:absolute;right:22%' onclick='increase({$row['ID']}, `drink`)'>+</button></span>
                   </div><br>
                   <button type='button' class='btn btn-danger'

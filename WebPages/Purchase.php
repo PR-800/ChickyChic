@@ -22,8 +22,8 @@
     <div class="container-fluid">
     <div class="header-area">
             <div class="header">
-                <img class="logo-img" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033040544206692372/logo.png">
-                <img class="logo-word" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033040544605143090/logo-word.png">
+                <img class="logo-img" src="./IMG/logo/logo-img.png">
+                <img class="logo-word" src="./IMG/logo/logo-word.png">
                 <div class="bar">
                     <a class="line"></a>
                     <a class="nav" href="Home.html" style="left: 235px; color: rgb(253 165 39);">หน้าหลัก</a>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="bar-basket">
                     <a class="basket-bg"></a>
-                    <img class="logo-basket" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033047007151013888/logo-basket.png">
+                    <img class="logo-basket" src="./IMG/logo/logo-basket.png">
                     <a class="nav" href="Purchase.php" style="right: 95px; color: white;">ออเดอร์ของคุณ</a>
                     <a class="basket-num"><p style="color: white;">55</p></a>
                 </div>
@@ -48,7 +48,7 @@
                         </div>
                     </div>
                 </div>
-                <img class="logo-user" href="User.html" src="https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png">
+                <img class="logo-user" href="User.html" src="./IMG/logo/logo-user.png">
             </div>
         </div>
 

@@ -23,6 +23,7 @@
    UPDATE rice set AMOUNT = $amount where ID=$id;
    UPDATE salad set AMOUNT = $amount where ID=$id;
    UPDATE drink set AMOUNT = $amount where ID=$id;
+   UPDATE Promotion set AMOUNT = $amount where ID=$id;
    EOF;
 
    $ret = $db->exec($sql);

@@ -17,10 +17,11 @@
     // Query process 
     // Create a Table using SQL 
     $sql =<<<EOF
-    CREATE TABLE drink
-    (ID INT PRIMARY KEY     NOT NULL,
+    CREATE TABLE Promotion
+    (ID INT      NOT NULL,
     NAME           TEXT    NOT NULL,
     PRICE            INT     NOT NULL,
+    DESCRIPTION     TEXT NOT NULL,
     AMOUNT        INT NOT NULL,
     IMG         TEXT NOT NULL);
     EOF;
