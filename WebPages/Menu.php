@@ -94,7 +94,7 @@
                 <img class="logo-word" src="./IMG/logo/logo-word.png">
                 <div class="bar">
                     <a class="line"></a>
-                    <a class="nav" href="Home.html" style="left: 235px;">หน้าหลัก</a>
+                    <a class="nav" href="Home.php" style="left: 235px;">หน้าหลัก</a>
                     <a class="nav" href="Menu.php" style="left: 320px; color: rgb(253 165 39);">เมนู</a>
                     <a class="nav" href="Promotion.php" style="left: 380px;">โปรโมชั่น</a>
                 </div>
