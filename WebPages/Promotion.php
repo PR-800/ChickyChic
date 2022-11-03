@@ -27,23 +27,19 @@
         <div class="header-area">
             <div class="header">
                 <img class="logo-img"
-                    src="https://cdn.discordapp.com/attachments/1008922955494989965/1033040544206692372/logo.png">
+                    src="./IMG/logo/logo-img.png">
                 <img class="logo-word"
-                    src="https://cdn.discordapp.com/attachments/1008922955494989965/1033040544605143090/logo-word.png">
+                    src="./IMG/logo/logo-word.png">
                 <div class="bar">
                     <a class="line"></a>
-<<<<<<<< HEAD:WebPages/Promotion.html
                     <a class="nav" href="Home.html" style="left: 235px;">หน้าหลัก</a>
-========
-                    <a class="nav" href="Home.php" style="left: 235px;">หน้าหลัก</a>
->>>>>>>> 20e2d263ca1927d31e050f43f88d0ed02a127b2d:WebPages/Promotion.php
                     <a class="nav" href="Menu.php" style="left: 320px;">เมนู</a>
                     <a class="nav" href="Promotion.php" style="left: 380px; color: rgb(253 165 39)">โปรโมชั่น</a>
                 </div>
                 <div class="bar-basket">
                     <a class="basket-bg"></a>
                     <img class="logo-basket"
-                        src="https://cdn.discordapp.com/attachments/1008922955494989965/1033047007151013888/logo-basket.png">
+                        src="./IMG/logo/logo-basket.png">
                     <a class="nav" href="Purchase.php" style="right: 95px; color: white;">ออเดอร์ของคุณ</a>
                     <a class="basket-num">
                         <p style="color: white;">55</p>
@@ -63,7 +59,7 @@
                     </div>
                 </div>
                 <img class="logo-user" href="User.html"
-                    src="https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png">
+                    src="./IMG/logo/logo-user.png">
             </div>
         </div>
 
@@ -71,375 +67,111 @@
             <div class="content">
 
                 <div class="row">
+                    <?php
+                        // Connect to Database 
+                        class MyDB extends SQLite3
+                        {
+                            function __construct()
+                            {
+                                $this->open('./currentMenu.db');
+                            }
+                        }
+                        // Open Database 
+                        $db = new MyDB();
+                        if (!$db) {
+                            echo $db->lastErrorMsg();
+                            return;
+                        }
 
+                        // Query process 
+                        $ret = $db->query("SELECT * from Promotion");
+                        while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
+                    echo "<div class='col-md-8'>
+                        <div class='card'>
+                            <img class='pic-set' src='{$row['IMG']}'>
+                            <div class='price'>
+                                <p>{$row['PRICE']} บาท</p>
+                            </div>
+                            <div class='infomation'>
+                                <h2 style='color: rgb(253 165 39);'>{$row['NAME']}</h2><br>
+                                <p>{$row['DESCRIPTION']}</p>
+                                <p>{$row['DESCRIPTION2']}</p>
+                                <p>{$row['DESCRIPTION3']}</p>
+                                <p>{$row['DESCRIPTION4']}</p>
+                                <p>{$row['DESCRIPTION5']}</p>
+                            </div>
+                            <div id='set-count-1'></div>
 
+                            <div class='amount'>
+                                <span class='minus'><button class='glyphicon' type='button'
+                                style='color: rgb(255, 255, 255);' onclick='decrease({$row['ID']}, `Promotion`)'>-</button></span>
+                                <span class='set-count' style='position: absolute;font-size: 25px;top: 330;right: 455px;' id='Promotion-{$row['ID']}'>{$row['AMOUNT']}</span>
+                                <span class='plus'><button class='glyphicon' type='button'
+                                    style='color: rgb(255, 255, 255);' onclick='increase({$row['ID']}, `Promotion`)'>+</button></span>
+                            </div><br>
 
-                    
-                    <div class="col-md-8">
-                        <div class="card">
-                            <div class="price">
-                                <p>125 บาท</p>
-                            </div>
-                            <img class="pic-set"
-                                src="https://media.discordapp.net/attachments/1029750439866007613/1034127903627149462/kai_don_jai_3.png">
-                            <div class="infomation">
-                                <h2 style="color: rgb(253 165 39);">เซ็ต ไก่กินคนเดียว</h2><br>
-                                <p>• ไก่ทอด 2 ชิ้น</p>
-                                <p>• วิงซ์แซ่บ 3 ชิ้น</p>
-                                <p>• เป๊ปซี่ 1 ขวด</p>
-                            </div>
-                            <div id="set-count-1"></div>
-                            <div class="minus"><button class='glyphicon'
-                                    style="color: rgb(255, 255, 255);" onclick="set1minus(this.id)"
-                                    id="set-1-minus">-</button>
-                                <script>
-                                    document.getElementById("set-count-1").innerHTML = 0;
-                                    let set_count_1 = document.getElementById("set-count-1");
-                                    set_count_1 = 1;
-
-                                    function set1minus(clicked_id) {
-                                        if (clicked_id == "set-1-minus") {
-                                            if (set_count_1 > 1) {
-                                                set_count_1--;
-                                                document.getElementById("set-count-1").innerHTML = set_count_1;
-                                            }
-                                        }
-                                    }
-                                </script>
-                            </div>
-                            <div class="plus"><button class='glyphicon'
-                                    style="color: rgb(255, 255, 255);" onclick="set1plus(this.id)"
-                                    id="set-1-plus">+</button>
-                                <script>
-                                    function set1plus(clicked_id) {
-                                        if (clicked_id == "set-1-plus") {
-                                            set_count_1++;
-                                            document.getElementById("set-count-1").innerHTML = set_count_1;
-                                        }
-                                    }
-                                </script>
-                            </div>
-                            <div><button class="add">เพิ่มลงตะกร้า</button></div>
+                            <div><button class='add' onclick='addToCart({$row['ID']})'>เพิ่มลงตะกร้า</button></div>
                         </div>
-                    </div>
-                </div>
+                    </div>";
+                                }
+                                // Close database
+                                $db->close();
+                                ?>
 
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="card">
-                            <div class="price">
-                                <p>125 บาท</p>
-                            </div>
-                            <img class="pic-set"
-                                src="https://media.discordapp.net/attachments/1029750439866007613/1034127903627149462/kai_don_jai_3.png">
-                            <div class="infomation">
-                                <h2 style="color: rgb(253 165 39);">เซ็ต ไก่กินคนเดียว</h2>
-                                <p>รายละเอียดภายในชุดเซ็ต</p>
-                                <p>• ไก่ทอด 2 ชิ้น</p>
-                                <p>• วิงซ์แซ่บ 3 ชิ้น</p>
-                                <p>• เป๊ปซี่ 1 ขวด</p>
-                            </div>
-                            <div id="set-count-2"></div>
-                            <div class="minus"><button class='glyphicon'
-                                    style="color: rgb(255, 255, 255); font-size: 25px;" onclick="set2minus(this.id)"
-                                    id="set-2-minus">-</button>
-                                <script>
-                                    document.getElementById("set-count-2").innerHTML = 1;
-                                    let set_count_2 = document.getElementById("set-count-2");
-                                    set_count_2 = 1;
-    
-                                    function set2minus(clicked_id) {
-                                        if (clicked_id == "set-2-minus") {
-                                            if (set_count_2 > 1) {
-                                                set_count_2--;
-                                                document.getElementById("set-count-2").innerHTML = set_count_2;
-                                            }
-                                        }
-                                    }
-                                </script>
-                            </div>
-                            <div class="plus"><button class='glyphicon'
-                                    style="color: rgb(255, 255, 255); font-size: 25px;" onclick="set2plus(this.id)"
-                                    id="set-2-plus">+</button>
-                                <script>
-                                    function set2plus(clicked_id) {
-                                        if (clicked_id == "set-2-plus") {
-                                            set_count_2++;
-                                            document.getElementById("set-count-2").innerHTML = set_count_2;
-                                        }
-                                    }
-                                </script>
-                            </div>
-                            <div><button class="add" onclick="">เพิ่มลงตะกร้า</button>
-                            </div>
-                        </div>
-                    </div>
+                
                 </div>
-
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="card">
-                            <div class="price">
-                                <p>125 บาท</p>
-                            </div>
-                            <img class="pic-set"
-                                src="https://media.discordapp.net/attachments/1029750439866007613/1034127903627149462/kai_don_jai_3.png">
-                            <div class="infomation">
-                                <h2 style="color: rgb(253 165 39);">เซ็ต ไก่กินคนเดียว</h2>
-                                <p>รายละเอียดภายในชุดเซ็ต</p>
-                                <p>• ไก่ทอด 2 ชิ้น</p>
-                                <p>• วิงซ์แซ่บ 3 ชิ้น</p>
-                                <p>• เป๊ปซี่ 1 ขวด</p>
-                            </div>
-                            <div id="set-count-3"></div>
-                            <div class="minus"><button class='glyphicon'
-                                    style="color: rgb(255, 255, 255); font-size: 25px;" onclick="set3minus(this.id)"
-                                    id="set-3-minus">-</button>
-                                <script>
-                                    document.getElementById("set-count-3").innerHTML = 1;
-                                    let set_count_3 = document.getElementById("set-count-3");
-                                    set_count_3 = 1;
-    
-                                    function set3minus(clicked_id) {
-                                        if (clicked_id == "set-3-minus") {
-                                            if (set_count_3 > 1) {
-                                                set_count_3--;
-                                                document.getElementById("set-count-3").innerHTML = set_count_3;
-                                            }
-                                        }
-                                    }
-                                </script>
-                            </div>
-                            <div class="plus"><button class='glyphicon'
-                                    style="color: rgb(255, 255, 255); font-size: 25px;" onclick="set3plus(this.id)"
-                                    id="set-3-plus">+</button>
-                                <script>
-                                    function set3plus(clicked_id) {
-                                        if (clicked_id == "set-3-plus") {
-                                            set_count_3++;
-                                            document.getElementById("set-count-3").innerHTML = set_count_3;
-                                        }
-                                    }
-                                </script>
-                            </div>
-                            <div><button class="add" onclick="">เพิ่มลงตะกร้า</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="card">
-                            <div class="price">
-                                <p>125 บาท</p>
-                            </div>
-                            <img class="pic-set"
-                                src="https://media.discordapp.net/attachments/1029750439866007613/1034127903627149462/kai_don_jai_3.png">
-                            <div class="infomation">
-                                <h2 style="color: rgb(253 165 39);">เซ็ต ไก่กินคนเดียว</h2>
-                                <p>รายละเอียดภายในชุดเซ็ต</p>
-                                <p>• ไก่ทอด 2 ชิ้น</p>
-                                <p>• วิงซ์แซ่บ 3 ชิ้น</p>
-                                <p>• เป๊ปซี่ 1 ขวด</p>
-                            </div>
-                            <div id="set-count-4"></div>
-                            <div class="minus"><button class='glyphicon'
-                                    style="color: rgb(255, 255, 255); font-size: 25px;" onclick="set4minus(this.id)"
-                                    id="set-4-minus">-</button>
-                                <script>
-                                    document.getElementById("set-count-4").innerHTML = 1;
-                                    let set_count_4 = document.getElementById("set-count-4");
-                                    set_count_4 = 1;
-    
-                                    function set4minus(clicked_id) {
-                                        if (clicked_id == "set-4-minus") {
-                                            if (set_count_4 > 1) {
-                                                set_count_4--;
-                                                document.getElementById("set-count-4").innerHTML = set_count_4;
-                                            }
-                                        }
-                                    }
-                                </script>
-                            </div>
-                            <div class="plus"><button class='glyphicon'
-                                    style="color: rgb(255, 255, 255); font-size: 25px;" onclick="set4plus(this.id)"
-                                    id="set-4-plus">+</button>
-                                <script>
-                                    function set4plus(clicked_id) {
-                                        if (clicked_id == "set-4-plus") {
-                                            set_count_4++;
-                                            document.getElementById("set-count-4").innerHTML = set_count_4;
-                                        }
-                                    }
-                                </script>
-                            </div>
-                            <div><button class="add" onclick="">เพิ่มลงตะกร้า</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="card">
-                            <div class="price">
-                                <p>125 บาท</p>
-                            </div>
-                            <img class="pic-set"
-                                src="https://media.discordapp.net/attachments/1029750439866007613/1034127903627149462/kai_don_jai_3.png">
-                            <div class="infomation">
-                                <h2 style="color: rgb(253 165 39);">เซ็ต ไก่กินคนเดียว</h2>
-                                <p>รายละเอียดภายในชุดเซ็ต</p>
-                                <p>• ไก่ทอด 2 ชิ้น</p>
-                                <p>• วิงซ์แซ่บ 3 ชิ้น</p>
-                                <p>• เป๊ปซี่ 1 ขวด</p>
-                            </div>
-                            <div id="set-count-5"></div>
-                            <div class="minus"><button class='glyphicon'
-                                    style="color: rgb(255, 255, 255); font-size: 25px;" onclick="set5minus(this.id)"
-                                    id="set-5-minus">-</button>
-                                <script>
-                                    document.getElementById("set-count-5").innerHTML = 1;
-                                    let set_count_5 = document.getElementById("set-count-5");
-                                    set_count_5 = 1;
-    
-                                    function set5minus(clicked_id) {
-                                        if (clicked_id == "set-5-minus") {
-                                            if (set_count_5 > 1) {
-                                                set_count_5--;
-                                                document.getElementById("set-count-5").innerHTML = set_count_5;
-                                            }
-                                        }
-                                    }
-                                </script>
-                            </div>
-                            <div class="plus"><button class='glyphicon'
-                                    style="color: rgb(255, 255, 255); font-size: 25px;" onclick="set5plus(this.id)"
-                                    id="set-5-plus">+</button>
-                                <script>
-                                    function set5plus(clicked_id) {
-                                        if (clicked_id == "set-5-plus") {
-                                            set_count_5++;
-                                            document.getElementById("set-count-5").innerHTML = set_count_5;
-                                        }
-                                    }
-                                </script>
-                            </div>
-                            <div><button class="add" onclick="">เพิ่มลงตะกร้า</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="card">
-                            <div class="price">
-                                <p>125 บาท</p>
-                            </div>
-                            <img class="pic-set"
-                                src="https://media.discordapp.net/attachments/1029750439866007613/1034127903627149462/kai_don_jai_3.png">
-                            <div class="infomation">
-                                <h2 style="color: rgb(253 165 39);">เซ็ต ไก่กินคนเดียว</h2>
-                                <p>รายละเอียดภายในชุดเซ็ต</p>
-                                <p>• ไก่ทอด 2 ชิ้น</p>
-                                <p>• วิงซ์แซ่บ 3 ชิ้น</p>
-                                <p>• เป๊ปซี่ 1 ขวด</p>
-                            </div>
-                            <div id="set-count-6"></div>
-                            <div class="minus"><button class='glyphicon'
-                                    style="color: rgb(255, 255, 255); font-size: 25px;" onclick="set6minus(this.id)"
-                                    id="set-6-minus">-</button>
-                                <script>
-                                    document.getElementById("set-count-6").innerHTML = 1;
-                                    let set_count_6 = document.getElementById("set-count-6");
-                                    set_count_6 = 1;
-    
-                                    function set6minus(clicked_id) {
-                                        if (clicked_id == "set-6-minus") {
-                                            if (set_count_6 > 1) {
-                                                set_count_6--;
-                                                document.getElementById("set-count-6").innerHTML = set_count_6;
-                                            }
-                                        }
-                                    }
-                                </script>
-                            </div>
-                            <div class="plus"><button class='glyphicon'
-                                    style="color: rgb(255, 255, 255); font-size: 25px;" onclick="set6plus(this.id)"
-                                    id="set-6-plus">+</button>
-                                <script>
-                                    function set6plus(clicked_id) {
-                                        if (clicked_id == "set-6-plus") {
-                                            set_count_6++;
-                                            document.getElementById("set-count-6").innerHTML = set_count_6;
-                                        }
-                                    }
-                                </script>
-                            </div>
-                            <div><button class="add" onclick="">เพิ่มลงตะกร้า</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="card">
-                            <div class="price">
-                                <p>125 บาท</p>
-                            </div>
-                            <img class="pic-set"
-                                src="https://media.discordapp.net/attachments/1029750439866007613/1034127903627149462/kai_don_jai_3.png">
-                            <div class="infomation">
-                                <h2 style="color: rgb(253 165 39);">เซ็ต ไก่กินคนเดียว</h2>
-                                <p>รายละเอียดภายในชุดเซ็ต</p>
-                                <p>• ไก่ทอด 2 ชิ้น</p>
-                                <p>• วิงซ์แซ่บ 3 ชิ้น</p>
-                                <p>• เป๊ปซี่ 1 ขวด</p>
-                            </div>
-                            <div id="set-count-7"></div>
-                            <div class="minus"><button class='glyphicon'
-                                    style="color: rgb(255, 255, 255); font-size: 25px;" onclick="set7minus(this.id)"
-                                    id="set-7-minus">-</button>
-                                <script>
-                                    document.getElementById("set-count-7").innerHTML = 1;
-                                    let set_count_7 = document.getElementById("set-count-7");
-                                    set_count_7 = 1;
-    
-                                    function set7minus(clicked_id) {
-                                        if (clicked_id == "set-7-minus") {
-                                            if (set_count_7 > 1) {
-                                                set_count_7--;
-                                                document.getElementById("set-count-7").innerHTML = set_count_7;
-                                            }
-                                        }
-                                    }
-                                </script>
-                            </div>
-                            <div class="plus"><button class='glyphicon'
-                                    style="color: rgb(255, 255, 255); font-size: 25px;" onclick="set7plus(this.id)"
-                                    id="set-7-plus">+</button>
-                                <script>
-                                    function set7plus(clicked_id) {
-                                        if (clicked_id == "set-7-plus") {
-                                            set_count_7++;
-                                            document.getElementById("set-count-7").innerHTML = set_count_7;
-                                        }
-                                    }
-                                </script>
-                            </div>
-                            <div><button class="add" onclick="">เพิ่มลงตะกร้า</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
         </div>
     </div>
 </body>
+
+
+<script>
+    const updateProduct = (id, type, newAmount) => {
+        $.ajax({
+            type: "POST",
+            url: "./UpdateMenu.php",
+            data: {
+                id: id,
+                type: type,
+                amount: newAmount
+            },
+            error: (result) => {
+                console.log(result)
+            },
+        });
+    }
+
+    const increase = (id, type) => {
+
+        let select = document.querySelector(`#${type}-${id}`)
+
+        let newAmount = parseInt(select.innerText) + 1
+        select.innerText = newAmount
+
+        updateProduct(id, type, newAmount)
+
+
+    }
+
+    const decrease = (id, type) => {
+        let select = document.querySelector(`#${type}-${id}`)
+        let newAmount = parseInt(select.innerText) - 1
+
+        if (newAmount < 0) return
+
+        select.innerText = newAmount
+
+        updateProduct(id, type, newAmount)
+
+
+    }
+
+    const addToCart = (id) => {
+
+        console.log(id)
+
+    }
+</script>
 
 </html>
