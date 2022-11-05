@@ -22,13 +22,15 @@
 </head>
 
 <style>
+     
     .half-top-content {
         position: relative;
+        z-index: -2;
         display: flex;
-        background-image: url('https://img.freepik.com/premium-photo/karaage-japanese-fried-chicken-plate_261158-50.jpg?w=2000');
+        background-image: url('./IMG/menu/chicken/10.jpg');
         background-position: center;
         background-size: cover;
-        left: 180px;
+        left: 10%;
         width: 1600px;
         height: 800px;
     }
@@ -66,16 +68,27 @@
     }
 
     .half-bottom-content {
+        /* border:1px solid black; */
         position: relative; 
-        left: 350px;
-        width: 1300px;
-        height: 600px;
+        width: 90%;
+        left: 6%;
+        height: 140%;
     }
 
     .half-bottom-top-content {
         position: relative;
-        width: 1300px;
-        top: 40px;
+        width: 70%;
+        height: 50%;
+        top: 3%;
+        left: 18%;
+
+    }
+
+    .half-bottom-bottom-content {
+        position: relative;
+        width: 100%;
+        height: 50%;
+        left: 5%;
 
     }
 
@@ -85,6 +98,7 @@
         margin-left: auto;
         margin-right: auto;
     }
+
 
     .card {
         text-align: center;
@@ -119,6 +133,22 @@
         right:25;
     }
 
+    .try-now{
+        position: absolute;
+        z-index: 1;
+        width: 65%;
+        left: -15%;
+        top:68%;
+        /* border:1px solid black; */
+    }
+
+    
+.logo-img-bottom {
+    position: absolute;
+    top: -25px;
+    right: -60px;
+    width: 140px;
+}
 </style>
 
 <body>
@@ -126,9 +156,9 @@
         <div class="header-area">
             <div class="header">
                 <img class="logo-img"
-                    src="https://cdn.discordapp.com/attachments/1008922955494989965/1033040544206692372/logo.png">
+                    src="./IMG/logo/logo-img.png">
                 <img class="logo-word"
-                    src="https://cdn.discordapp.com/attachments/1008922955494989965/1033040544605143090/logo-word.png">
+                    src="./IMG/logo/logo-word.png">
                 <div class="bar">
                     <a class="line"></a>
                     <a class="nav" href="Home.php" style="left: 235px; color: rgb(253 165 39);">หน้าหลัก</a>
@@ -138,7 +168,7 @@
                 <div class="bar-basket">
                     <a class="basket-bg"></a>
                     <img class="logo-basket"
-                        src="https://cdn.discordapp.com/attachments/1008922955494989965/1033047007151013888/logo-basket.png">
+                        src="./IMG/logo/logo-basket.png">
                     <a class="nav" href="Purchase.php" style="right: 95px; color: white;">ออเดอร์ของคุณ</a>
                     <a class="basket-num">
                         <p style="color: white;">55</p>
@@ -157,6 +187,8 @@
                         </div>
                     </div>
                 </div>
+                <img class="logo-user" href="User.html"
+                    src="./IMG/logo/logo-user.png">
                 <a href="SignIn.php"><img class="logo-user" href="User.html"
                     src="https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png"></a>
             </div>
@@ -167,9 +199,9 @@
             <div class="half-top-content">
                 <div class="half-top-left-content">
                     <img class="logo-img-content"
-                        src="https://cdn.discordapp.com/attachments/1008922955494989965/1033040544206692372/logo.png">
+                        src="./IMG/logo/logo-img.png">
                     <img class="logo-word-content"
-                        src="https://cdn.discordapp.com/attachments/1008922955494989965/1033040544605143090/logo-word.png">
+                        src="./IMG/logo/logo-word.png">
                     <div class="slogan">
                         <p>ยืนหนึ่งเรื่องความกรอบ</p>
                         <p>สะอาด ปลอดภัย น่าไว้ใจ</p>
@@ -188,17 +220,17 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img class="d-block"
-                                src="https://img.freepik.com/premium-photo/karaage-japanese-fried-chicken-plate_261158-50.jpg?w=2000"
+                                src="./IMG/menu/chicken/11.jpg"
                                 alt="First slide">
                         </div>
                         <div class="carousel-item">
                             <img class="d-block"
-                                src="https://img.freepik.com/premium-photo/karaage-japanese-fried-chicken-plate_261158-50.jpg?w=2000"
+                                src="./IMG/menu/chicken/12.jpg"
                                 alt="Second slide">
                         </div>
                         <div class="carousel-item">
                             <img class="d-block"
-                                src="https://img.freepik.com/premium-photo/karaage-japanese-fried-chicken-plate_261158-50.jpg?w=2000"
+                                src="./IMG/menu/chicken/13.jpg"
                                 alt="Third slide">
                         </div>
                     </div>
@@ -211,7 +243,7 @@
                 </div>
                 </div>
 
-                <div class="half-bottom-bottom-content">         
+                <div class="half-bottom-bottom-content">  
                 <div class="row" id="listsOfFood">
                     
                     <?php
@@ -237,10 +269,13 @@
                                     if($row['ID'] == 5){
                                         echo "
     <div class='col-md-4'>
-      <div class='card' style='width: 100%;'>
+      <div class='card' style='width:70%;'>
+      <img class='logo-img-bottom'
+                        src='./IMG/logo/logo-img.png'>
       <a href='Menu.php'>
       <img src='{$row['IMG']}'class='card-img-top'>
-      </a>
+      <img class='try-now' src='./IMG/logo/try-now.png'>  
+      </a>  
           <div class='card-body'>
               <h3 class='card-title'>{$row['NAME']}</h3>
               <h6 class='card-subtitle mb-2 text-muted'>{$row['PRICE']} บาท</h6>
@@ -265,14 +300,17 @@
                                 }
 
                                 // Query process 
-                                $ret = $db->query("SELECT * from burger");
+                                $ret = $db->query("SELECT * from Promotion");
                                 while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-                                    if($row['ID'] == 15){
+                                    if($row['ID'] == 41){
 echo "<div class='col-md-4'>
-      <div class='card' style='width: 100%;'>
-      <a href='Menu.php'>
+      <div class='card' style='width: 70%;'>
+      <img class='logo-img-bottom'
+                        src='./IMG/logo/logo-img.png'>
+      <a href='Promotion.php #burger'>   
       <img src='{$row['IMG']}'class='card-img-top'>
       </a>
+      <img class='try-now' src='./IMG/logo/try-now.png'>  
           
           <div class='card-body'>
               <h3 class='card-title'>{$row['NAME']}</h3>
@@ -297,16 +335,18 @@ echo "<div class='col-md-4'>
                                 }
 
                                 // Query process 
-                                $ret = $db->query("SELECT * from rice");
+                                $ret = $db->query("SELECT * from Promotion");
                                 while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-                                    if($row['ID'] == 21){
+                                    if($row['ID'] == 36){
                                         echo "<div class='col-md-4'>
-      <div class='card' style='width: 100%;'>
-          
-              <a href='Menu.php'>
+      <div class='card' style='width: 70%;'>
+      <img class='logo-img-bottom'
+                        src='./IMG/logo/logo-img.png'>
+              <a href='Promotion.php'>
               <img src='{$row['IMG']}'
               class='card-img-top'>
               </a>
+              <img class='try-now' src='./IMG/logo/try-now.png'>  
           <div class='card-body'>
               <h3 class='card-title'>{$row['NAME']}</h3>
               <h6 class='card-subtitle mb-2 text-muted'>{$row['PRICE']} บาท</h6>

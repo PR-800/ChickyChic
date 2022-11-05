@@ -198,7 +198,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="burger" role="tabpanel" aria-labelledby="burger-tab">
+                <div name="burger" class="tab-pane fade" id="burger" role="tabpanel" aria-labelledby="burger-tab">
                 <div class="burger-page page">
                         <div class="container mx-auto mt-4">
                             <div class="row" id="listBurgers">
