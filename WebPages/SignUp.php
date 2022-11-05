@@ -99,7 +99,7 @@
                             <img class = "kaitae" src="https://cdn.discordapp.com/attachments/969070208729899008/1038387053802557460/kaitae.png" alt="brand">
                         </div>
                         <div class="btnAndlabel">
-                            <button class="button" name="checkData">สร้างบัญชีผู้ใช้</button>
+                            <button class="button" name="createData">สร้างบัญชีผู้ใช้</button>
                             <label class="label">เป็นสมาชิกอยู่แล้ว ? <a href = "signIn.php">เข้าสู่ระบบ</a>เลย</label>
                         </div>
                     </div>

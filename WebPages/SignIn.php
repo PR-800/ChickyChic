@@ -123,19 +123,18 @@
             $checkLast = false;
             while($row = $allData->fetchArray(SQLITE3_ASSOC)){
                 if((($userName === $row['UserName']) || ($userName === $row['Email'])) && ($password === $row['Password'])){
-                    $checkLast = true;
-                    header("Location: profile.php"); //test(link to home page)////////////////////
-                    exit();
+                    echo "<script type='text/javascript'>";
+                        echo "window.location='Home.php'";
+                    echo "</script>";
                 }
             }
-            if ($checkLast == false){
-                echo "<script>";
+            // if ($checkLast == false){
+            //     echo "<script>";
                 
-                echo "</script>";
-            }
+            //     echo "</script>";
+            // }
             $db->close();
         }
-        
     ?>
 </body>
 
