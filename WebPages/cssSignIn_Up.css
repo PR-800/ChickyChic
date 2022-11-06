@@ -24,17 +24,20 @@
 
 .modal-header{
     padding: 0;
+    margin-bottom: 10px;
     border: none;
+}
+.modal-title{
+    font-size:xx-large;
 }
 
 .modal-content{
-    /* width: 80%; */
-    width: 100%;
+    width: 900px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;;
 }
 
 .modal-body{
     padding: 0;
-    /* margin-bottom: 41%; */
 }
 
 .form-control{
@@ -73,7 +76,7 @@ h1{
 }
 
 .md-form{
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 label{
@@ -84,8 +87,9 @@ label{
 .inRight{
     position: relative;
     top: 50%;
+    left: 2%;
     transform: translateY(-50%);
-    width: 100%;
+    width:100%;
     height: 100%;
     background-color: #FEA628;
     border-bottom-right-radius: 5px;
@@ -178,6 +182,7 @@ label{
         height: fit-content;
     }
     .inRight{
+        left: 1.2%;
         position: relative;
         border-top-right-radius: 0px;
         border-bottom-left-radius: 5px;
@@ -200,6 +205,7 @@ label{
         top: 90%;
         margin-top: 5px;
         top: 75%;
+        width: 120px;
     }
     label{
         font-size: small;
