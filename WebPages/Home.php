@@ -80,7 +80,7 @@
         width: 70%;
         height: 50%;
         top: 3%;
-        left: 18%;
+        left: 15%;
 
     }
 
@@ -137,15 +137,15 @@
         position: absolute;
         z-index: 1;
         width: 65%;
-        left: -15%;
-        top:68%;
+        left: -22%;
+        top:-18%;
         /* border:1px solid black; */
     }
 
     
 .logo-img-bottom {
     position: absolute;
-    top: -25px;
+    bottom:0%;
     right: -60px;
     width: 140px;
 }
@@ -309,9 +309,9 @@ echo "<div class='col-md-4'>
                         src='./IMG/logo/logo-img.png'>
       <a href='Promotion.php #burger'>   
       <img src='{$row['IMG']}'class='card-img-top'>
-      </a>
       <img class='try-now' src='./IMG/logo/try-now.png'>  
-          
+      </a>
+     
           <div class='card-body'>
               <h3 class='card-title'>{$row['NAME']}</h3>
               <h6 class='card-subtitle mb-2 text-muted'>{$row['PRICE']} บาท</h6>
@@ -337,7 +337,7 @@ echo "<div class='col-md-4'>
                                 // Query process 
                                 $ret = $db->query("SELECT * from Promotion");
                                 while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-                                    if($row['ID'] == 36){
+                                    if($row['ID'] == 37){
                                         echo "<div class='col-md-4'>
       <div class='card' style='width: 70%;'>
       <img class='logo-img-bottom'
@@ -345,8 +345,9 @@ echo "<div class='col-md-4'>
               <a href='Promotion.php'>
               <img src='{$row['IMG']}'
               class='card-img-top'>
-              </a>
               <img class='try-now' src='./IMG/logo/try-now.png'>  
+              </a>
+              
           <div class='card-body'>
               <h3 class='card-title'>{$row['NAME']}</h3>
               <h6 class='card-subtitle mb-2 text-muted'>{$row['PRICE']} บาท</h6>
