@@ -59,11 +59,16 @@
     color: rgb(136, 136, 136);
 }
 
-.logo-user {
+#logo-user {
     position: absolute;
     top: 25px;
     right: 15px;
     width: 33px;
+}
+
+.dropdown-menu{
+    position: fixed;
+    z-index: 10;
 }
 
 .logo-basket {
@@ -135,4 +140,8 @@
     background-color: rgb(253 165 39);
     border: none;
     border-radius: 12px;
+}
+
+#total{
+    z-index: -1;
 }

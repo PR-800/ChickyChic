@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register SignUp</title>
+    <title>Register SignIn</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link href="css/bootstrap.css" rel="stylesheet" media="all">
 
     <link rel="stylesheet" href="cssSignIn_Up.css">
+    <link rel="stylesheet" href="Home.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container-fluid">
+<div class="container-fluid">
         <div class="header-area">
             <div class="header">
                 <img class="logo-img"
@@ -42,7 +46,7 @@
                 <div class="bar-dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                    <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-menu">
                         <a class="dropdown-item" href="Home.php" style="color: rgb(253 165 39);">หน้าหลัก</a>
                         <a class="dropdown-item" href="Menu.php">เมนู</a>
                         <a class="dropdown-item" href="Promotion.php">โปรโมชั่น</a>
@@ -52,8 +56,15 @@
                         </div>
                     </div>
                 </div>
-                <a href="SignIn.php"><img class="logo-user" href="User.html"
-                    src="https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png"></a>
+                <div class="dropdown">
+                    <img src = "https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png" 
+                        aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" type="button" id="logo-user" class="dropdown-toggle" id="logo-user">
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="SignIn.php">Sign in</a>
+                        <a class="dropdown-item" href="SignUp.php">Sign up</a>
+                        <a class="dropdown-item" href="Profile.php">Profile</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -100,7 +111,7 @@
                         </div>
                         <div class="btnAndlabel">
                             <button class="button" name="createData">สร้างบัญชีผู้ใช้</button>
-                            <label class="label">เป็นสมาชิกอยู่แล้ว ? <a href = "signIn.php">เข้าสู่ระบบ</a>เลย</label>
+                            <label class="label">เป็นสมาชิกอยู่แล้ว ?<a href = "signIn.php">เข้าสู่ระบบ</a>เลย</label>
                         </div>
                     </div>
                 </div>
