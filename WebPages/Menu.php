@@ -26,6 +26,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js" integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <style>
+        body {
+            background: url('https://www.kfc.co.th/Content/OnlineOrderingImages/Shared/bg.jpg');
+        }
         .card {
             text-align: center;
             align-items: center;
@@ -119,7 +122,7 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <img src = "https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png" 
+                    <img src = "https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png"
                         aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" type="button" class="dropdown-toggle" id="logo-user">
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="SignIn.php">Sign in</a>
@@ -138,7 +141,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="burger-tab" data-toggle="tab" href="#burger" role="tab" aria-controls="menu" aria-selected="false">เบอร์เกอร์</a>
-                    </li>                    
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" id="rice-tab" data-toggle="tab" href="#rice" role="tab" aria-controls="menu" aria-selected="false">ข้าว</a>
                     </li>
@@ -157,7 +160,7 @@
                         <div class="container mx-auto mt-4">
                             <div class="row" id="listChickens">
                                 <?php
-                                // Connect to Database 
+                                // Connect to Database
                                 class MyDB extends SQLite3
                                 {
                                     function __construct()
@@ -166,14 +169,14 @@
                                     }
                                 }
 
-                                // Open Database 
+                                // Open Database
                                 $db = new MyDB();
                                 if (!$db) {
                                     echo $db->lastErrorMsg();
                                     return;
                                 }
 
-                                // Query process 
+                                // Query process
                                 $ret = $db->query("SELECT * from chicken");
                                 while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
                                     echo "<div class='col-md-4'>
@@ -210,14 +213,14 @@
                         <div class="container mx-auto mt-4">
                             <div class="row" id="listBurgers">
                                 <?php
-                                // Open Database 
+                                // Open Database
                                 $db = new MyDB();
                                 if (!$db) {
                                     echo $db->lastErrorMsg();
                                     return;
                                 }
 
-                                // Query process 
+                                // Query process
                                 $ret = $db->query("SELECT * from burger");
                                 while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
                                     echo "<div class='col-md-4'>
@@ -255,14 +258,14 @@
                         <div class="container mx-auto mt-4">
                             <div class="row" id="listRice">
                                 <?php
-                                // Open Database 
+                                // Open Database
                                 $db = new MyDB();
                                 if (!$db) {
                                     echo $db->lastErrorMsg();
                                     return;
                                 }
 
-                                // Query process 
+                                // Query process
                                 $ret = $db->query("SELECT * from rice");
                                 while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
                                     echo "<div class='col-md-4'>
@@ -294,20 +297,20 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="tab-pane fade" id="salad" role="tabpanel" aria-labelledby="salad-tab">
                 <div class="salad-page page">
                         <div class="container mx-auto mt-4">
                             <div class="row" id="listSalads">
                                 <?php
-                                // Open Database 
+                                // Open Database
                                 $db = new MyDB();
                                 if (!$db) {
                                     echo $db->lastErrorMsg();
                                     return;
                                 }
 
-                                // Query process 
+                                // Query process
                                 $ret = $db->query("SELECT * from salad");
                                 while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
                                     echo "<div class='col-md-4'>
@@ -337,21 +340,21 @@
                                 ?>
                             </div>
                         </div>
-                    </div>    
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="drink" role="tabpanel" aria-labelledby="drink-tab">
                 <div class="drink-page page">
                         <div class="container mx-auto mt-4">
                             <div class="row" id="listDrinks">
                                 <?php
-                                // Open Database 
+                                // Open Database
                                 $db = new MyDB();
                                 if (!$db) {
                                     echo $db->lastErrorMsg();
                                     return;
                                 }
 
-                                // Query process 
+                                // Query process
                                 $ret = $db->query("SELECT * from drink");
                                 while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
                                     echo "<div class='col-md-4'>
