@@ -22,6 +22,11 @@
 </head>
 
 <style>
+
+body {
+        background: url('https://www.kfc.co.th/Content/OnlineOrderingImages/Shared/bg.jpg');
+    }
+
      
     .half-top-content {
         position: relative;
