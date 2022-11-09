@@ -58,8 +58,15 @@
                         </div>
                     </div>
                 </div>
-                <a href="SignIn.php"><img class="logo-user" href="User.html"
-                    src="https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png"></a>
+                <div class="dropdown">
+                    <img src = "https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png" 
+                        aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" type="button" id="logo-user" class="dropdown-toggle" id="logo-user">
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="SignIn.php">Sign in</a>
+                        <a class="dropdown-item" href="SignUp.php">Sign up</a>
+                        <a class="dropdown-item" href="Profile.php">Profile</a>
+                    </div>
+                </div>
             </div>
         </div>
 

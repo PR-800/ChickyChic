@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Profile</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -14,6 +14,7 @@
     <link href="css/bootstrap.css" rel="stylesheet" media="all">
 
     <link rel="stylesheet" href="cssProfile.css">
+    <link rel="stylesheet" href="Home.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,13 +56,20 @@
                         </div>
                     </div>
                 </div>
-                <a href="SignIn.php"><img class="logo-user" href="User.html"
-                    src="https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png"></a>
+                <div class="dropdown">
+                    <img src = "https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png" 
+                        aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" type="button" class="dropdown-toggle" id="logo-user">
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="SignIn.php">Sign in</a>
+                        <a class="dropdown-item" href="SignUp.php">Sign up</a>
+                        <a class="dropdown-item" href="Profile.php">Profile</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="modal-dialog modal-md">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title">ข้อมูลผู้ใช้</h1>

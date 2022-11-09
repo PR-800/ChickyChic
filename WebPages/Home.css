@@ -11,16 +11,18 @@
 .header-area {
     padding-top: 10px;
     padding-bottom: 10px;
+
 }
 
 .header {
     width: 94%;
     height: 80px;
     position: relative;
-    background-color: white;
-    top: 4%;
+    background-color: rgb(254, 254, 254, 70%);
+    top: 10%;
     left: 50%;
     transform: translate(-50%, 0%);
+    border-radius: 20px;
 }
 
 .logo-img {
@@ -59,11 +61,16 @@
     color: rgb(136, 136, 136);
 }
 
-.logo-user {
+#logo-user {
     position: absolute;
     top: 25px;
     right: 15px;
     width: 33px;
+}
+
+.dropdown-menu{
+    position: fixed;
+    z-index: 10;
 }
 
 .logo-basket {
@@ -135,4 +142,8 @@
     background-color: rgb(253 165 39);
     border: none;
     border-radius: 12px;
+}
+
+#total{
+    z-index: -1;
 }
