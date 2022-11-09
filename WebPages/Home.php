@@ -275,8 +275,6 @@ body {
                                         echo "
     <div class='col-md-4'>
       <div class='card' style='width:70%;'>
-      <img class='logo-img-bottom'
-                        src='./IMG/logo/logo-img.png'>
       <a href='Menu.php'>
       <img src='{$row['IMG']}'class='card-img-top'>
       <img class='try-now' src='./IMG/logo/try-now.png'>  
@@ -310,8 +308,6 @@ body {
                                     if($row['ID'] == 41){
 echo "<div class='col-md-4'>
       <div class='card' style='width: 70%;'>
-      <img class='logo-img-bottom'
-                        src='./IMG/logo/logo-img.png'>
       <a href='Promotion.php #burger'>   
       <img src='{$row['IMG']}'class='card-img-top'>
       <img class='try-now' src='./IMG/logo/try-now.png'>  
@@ -345,8 +341,6 @@ echo "<div class='col-md-4'>
                                     if($row['ID'] == 37){
                                         echo "<div class='col-md-4'>
       <div class='card' style='width: 70%;'>
-      <img class='logo-img-bottom'
-                        src='./IMG/logo/logo-img.png'>
               <a href='Promotion.php'>
               <img src='{$row['IMG']}'
               class='card-img-top'>

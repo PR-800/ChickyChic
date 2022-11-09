@@ -60,7 +60,7 @@
     color: rgb(136, 136, 136);
 }
 
-.logo-user {
+#logo-user {
     position: absolute;
     top: 25px;
     right: 15px;
