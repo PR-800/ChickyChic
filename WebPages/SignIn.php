@@ -15,7 +15,6 @@
     <link href="css/bootstrap.css" rel="stylesheet" media="all">
 
     <link rel="stylesheet" href="cssSignIn_Up.css">
-    <link rel="stylesheet" href="Home.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,15 +57,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="dropdown">
-                    <img src = "https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png" 
-                        aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" type="button" id="logo-user" class="dropdown-toggle" id="logo-user">
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="SignIn.php">Sign in</a>
-                        <a class="dropdown-item" href="SignUp.php">Sign up</a>
-                        <a class="dropdown-item" href="Profile.php">Profile</a>
-                    </div>
-                </div>
+                <a href="SignIn.php"><img class="logo-user" href="User.html"
+                    src="https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png"></a>
             </div>
         </div>
     </div>
@@ -81,7 +73,7 @@
                             <h1 class="modal-title">ลงชื่อเข้าใช้</h1>
                         </div>
         
-                        <div class="modal-body"> 
+                        <div class="modal-body">
                             <div class="md-form">
                                 <label>ชื่อผู้ใช้ / อีเมลล์</label><br>
                                 <input type="text" class="form-control" name="userName">
@@ -132,14 +124,16 @@
             $checkLast = false;
             while($row = $allData->fetchArray(SQLITE3_ASSOC)){
                 if((($userName === $row['UserName']) || ($userName === $row['Email'])) && ($password === $row['Password'])){
-                    $checkLast = true;
                     echo "<script type='text/javascript'>";
                         echo "window.location='Home.php'";
                     echo "</script>";
-                    break;
                 }
             }
-            
+            // if ($checkLast == false){
+            //     echo "<script>";
+                
+            //     echo "</script>";
+            // }
             $db->close();
         }
     ?>

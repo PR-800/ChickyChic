@@ -22,10 +22,7 @@
 </head>
 
 <style>
-    body {
-        background: url('https://www.kfc.co.th/Content/OnlineOrderingImages/Shared/bg.jpg');
-    }
-
+     
     .half-top-content {
         position: relative;
         z-index: -2;
@@ -72,7 +69,7 @@
 
     .half-bottom-content {
         /* border:1px solid black; */
-        position: relative;
+        position: relative; 
         width: 90%;
         left: 6%;
         height: 140%;
@@ -145,7 +142,7 @@
         /* border:1px solid black; */
     }
 
-
+    
 .logo-img-bottom {
     position: absolute;
     bottom:0%;
@@ -190,15 +187,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="dropdown">
-                    <img src = "https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png"
-                        aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" type="button" class="dropdown-toggle" id="logo-user">
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="SignIn.php">Sign in</a>
-                        <a class="dropdown-item" href="SignUp.php">Sign up</a>
-                        <a class="dropdown-item" href="Profile.php">Profile</a>
-                    </div>
-                </div>
+                <img class="logo-user" href="User.html"
+                    src="./IMG/logo/logo-user.png">
+                <a href="SignIn.php"><img class="logo-user" href="User.html"
+                    src="https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png"></a>
             </div>
         </div>
 
@@ -251,11 +243,11 @@
                 </div>
                 </div>
 
-                <div class="half-bottom-bottom-content">
+                <div class="half-bottom-bottom-content">  
                 <div class="row" id="listsOfFood">
-
+                    
                     <?php
-                                // Connect to Database
+                                // Connect to Database 
                                 class MyDB extends SQLite3
                                 {
                                     function __construct()
@@ -264,14 +256,14 @@
                                     }
                                 }
 
-                                // Open Database
+                                // Open Database 
                                 $db = new MyDB();
                                 if (!$db) {
                                     echo $db->lastErrorMsg();
                                     return;
                                 }
 
-                                // Query process
+                                // Query process 
                                 $ret = $db->query("SELECT * from chicken");
                                 while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
                                     if($row['ID'] == 5){
@@ -282,8 +274,8 @@
                         src='./IMG/logo/logo-img.png'>
       <a href='Menu.php'>
       <img src='{$row['IMG']}'class='card-img-top'>
-      <img class='try-now' src='./IMG/logo/try-now.png'>
-      </a>
+      <img class='try-now' src='./IMG/logo/try-now.png'>  
+      </a>  
           <div class='card-body'>
               <h3 class='card-title'>{$row['NAME']}</h3>
               <h6 class='card-subtitle mb-2 text-muted'>{$row['PRICE']} บาท</h6>
@@ -291,7 +283,7 @@
               </div><br>
           </div>
       </div>
-      </div>";
+      </div>";                              
     }
 }
                                 // Close database
@@ -300,14 +292,14 @@
 
 
                     <?php
-                                // Open Database
+                                // Open Database 
                                 $db = new MyDB();
                                 if (!$db) {
                                     echo $db->lastErrorMsg();
                                     return;
                                 }
 
-                                // Query process
+                                // Query process 
                                 $ret = $db->query("SELECT * from Promotion");
                                 while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
                                     if($row['ID'] == 41){
@@ -315,11 +307,11 @@ echo "<div class='col-md-4'>
       <div class='card' style='width: 70%;'>
       <img class='logo-img-bottom'
                         src='./IMG/logo/logo-img.png'>
-      <a href='Promotion.php #burger'>
+      <a href='Promotion.php #burger'>   
       <img src='{$row['IMG']}'class='card-img-top'>
-      <img class='try-now' src='./IMG/logo/try-now.png'>
+      <img class='try-now' src='./IMG/logo/try-now.png'>  
       </a>
-
+     
           <div class='card-body'>
               <h3 class='card-title'>{$row['NAME']}</h3>
               <h6 class='card-subtitle mb-2 text-muted'>{$row['PRICE']} บาท</h6>
@@ -328,21 +320,21 @@ echo "<div class='col-md-4'>
           </div>
       </div>
   </div>";
-                                    }
+                                    }      
 }
                                 // Close database
                                 $db->close();
                                 ?>
 
                     <?php
-                                // Open Database
+                                // Open Database 
                                 $db = new MyDB();
                                 if (!$db) {
                                     echo $db->lastErrorMsg();
                                     return;
                                 }
 
-                                // Query process
+                                // Query process 
                                 $ret = $db->query("SELECT * from Promotion");
                                 while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
                                     if($row['ID'] == 37){
@@ -353,18 +345,18 @@ echo "<div class='col-md-4'>
               <a href='Promotion.php'>
               <img src='{$row['IMG']}'
               class='card-img-top'>
-              <img class='try-now' src='./IMG/logo/try-now.png'>
+              <img class='try-now' src='./IMG/logo/try-now.png'>  
               </a>
-
+              
           <div class='card-body'>
               <h3 class='card-title'>{$row['NAME']}</h3>
               <h6 class='card-subtitle mb-2 text-muted'>{$row['PRICE']} บาท</h6>
               <div><br>
-              </div><br>
+              </div><br>    
           </div>
       </div>
   </div>";
-                                    }
+                                    }       
 }
                                 // Close database
                                 $db->close();
