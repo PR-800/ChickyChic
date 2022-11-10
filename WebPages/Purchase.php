@@ -33,6 +33,12 @@
             align-items: center;
             text-align: center;
         }
+        .logo-user {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    width: 33px;
+}
     </style>
 
 </head>

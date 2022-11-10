@@ -88,6 +88,13 @@ body {
         h3 {
             font-size: 25px;
         }
+
+        .logo-user {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    width: 33px;
+}
     </style>
 </head>
 

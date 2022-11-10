@@ -154,6 +154,13 @@ body {
     right: -60px;
     width: 140px;
 }
+
+.logo-user {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    width: 33px;
+}
 </style>
 
 <body>
@@ -192,8 +199,6 @@ body {
                         </div>
                     </div>
                 </div>
-                <img class="logo-user" href="User.html"
-                    src="./IMG/logo/logo-user.png">
                 <a href="SignIn.php"><img class="logo-user" href="User.html"
                     src="https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png"></a>
             </div>
