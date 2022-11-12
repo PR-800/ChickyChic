@@ -134,10 +134,51 @@
             color: rgb(253 165 39);
             margin-bottom: 2%;
         }
-        .col {
-            align-items: center;
-            text-align: center;
+
+        .table {
+            font-size: 30px;
         }
+
+        .row {
+            font-size: 30px;
+            position: relative;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 90%;
+        }
+
+        .table th, .table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .order-card {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            background-color: white;
+        }
+        .input-group .text {
+            font-size: 30px;
+        }
+
+        .butt {
+            background-color: rgb(253 165 39);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            font-size: 25px;
+            vertical-align: middle;
+            align-items: center;
+        }
+
+        .butt:focus {
+            border: none;
+        }
+
     </style>
 
 </head>
@@ -175,58 +216,72 @@
         </div>
 
         <?php
-            class SelectMenu extends SQLite3{
+            class MyDB extends SQLite3{
                 function __construct(){
-                    $this->open('selectMenu.db');
+                    $this->open('../Database/selectMenu.db');
                 }
             }
 
-            $db = new SelectMenu();
+            $db = new MyDB();
             if(!$db){
                 echo $db->lastErrorMsg();
             }
         ?>
 
         <div class="row">
-            <div class="col">
+            <div class="col-md-9">
                 <table class="table">
                     <tr>
-                        <th style="width:70%;">รายการ</th>
-                        <th>จำนวน</th>
-                        <th>ราคา</th>
+                        <th style="width:20%;">รายการ</th>
+                        <th style="width:40%;"></th>
+                        <th style="width:15%;">จำนวน</th>
+                        <th style="width:15%;">ราคา</th>
+                        <th style="width:10%;"></th>
                     </tr>
                     <?php
-                        // $sql ="SELECT * from selectMenu";
-                        // $ret = $db->query($sql);
-                        // while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
-                        //     echo "<tr>";
-                        //     echo "<td>" . $row['Image'] . "</td>" . $row['Menu'] . "</td>";
-                        //     echo "<td>" . $row['Number'] . "</td>";
-                        //     echo "<td>" . (+$row['Price'])*(+$row['Number']) . "</td>";
-                        //     echo "</tr>";
-                        // }
+                        $sql ="SELECT * from selectMenu";
+                        $ret = $db->query($sql);
+                        while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
+                            echo "<tr>";
+                            echo "<td>" . "<img src='" . $row['IMG'] . "' width='100%'></td>";
+                            echo "<td style='text-align: left;'>" .$row['NAME'] . "</td>";
+                            echo "<td>" . $row['AMOUNT'] . "</td>";
+                            echo "<td>" . (+$row['PRICE'])*(+$row['AMOUNT']) . "</td>";
+                            echo "<td></td>";
+                            echo "</tr>";
+                        }
                     ?>
                 </table>
             </div>
-            <div class="col d-flex justify-content-center">
-                <div class="card text-center" style="width: 15rem;">
+            <div class="col-md-3 d-flex justify-content-center">
+                <div class="pay card text-center" style="padding: 1rem; width: 25rem; height: 22rem;">
                     <div class="card-body">
                         <p class="card-text">
                             <span style="float: left;">ค่าอาหาร</span>
-                            <span style="float: right;">0 บาท</span><br>
+                            <span style="float: right;">
+                            <?php
+                                $sql ="SELECT * from selectMenu";
+                                $ret = $db->query($sql);
+                                $total = 0;
+                                while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
+                                    +$total += +$row['PRICE'];
+                                }
+                                echo $total;
+                            ?> บาท</span><br>
                             <span style="float: left;">ค่าจัดส่ง</span>
                             <span style="float: right;">0 บาท</span><br><br>
                             <b><span style="float: left;">ยอดรวม</span>
                             <span style="float: right;">0 บาท</span><br></b>
                         </p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderConfirm">ดำเนินการต่อ</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderConfirm"
+                            style="font-size: 30px; border-radius: 30px;">ดำเนินการต่อ</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="modal fade" id="orderConfirm" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-dialog modal-dialog-centered" role="document" style="font-size: 30px;">
                 <div class="modal-content">
                     <div class="modal-body">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
