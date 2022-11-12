@@ -5,7 +5,7 @@
    {
        function __construct()
        {
-           $this->open('./currentMenu.db');
+           $this->open('../Database/currentMenu.db');
        }
    }
 
@@ -18,12 +18,7 @@
    if(!$id || !$type || !$amount || !$amount < 0) echo new Error("มีบางอย่างผิดพลาดโปรดกินไก่ 1 ชิ้น");
 
    $sql =<<<EOF
-   UPDATE chicken set AMOUNT = $amount where ID=$id;
-   UPDATE burger set AMOUNT = $amount where ID=$id;
-   UPDATE rice set AMOUNT = $amount where ID=$id;
-   UPDATE salad set AMOUNT = $amount where ID=$id;
-   UPDATE drink set AMOUNT = $amount where ID=$id;
-   UPDATE Promotion set AMOUNT = $amount where ID=$id;
+   UPDATE $type set AMOUNT = $amount where ID=$id;
    EOF;
 
    $ret = $db->exec($sql);

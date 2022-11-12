@@ -24,7 +24,7 @@
 <style>
 
 body {
-        background: url('https://www.kfc.co.th/Content/OnlineOrderingImages/Shared/bg.jpg');
+        background: url('../IMG/bg.jpg');
     }
 
      
@@ -32,7 +32,7 @@ body {
         position: relative;
         z-index: -2;
         display: flex;
-        background-image: url('./IMG/menu/chicken/10.jpg');
+        background-image: url('../IMG/menu/chicken/10.jpg');
         background-position: center;
         background-size: cover;
         left: 10%;
@@ -168,19 +168,19 @@ body {
         <div class="header-area">
             <div class="header">
                 <img class="logo-img"
-                    src="./IMG/logo/logo-img.png">
+                    src="../IMG/logo/logo-img.png">
                 <img class="logo-word"
-                    src="./IMG/logo/logo-word.png">
+                    src="../IMG/logo/logo-word.png">
                 <div class="bar">
                     <a class="line"></a>
-                    <a class="nav" href="Home.php" style="left: 235px; color: rgb(253 165 39);">หน้าหลัก</a>
-                    <a class="nav" href="Menu.php" style="left: 320px;">เมนู</a>
-                    <a class="nav" href="Promotion.php" style="left: 380px;">โปรโมชั่น</a>
+                    <a class="nav" href="../Home/Home.php" style="left: 235px; color: rgb(253 165 39);">หน้าหลัก</a>
+                    <a class="nav" href="../Menu/Menu.php" style="left: 320px;">เมนู</a>
+                    <a class="nav" href="../Promotion/Promotion.php" style="left: 380px;">โปรโมชั่น</a>
                 </div>
                 <div class="bar-basket">
                     <a class="basket-bg"></a>
                     <img class="logo-basket"
-                        src="./IMG/logo/logo-basket.png">
+                        src="../IMG/logo/logo-basket.png">
                     <a class="nav" href="Purchase.php" style="right: 95px; color: white;">ออเดอร์ของคุณ</a>
                     <a class="basket-num">
                         <p style="color: white;">55</p>
@@ -190,16 +190,16 @@ body {
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                     <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="Home.php" style="color: rgb(253 165 39);">หน้าหลัก</a>
-                        <a class="dropdown-item" href="Menu.php">เมนู</a>
-                        <a class="dropdown-item" href="Promotion.php">โปรโมชั่น</a>
+                        <a class="dropdown-item" href="../Home/Home.php" style="color: rgb(253 165 39);">หน้าหลัก</a>
+                        <a class="dropdown-item" href="../Menu/Menu.php">เมนู</a>
+                        <a class="dropdown-item" href="../Promotion/Promotion.php">โปรโมชั่น</a>
                         <div class="bar-dropdown-plus">
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="Purchase.php">ออเดอร์ของคุณ</a>
                         </div>
                     </div>
                 </div>
-                <a href="SignIn.php"><img class="logo-user" href="User.html"
+                <a href="SignIn.php"><img class="logo-user"
                     src="https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png"></a>
             </div>
         </div>
@@ -209,9 +209,9 @@ body {
             <div class="half-top-content">
                 <div class="half-top-left-content">
                     <img class="logo-img-content"
-                        src="./IMG/logo/logo-img.png">
+                        src="../IMG/logo/logo-img.png">
                     <img class="logo-word-content"
-                        src="./IMG/logo/logo-word.png">
+                        src="../IMG/logo/logo-word.png">
                     <div class="slogan">
                         <p>ยืนหนึ่งเรื่องความกรอบ</p>
                         <p>สะอาด ปลอดภัย น่าไว้ใจ</p>
@@ -230,17 +230,17 @@ body {
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img class="d-block"
-                                src="./IMG/menu/chicken/11.jpg"
+                                src="../IMG/menu/chicken/11.jpg"
                                 alt="First slide">
                         </div>
                         <div class="carousel-item">
                             <img class="d-block"
-                                src="./IMG/menu/chicken/12.jpg"
+                                src="../IMG/menu/chicken/12.jpg"
                                 alt="Second slide">
                         </div>
                         <div class="carousel-item">
                             <img class="d-block"
-                                src="./IMG/menu/chicken/13.jpg"
+                                src="../IMG/menu/chicken/13.jpg"
                                 alt="Third slide">
                         </div>
                     </div>
@@ -262,7 +262,7 @@ body {
                                 {
                                     function __construct()
                                     {
-                                        $this->open('./currentMenu.db');
+                                        $this->open('../Database/currentMenu.db');
                                     }
                                 }
 
@@ -280,9 +280,9 @@ body {
                                         echo "
     <div class='col-md-4'>
       <div class='card' style='width:70%;'>
-      <a href='Menu.php'>
+      <a href='../Menu/Menu.php'>
       <img src='{$row['IMG']}'class='card-img-top'>
-      <img class='try-now' src='./IMG/logo/try-now.png'>  
+      <img class='try-now' src='../IMG/logo/try-now.png'>  
       </a>  
           <div class='card-body'>
               <h3 class='card-title'>{$row['NAME']}</h3>
@@ -313,9 +313,9 @@ body {
                                     if($row['ID'] == 41){
 echo "<div class='col-md-4'>
       <div class='card' style='width: 70%;'>
-      <a href='Promotion.php #burger'>   
+      <a href='../Promotion/Promotion.php #burger'>   
       <img src='{$row['IMG']}'class='card-img-top'>
-      <img class='try-now' src='./IMG/logo/try-now.png'>  
+      <img class='try-now' src='../IMG/logo/try-now.png'>  
       </a>
      
           <div class='card-body'>
@@ -346,10 +346,10 @@ echo "<div class='col-md-4'>
                                     if($row['ID'] == 37){
                                         echo "<div class='col-md-4'>
       <div class='card' style='width: 70%;'>
-              <a href='Promotion.php'>
+              <a href='../Promotion/Promotion.php'>
               <img src='{$row['IMG']}'
               class='card-img-top'>
-              <img class='try-now' src='./IMG/logo/try-now.png'>  
+              <img class='try-now' src='../IMG/logo/try-now.png'>  
               </a>
               
           <div class='card-body'>
