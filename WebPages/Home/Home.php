@@ -57,7 +57,7 @@
 
     .logo-img {
         position: absolute;
-        top: 6px;
+        top: 15px;
         left: 25px;
         width: 110px;
     }

@@ -36,7 +36,7 @@
 
         .header-area {
             padding-top: 10px;
-            padding-bottom: 10px;
+            padding-bottom: 20px;
         }
 
         .header {
@@ -53,7 +53,7 @@
 
         .logo-img {
             position: absolute;
-            top: 6px;
+            top: 15px;
             left: 25px;
             width: 110px;
         }
@@ -153,30 +153,12 @@
             vertical-align: middle;
         }
 
-        .order-card {
-            position: relative;
-            width: 50%;
-            height: 100%;
-            background-color: white;
-        }
-        .input-group .text {
-            font-size: 30px;
-        }
-
-        .butt {
-            background-color: rgb(253 165 39);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 35px;
-            height: 35px;
-            font-size: 25px;
-            vertical-align: middle;
-            align-items: center;
-        }
-
-        .butt:focus {
-            border: none;
+        .pay {
+            padding: 1rem;
+            width: 25rem;
+            height: 22rem;
+            top: 5%;
+            position: sticky;
         }
 
     </style>
@@ -254,7 +236,7 @@
                 </table>
             </div>
             <div class="col-md-3 d-flex justify-content-center">
-                <div class="pay card text-center" style="padding: 1rem; width: 25rem; height: 22rem;">
+                <div class="pay card text-center">
                     <div class="card-body">
                         <p class="card-text">
                             <span style="float: left;">ค่าอาหาร</span>
@@ -269,9 +251,39 @@
                                 echo $total;
                             ?> บาท</span><br>
                             <span style="float: left;">ค่าจัดส่ง</span>
-                            <span style="float: right;">0 บาท</span><br><br>
+                            <span style="float: right;">
+                            <?php
+                                $sql ="SELECT * from selectMenu";
+                                $ret = $db->query($sql);
+                                if (empty($ret)) {
+                                    $ship = 0;
+                                }
+                                else {
+                                    $ship = 25;
+                                }
+                                while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
+                                    +$ship += 5;
+                                }
+                                echo $ship ;
+                            ?> บาท</span><br><br>
                             <b><span style="float: left;">ยอดรวม</span>
-                            <span style="float: right;">0 บาท</span><br></b>
+                            <span style="float: right;">
+                            <?php
+                                $sql ="SELECT * from selectMenu";
+                                $ret = $db->query($sql);
+                                $total = 0;
+                                if (empty($ret)) {
+                                    $ship = 0;
+                                }
+                                else {
+                                    $ship = 25;
+                                }
+                                while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
+                                    +$total += +$row['PRICE'];
+                                    +$ship += 5;
+                                }
+                                echo +$total + +$ship ;
+                            ?> บาท</span><br></b>
                         </p>
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderConfirm"
                             style="font-size: 30px; border-radius: 30px;">ดำเนินการต่อ</button>
