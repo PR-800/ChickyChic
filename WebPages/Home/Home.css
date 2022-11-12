@@ -1,5 +1,12 @@
-* {
+/* home.css */
+
+/* * {
     font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background: url('../IMG/bg.png');
+    background-size: cover;
 }
 
 .container-fluid {
@@ -15,35 +22,36 @@
 
 .header {
     width: 94%;
-    height: 80px;
+    height: 140px;
     position: relative;
     background-color: rgb(254, 254, 254, 70%);
     top: 10%;
     left: 50%;
     transform: translate(-50%, 0%);
     border-radius: 20px;
+    font-size: 30px;
 }
 
 .logo-img {
     position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 70px;
+    top: 6px;
+    left: 25px;
+    width: 110px;
 }
 
 .logo-word {
     position: absolute;
-    top: 15px;
-    left: 95px;
-    width: 80px;
+    top: 30px;
+    left: 175px;
+    width: 130px;
 }
 
 .line {
     position: absolute;
-    top: 15px;
-    left: 200px;
+    top: 20px;
+    left: 330px;
     border-left: 3px solid rgb(253 165 39);
-    height: 50px;
+    height: 100px;
 }
 
 .nav {
@@ -62,78 +70,36 @@
 
 .logo-basket {
     position: absolute;
-    top: 28px;
-    right: 205px;
-    width: 25px;
+    top: 45px;
+    right: 400px;
+    width: 50px;
     filter: brightness(100);
 }
 
 .basket-bg {
     position: absolute;
-    top: 22px;
-    right: 79px;
-    width: 170px;
-    height: 38px;
-    border-radius: 25px;
+    top: 35px;
+    right: 170px;
+    width: 310px;
+    height: 70px;
+    border-radius: 35px;
     background-color: rgb(241 72 34);
 }
 
 .basket-num {
     position: absolute;
-    top: 18px;
-    right: 235px;
-    width: 20px;
-    height: 20px;
+    top: 25px;
+    right: 455px;
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
     background-color: rgb(253 165 39);
     text-align: center;
-    font-size: 13.5px;
-}
-
-@media screen {
-    .bar-dropdown{
-        display: none;
-    }
-}
-@media screen and (max-width: 760px) {
-    .bar , .bar-dropdown-plus{
-        display: none;
-    }
-    .bar-dropdown{
-        right: 270px;
-        z-index: 1;
-        display: block;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    .bar, .bar-basket {
-        display: none;
-    }
-    .bar-dropdown, .bar-dropdown-plus {
-        right: 70px;
-        z-index: 1;
-        display: block;
-    }
-}
-
-.bar-dropdown {
-    position: relative;
-    float: right;
-    top: 26px;
-    z-index: -1;
-}
-
-.bar-dropdown button, .bar-dropdown-plus button{
-    height: 30px;
-    background-color: rgb(253 165 39);
-    border: none;
-    border-radius: 12px;
 }
 
 .logo-user {
     position: absolute;
-    top: 25px;
-    right: 15px;
-    width: 33px;
-}
+    top: 40px;
+    right: 70px;
+    width: 60px;
+} */

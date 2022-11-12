@@ -24,43 +24,141 @@
 
 <body>
     <style>
+        /* home.css */
+        * {
+            font-family: 'Kanit', sans-serif;
+        }
+
         body {
-            background: url('../IMG/bg.jpg');
+            background: url('../IMG/bg.png');
+            background-size: cover;
+        }
+
+        .container-fluid {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .header-area {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .header {
+            width: 94%;
+            height: 140px;
+            position: relative;
+            background-color: rgb(254, 254, 254, 70%);
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            border-radius: 20px;
+            font-size: 30px;
+        }
+
+        .logo-img {
+            position: absolute;
+            top: 6px;
+            left: 25px;
+            width: 110px;
+        }
+
+        .logo-word {
+            position: absolute;
+            top: 30px;
+            left: 175px;
+            width: 130px;
+        }
+
+        .line {
+            position: absolute;
+            top: 20px;
+            left: 330px;
+            border-left: 3px solid rgb(253 165 39);
+            height: 100px;
+        }
+
+        .nav {
+            position: absolute;
+            top: 30px;
+        }
+
+        .nav:link, .nav:visited {
+            color: black;
+            text-decoration: none;
+        }
+
+        .nav:hover {
+            color: rgb(136, 136, 136);
+        }
+
+        .logo-basket {
+            position: absolute;
+            top: 45px;
+            right: 400px;
+            width: 50px;
+            filter: brightness(100);
+        }
+
+        .basket-bg {
+            position: absolute;
+            top: 35px;
+            right: 170px;
+            width: 310px;
+            height: 70px;
+            border-radius: 35px;
+            background-color: rgb(241 72 34);
+        }
+
+        .basket-num {
+            position: absolute;
+            top: 25px;
+            right: 455px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background-color: rgb(253 165 39);
+            text-align: center;
+        }
+
+        .logo-user {
+            position: absolute;
+            top: 40px;
+            right: 70px;
+            width: 60px;
         }
     </style>
-    
+
     <div class="container-fluid">
         <div class="header-area">
             <div class="header">
-                <img class="logo-img" src="../IMG/logo/logo-img.png">
-                <img class="logo-word" src="../IMG/logo/logo-word.png">
+                <a href="../Home/Home.php">
+                    <img class="logo-img"
+                        src="../IMG/logo/logo-img.png">
+                    <img class="logo-word"
+                        src="../IMG/logo/logo-word.png">
+                </a>
                 <div class="bar">
                     <a class="line"></a>
-                    <a class="nav" href="../Home/Home.php" style="left: 235px;">หน้าหลัก</a>
-                    <a class="nav" href="../Menu/Menu.php" style="left: 320px;">เมนู</a>
-                    <a class="nav" href="../Promotion/Promotion.php" style="left: 380px; color: rgb(253 165 39)">โปรโมชั่น</a>
+                    <a class="nav" href="../Home/Home.php" style="top: 50px; left: 380px;">หน้าหลัก</a>
+                    <a class="nav" href="../Menu/Menu.php" style="top: 50px; left: 530px;">เมนู</a>
+                    <a class="nav" href="../Promotion/Promotion.php" style="top: 50px; left: 630px; color: rgb(253 165 39);">โปรโมชั่น</a>
                 </div>
-                <div class="bar-basket">
-                    <a class="basket-bg"></a>
-                    <img class="logo-basket" src="../IMG/logo/logo-basket.png">
-                    <a class="nav" href="Purchase.php" style="right: 95px; color: white;">ออเดอร์ของคุณ</a>
-                    <a class="basket-num">
-                        <p style="color: white;">55</p>
-                    </a>
-                </div>
-                <div class="bar-dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="../Home/Home.html" style="color: rgb(253 165 39);">หน้าหลัก</a>
-                        <a class="dropdown-item" href="../Menu/Menu.php">เมนู</a>
-                        <a class="dropdown-item" href="../Promotion/Promotion.php">โปรโมชั่น</a>
-                        <div class="bar-dropdown-plus">
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="Purchase.php">ออเดอร์ของคุณ</a>
-                        </div>
+                <a href="">
+                    <div class="bar-basket">
+                        <a class="basket-bg"></a>
+                        <img class="logo-basket"
+                            src="../IMG/logo/logo-basket.png">
+                        <a class="nav" style="top: 45px; right: 195px; color: white;">ออเดอร์ของคุณ</a>
+                        <a class="basket-num">
+                            <p style="color: white; font-size: 28px;">55</p>
+                        </a>
+                        <a class="basket-bg" href="../Purchase/Purchase.php" style="background-color: transparent;"></a>
                     </div>
-                </div>
-                <a href="../SignIn.php"><img class="logo-user" src="../IMG/logo/logo-user.png"></a>
+                </a>
+                <a href="../User/SignIn.php"><img class="logo-user"
+                    src="../IMG/logo/logo-user.png"></a>
             </div>
         </div>
 
@@ -69,7 +167,7 @@
 
                 <div class="row">
                     <?php
-                    // Connect to Database 
+                    // Connect to Database
                     class MyDB extends SQLite3
                     {
                         function __construct()
@@ -77,14 +175,14 @@
                             $this->open('../Database/currentMenu.db');
                         }
                     }
-                    // Open Database 
+                    // Open Database
                     $db = new MyDB();
                     if (!$db) {
                         echo $db->lastErrorMsg();
                         return;
                     }
 
-                    // Query process 
+                    // Query process
                     $ret = $db->query("SELECT * from Promotion");
                     while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
                         if ($row['INCART'] == "NO") {
