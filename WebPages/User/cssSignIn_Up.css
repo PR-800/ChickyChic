@@ -1,0 +1,461 @@
+*{
+    font-family: 'Kanit', sans-serif;
+}
+
+.body{
+    width: 100%;
+    height: 100%;
+}
+
+.modal-dialog{
+    /* position: relative;
+    top: 50%;
+    transform: translateY(30%);
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-header{
+    padding: 0;
+    margin-bottom: 10px;
+    border: none;
+}
+.modal-title{
+    font-size:xx-large;
+}
+
+.modal-content{
+    width: 900px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;;
+}
+
+.modal-body{
+    padding: 0;
+}
+
+.form-control{
+    border: 1px solid rgb(174, 174, 174);
+    border-radius: 20px;
+    width: 100%;
+    height: 80%;
+}
+
+.right{
+    width: 45%;
+}
+
+form{
+    width: 100%;
+    display: flex;
+}
+
+.left{
+    box-sizing: border-box;
+    width: 55%;
+    padding: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.inLeft{
+    height: 400px;
+    /* position: relative;
+    top: 50%;
+    transform: translateY(-50%); */
+}
+
+h1{
+    color: rgb(243, 188, 5);
+}
+
+.md-form{
+    margin-bottom: 20px;
+}
+
+label{
+    font-size: medium;
+    font-weight: lighter;
+}
+
+.inRight{
+    position: relative;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    width:100%;
+    height: 100%;
+    background-color: #FEA628;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.brand, .btnAndlabel{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 300px;
+}
+
+.btnAndlabel{
+    top: 30%;
+}
+
+.logo, .kaitae, button, .label{
+    position: absolute;
+    /* top: 0%; */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+}
+
+.kaitae{
+    top: 60%;
+}
+
+.button{
+    margin: 0;
+    top: 75%;
+    width: 200px;
+    height: 10%;
+    background-color: #F24822;
+    color: white;
+    font-size: large;
+    border: none;
+    border-radius: 50px;
+}
+
+.label{
+    margin-top: 10px;
+    font-size: small;
+    color: white;
+    font-weight: 100;
+    top: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width:990px){
+    .logo, .kaitae, button, .label{
+        top: 10%;
+        width: 200px;
+    }
+    .kaitae{
+        top: 60%;
+    }
+    .button{
+        top: 65%;
+        width: 150px;
+    }
+    .label{
+        top: 75%;
+    }
+}
+
+@media screen and (max-width:770px){
+    .modal-content{
+        width: 400px;
+        height: 100%;
+    }
+    .form-row{
+        display: block;
+    }
+    .left{
+        width: 100%;
+        height: 50%;
+        padding-bottom: 25px;
+    }
+    .right{
+        width: 100%;
+        height: 100px;
+    }
+    .inLeft{
+        height: fit-content;
+    }
+    .inRight{
+        left: 1.2%;
+        position: relative;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 5px;
+    }
+    .logo, .kaitae, button, .label{
+        top: 3%;
+        width: 60px;
+    }
+    .kaitae{
+        top: 18%;
+    }
+    .button{
+        font-size: small;
+        width: 100px;
+        height: 30px;
+        top: 65%;
+    }
+    .label{
+        font-size: x-small;
+        top: 90%;
+        margin-top: 5px;
+        top: 75%;
+        width: 120px;
+    }
+    label{
+        font-size: small;
+    }
+    .brand{
+        position: relative;
+        top: 0%;
+        left: 65%;
+    }
+    .btnAndlabel{
+        position: relative;
+        top: -465%;
+        left: 40%;
+        margin-right: 10px;
+    }
+}
+
+/* //////////////////////////////////////////////////  NAV BAR  /////////////////////////////////////////////////////////// */
+
+.container-fluid {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.header-area {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header {
+    width: 94%;
+    height: 80px;
+    position: relative;
+    background-color: white;
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.logo-img {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 70px;
+}
+
+.logo-word {
+    position: absolute;
+    top: 15px;
+    left: 95px;
+    width: 80px;
+}
+
+.line {
+    position: absolute;
+    top: 15px;
+    left: 200px;
+    border-left: 3px solid rgb(253 165 39);
+    height: 50px;
+}
+
+.nav {
+    position: absolute;
+    top: 30px;
+}
+
+.nav:link, .nav:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.nav:hover {
+    color: rgb(136, 136, 136);
+}
+
+.logo-user {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    width: 33px;
+}
+
+.logo-basket {
+    position: absolute;
+    top: 28px;
+    right: 205px;
+    width: 25px;
+    filter: brightness(100);
+}
+
+.basket-bg {
+    position: absolute;
+    top: 22px;
+    right: 79px;
+    width: 170px;
+    height: 38px;
+    border-radius: 25px;
+    background-color: rgb(241 72 34);
+}
+
+.basket-num {
+    position: absolute;
+    top: 18px;
+    right: 235px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(253 165 39);
+    text-align: center;
+    font-size: 13.5px;
+}
+
+@media screen {
+    .bar-dropdown{
+        display: none;
+    }
+}
+@media screen and (max-width: 760px) {
+    .bar , .bar-dropdown-plus{
+        display: none;
+    }
+    .bar-dropdown{
+        right: 270px;
+        z-index: 1;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .bar, .bar-basket {
+        display: none;
+    }
+    .bar-dropdown, .bar-dropdown-plus {
+        right: 70px;
+        z-index: 1;
+        display: block;
+    }
+}
+
+.bar-dropdown {
+    position: relative;
+    float: right;
+    top: 26px;
+    z-index: -1;
+}
+
+.bar-dropdown button, .bar-dropdown-plus button{
+    height: 30px;
+    background-color: rgb(253 165 39);
+    border: none;
+    border-radius: 12px;
+}
+
+.half-top-content {
+    position: relative;
+    display: flex;
+    background-image: url('https://img.freepik.com/premium-photo/karaage-japanese-fried-chicken-plate_261158-50.jpg?w=2000');
+    background-position: center;
+    background-size: cover;
+    left: 180px;
+    width: 1600px;
+    height: 800px;
+}
+
+.half-top-left-content {
+    position: absolute;
+    right: 0px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.85;
+    width: 500px;
+    height: 800px;
+}
+
+.logo-img-content {
+    width: 250px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+
+}
+
+.logo-word-content {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.slogan {
+    position: relative;
+    top: 80px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.half-bottom-content {
+    position: relative; 
+    left: 350px;
+    width: 1300px;
+    height: 600px;
+}
+
+.half-bottom-top-content {
+    position: relative;
+    width: 1300px;
+    top: 40px;
+
+}
+
+.d-block {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    text-align: center;
+    align-items: center;
+    border-radius: 40px;
+    margin: 6%;
+}
+
+#cardd {
+    border-radius: 30px;
+}
+
+.card-img-top {
+    margin-top: 5%;
+    width: 80%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+.card-text {
+    font-size: 18px;
+    color: grey;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+#listsOfFood {
+    position: relative;
+    top: 50px;
+    right:25;
+}
+.nav{
+    font-size: medium;
+}

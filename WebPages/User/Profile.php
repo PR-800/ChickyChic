@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Profile</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -14,7 +14,6 @@
     <link href="css/bootstrap.css" rel="stylesheet" media="all">
 
     <link rel="stylesheet" href="cssProfile.css">
-    <link rel="stylesheet" href="Home.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,52 +29,36 @@
     <div class="container-fluid">
         <div class="header-area">
             <div class="header">
-                <img class="logo-img"
-                    src="https://cdn.discordapp.com/attachments/1008922955494989965/1033040544206692372/logo.png">
-                <img class="logo-word"
-                    src="https://cdn.discordapp.com/attachments/1008922955494989965/1033040544605143090/logo-word.png">
+                <a href="../Home/Home.php">
+                    <img class="logo-img"
+                        src="../IMG/logo/logo-img.png">
+                    <img class="logo-word"
+                        src="../IMG/logo/logo-word.png">
+                </a>
                 <div class="bar">
                     <a class="line"></a>
-                    <a class="nav" href="Home.php" style="left: 235px; color: rgb(253 165 39);">หน้าหลัก</a>
-                    <a class="nav" href="Menu.php" style="left: 320px;">เมนู</a>
-                    <a class="nav" href="Promotion.php" style="left: 380px;">โปรโมชั่น</a>
+                    <a class="nav" href="../Home/Home.php" style="top: 50px; left: 380px;">หน้าหลัก</a>
+                    <a class="nav" href="../Menu/Menu.php" style="top: 50px; left: 530px;">เมนู</a>
+                    <a class="nav" href="../Promotion/Promotion.php" style="top: 50px; left: 630px;">โปรโมชั่น</a>
                 </div>
-                <div class="bar-basket">
-                    <a class="basket-bg"></a>
-                    <img class="logo-basket"
-                        src="https://cdn.discordapp.com/attachments/1008922955494989965/1033047007151013888/logo-basket.png">
-                    <a class="nav" href="Purchase.php" style="right: 95px; color: white;">ออเดอร์ของคุณ</a>
-                    <a class="basket-num">
-                        <p style="color: white;">55</p>
-                    </a>
-                </div>
-                <div class="bar-dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="Home.php" style="color: rgb(253 165 39);">หน้าหลัก</a>
-                        <a class="dropdown-item" href="Menu.php">เมนู</a>
-                        <a class="dropdown-item" href="Promotion.php">โปรโมชั่น</a>
-                        <div class="bar-dropdown-plus">
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="Purchase.php">ออเดอร์ของคุณ</a>
-                        </div>
+                <a href="">
+                    <div class="bar-basket">
+                        <a class="basket-bg"></a>
+                        <img class="logo-basket"
+                            src="../IMG/logo/logo-basket.png">
+                        <a class="nav" style="top: 45px; right: 195px; color: white;">ออเดอร์ของคุณ</a>
+                        <a class="basket-num">
+                            <p style="color: white; font-size: 28px;">55</p>
+                        </a>
+                        <a class="basket-bg" href="../Purchase/Purchase.php" style="background-color: transparent;"></a>
                     </div>
-                </div>
-                <div class="dropdown">
-                    <img src = "https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png" 
-                        aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" type="button" class="dropdown-toggle" id="logo-user">
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="SignIn.php">Sign in</a>
-                        <a class="dropdown-item" href="SignUp.php">Sign up</a>
-                        <a class="dropdown-item" href="Profile.php">Profile</a>
-                    </div>
-                </div>
+                </a>
+                <a href="../User/SignIn.php"><img class="logo-user"
+                    src="../IMG/logo/logo-user.png"></a>
             </div>
         </div>
-    </div>
 
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-md">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title">ข้อมูลผู้ใช้</h1>

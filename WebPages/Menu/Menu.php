@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="../Home/Home.css">
     <link rel="stylesheet" href="menu.css">
 
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -26,19 +26,151 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js" integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <style>
-        body {
-            background: url('https://www.kfc.co.th/Content/OnlineOrderingImages/Shared/bg.jpg');
+        /* home.css */
+        * {
+            font-family: 'Kanit', sans-serif;
         }
+
+        body {
+            background: url('../IMG/bg.png');
+            background-size: cover;
+        }
+
+        .container-fluid {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .header-area {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .header {
+            width: 94%;
+            height: 140px;
+            position: relative;
+            background-color: rgb(254, 254, 254, 70%);
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            border-radius: 20px;
+            font-size: 30px;
+        }
+
+        .logo-img {
+            position: absolute;
+            top: 15px;
+            left: 25px;
+            width: 110px;
+        }
+
+        .logo-word {
+            position: absolute;
+            top: 30px;
+            left: 175px;
+            width: 130px;
+        }
+
+        .line {
+            position: absolute;
+            top: 20px;
+            left: 330px;
+            border-left: 3px solid rgb(253 165 39);
+            height: 100px;
+        }
+
+        .nav {
+            position: absolute;
+            top: 30px;
+        }
+
+        .nav:link, .nav:visited {
+            color: black;
+            text-decoration: none;
+        }
+
+        .nav:hover {
+            color: rgb(136, 136, 136);
+        }
+
+        .logo-basket {
+            position: absolute;
+            top: 45px;
+            right: 400px;
+            width: 50px;
+            filter: brightness(100);
+        }
+
+        .basket-bg {
+            position: absolute;
+            top: 35px;
+            right: 170px;
+            width: 310px;
+            height: 70px;
+            border-radius: 35px;
+            background-color: rgb(241 72 34);
+        }
+
+        .basket-num {
+            position: absolute;
+            top: 25px;
+            right: 455px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background-color: rgb(253 165 39);
+            text-align: center;
+        }
+
+        .logo-user {
+            position: absolute;
+            top: 40px;
+            right: 70px;
+            width: 60px;
+        }
+
+        /* menu.css */
+        .nav-item {
+            width: 190px;
+            text-align: center;
+            margin-left: 5px;
+        }
+
+        .nav-tabs {
+            background-color: rgb(253 165 39);
+            padding: 8px;
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        .nav-link, .nav-link:hover {
+            text-decoration: none;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .menu {
+            position: relative;
+            margin-top: -20px;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            width: 93%;
+            font-size: 30px;
+        }
+
+        .nav-link {
+            border-radius: 8px;
+        }
+
         .card {
             text-align: center;
             align-items: center;
             border-radius: 40px;
             margin: 6%;
-            /* margin: 20px; */
-        }
-
-        #cardd {
-            border-radius: 30px;
+            /* margin: 50px; */
         }
 
         .card-img-top {
@@ -48,9 +180,8 @@
             object-fit: contain;
         }
 
-        .card-text {
-            font-size: 18px;
-            color: grey;
+        .card-subtitle {
+            font-size: 19px;
         }
 
         .btn {
@@ -78,14 +209,17 @@
             border: none;
             outline: none;
         }
+
         .page {
             position: absolute;
             top: 100px;
             left: 350px;
         }
+
         h3 {
             font-size: 25px;
         }
+
     </style>
 </head>
 
@@ -93,45 +227,35 @@
     <div class="container-fluid">
         <div class="header-area">
             <div class="header">
-                <img class="logo-img" src="./IMG/logo/logo-img.png">
-                <img class="logo-word" src="./IMG/logo/logo-word.png">
+                <a href="../Home/Home.php">
+                    <img class="logo-img"
+                        src="../IMG/logo/logo-img.png">
+                    <img class="logo-word"
+                        src="../IMG/logo/logo-word.png">
+                </a>
                 <div class="bar">
                     <a class="line"></a>
-                    <a class="nav" href="Home.php" style="left: 235px;">หน้าหลัก</a>
-                    <a class="nav" href="Menu.php" style="left: 320px; color: rgb(253 165 39);">เมนู</a>
-                    <a class="nav" href="Promotion.php" style="left: 380px;">โปรโมชั่น</a>
+                    <a class="nav" href="../Home/Home.php" style="top: 50px; left: 380px;">หน้าหลัก</a>
+                    <a class="nav" href="../Menu/Menu.php" style="top: 50px; left: 530px; color: rgb(253 165 39);">เมนู</a>
+                    <a class="nav" href="../Promotion/Promotion.php" style="top: 50px; left: 630px;">โปรโมชั่น</a>
                 </div>
-                <div class="bar-basket">
-                    <a class="basket-bg"></a>
-                    <img class="logo-basket" src="./IMG/logo/logo-basket.png">
-                    <a class="nav" href="Purchase.php" style="right: 95px; color: white;">ออเดอร์ของคุณ</a>
-                    <a class="basket-num">
-                        <p style="color: white;">55</p>
-                    </a>
-                </div>
-                <div class="bar-dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="Home.html" style="color: rgb(253 165 39);">หน้าหลัก</a>
-                        <a class="dropdown-item" href="Menu.php">เมนู</a>
-                        <a class="dropdown-item" href="Promotion.php">โปรโมชั่น</a>
-                        <div class="bar-dropdown-plus">
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="Purchase.php">ออเดอร์ของคุณ</a>
-                        </div>
+                <a href="">
+                    <div class="bar-basket">
+                        <a class="basket-bg"></a>
+                        <img class="logo-basket"
+                            src="../IMG/logo/logo-basket.png">
+                        <a class="nav" style="top: 45px; right: 195px; color: white;">ออเดอร์ของคุณ</a>
+                        <a class="basket-num">
+                            <p style="color: white; font-size: 28px;">55</p>
+                        </a>
+                        <a class="basket-bg" href="../Purchase/Purchase.php" style="background-color: transparent;"></a>
                     </div>
-                </div>
-                <div class="dropdown">
-                    <img src = "https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png"
-                        aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" type="button" class="dropdown-toggle" id="logo-user">
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="SignIn.php">Sign in</a>
-                        <a class="dropdown-item" href="SignUp.php">Sign up</a>
-                        <a class="dropdown-item" href="Profile.php">Profile</a>
-                    </div>
-                </div>
+                </a>
+                <a href="../User/SignIn.php"><img class="logo-user"
+                    src="../IMG/logo/logo-user.png"></a>
             </div>
         </div>
+        <!-- <button style="background-color:red;button-active:translateY(2px);">acr</button> -->
 
         <div class="menu">
             <div class="menu-nav">
@@ -165,7 +289,7 @@
                                 {
                                     function __construct()
                                     {
-                                        $this->open('./currentMenu.db');
+                                        $this->open('../DataBase/currentMenu.db');
                                     }
                                 }
 
@@ -179,7 +303,8 @@
                                 // Query process
                                 $ret = $db->query("SELECT * from chicken");
                                 while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-                                    echo "<div class='col-md-4'>
+                                    if ($row['INCART'] == "NO") {
+                                        echo "<div class='col-md-4'>
       <div class='card' style='width: 100%;'>
           <img src='{$row['IMG']}'
               class='card-img-top'>
@@ -194,13 +319,35 @@
                       <span class='increase'><button type='button' class='butt'
                               style='position:absolute;right:22%' onclick='increase({$row['ID']}, `chicken`)'>+</button></span>
                   </div><br>
-                  <button type='button' class='btn btn-danger'
-                      onclick='addToCart({$row['ID']})'>เพิ่มลงตะกร้า</button>
+                  <button type='button' class='btn btn-danger' id='button-chicken-{$row['ID']}'
+                      onclick='addToCart({$row['ID']}, `{$row['NAME']}`, {$row['PRICE']}, {$row['AMOUNT']}, `{$row['IMG']}`, `chicken`)'>เพิ่มลงตะกร้า</button>
               </div><br>
           </div>
       </div>
   </div>";
-}
+                                    } else {
+                                        echo "<div class='col-md-4'>
+      <div class='card' style='width: 100%;'>
+          <img src='{$row['IMG']}'
+              class='card-img-top'>
+          <div class='card-body'>
+              <h3 class='card-title'>{$row['NAME']}</h3>
+              <h6 class='card-subtitle mb-2 text-muted'>{$row['PRICE']} บาท</h6>
+              <div><br>
+                  <div class='amount'>
+                      <span class='decrease'><button type='button' class='butt'
+                              style='position:absolute;left:22%;' onclick='decrease({$row['ID']}, `chicken`)'>-</button></span>
+                      <span class='num' style='font-size:22px' id='chicken-{$row['ID']}'>{$row['AMOUNT']}</span>
+                      <span class='increase'><button type='button' class='butt'
+                              style='position:absolute;right:22%' onclick='increase({$row['ID']}, `chicken`)'>+</button></span>
+                  </div><br>
+                  <button type='button' class='btn btn-danger' disabled id='button-chicken-{$row['ID']}'>เพิ่มลงในตะกร้าแล้ว</button>
+              </div><br>
+          </div>
+      </div>
+  </div>";
+                                    }
+                                }
                                 // Close database
                                 $db->close();
                                 ?>
@@ -209,7 +356,7 @@
                     </div>
                 </div>
                 <div name="burger" class="tab-pane fade" id="burger" role="tabpanel" aria-labelledby="burger-tab">
-                <div class="burger-page page">
+                    <div class="burger-page page">
                         <div class="container mx-auto mt-4">
                             <div class="row" id="listBurgers">
                                 <?php
@@ -223,7 +370,8 @@
                                 // Query process
                                 $ret = $db->query("SELECT * from burger");
                                 while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-                                    echo "<div class='col-md-4'>
+                                    if ($row['INCART'] == "NO") {
+                                        echo "<div class='col-md-4'>
       <div class='card' style='width: 100%;'>
           <img src='{$row['IMG']}'
               class='card-img-top'>
@@ -238,13 +386,35 @@
                       <span class='increase'><button type='button' class='butt'
                               style='position:absolute;right:22%' onclick='increase({$row['ID']}, `burger`)'>+</button></span>
                   </div><br>
-                  <button type='button' class='btn btn-danger'
-                      onclick='addToCart({$row['ID']})'>เพิ่มลงตะกร้า</button>
+                  <button type='button' class='btn btn-danger' id='button-burger-{$row['ID']}'
+                      onclick='addToCart({$row['ID']}, `{$row['NAME']}`, {$row['PRICE']}, {$row['AMOUNT']}, `{$row['IMG']}`, `burger`)'>เพิ่มลงตะกร้า</button>
               </div><br>
           </div>
       </div>
   </div>";
-}
+                                    } else {
+                                        echo "<div class='col-md-4'>
+      <div class='card' style='width: 100%;'>
+          <img src='{$row['IMG']}'
+              class='card-img-top'>
+          <div class='card-body'>
+              <h3 class='card-title'>{$row['NAME']}</h3>
+              <h6 class='card-subtitle mb-2 text-muted'>{$row['PRICE']} บาท</h6>
+              <div><br>
+                  <div class='amount'>
+                      <span class='decrease'><button type='button' class='butt'
+                              style='position:absolute;left:22%;' onclick='decrease({$row['ID']}, `burger`)'>-</button></span>
+                      <span class='num' style='font-size:22px' id='burger-{$row['ID']}'>{$row['AMOUNT']}</span>
+                      <span class='increase'><button type='button' class='butt'
+                              style='position:absolute;right:22%' onclick='increase({$row['ID']}, `burger`)'>+</button></span>
+                  </div><br>
+                  <button type='button' class='btn btn-danger' disabled id='button-burger-{$row['ID']}'>เพิ่มลงในตะกร้าแล้ว</button>
+              </div><br>
+          </div>
+      </div>
+  </div>";
+                                    }
+                                }
                                 // Close database
                                 $db->close();
                                 ?>
@@ -254,7 +424,7 @@
                 </div>
 
                 <div class="tab-pane fade" id="rice" role="tabpanel" aria-labelledby="rice-tab">
-                <div class="rice-page page">
+                    <div class="rice-page page">
                         <div class="container mx-auto mt-4">
                             <div class="row" id="listRice">
                                 <?php
@@ -268,7 +438,8 @@
                                 // Query process
                                 $ret = $db->query("SELECT * from rice");
                                 while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-                                    echo "<div class='col-md-4'>
+                                    if ($row['INCART'] == "NO") {
+                                        echo "<div class='col-md-4'>
       <div class='card' style='width: 100%;'>
           <img src='{$row['IMG']}'
               class='card-img-top'>
@@ -283,13 +454,35 @@
                       <span class='increase'><button type='button' class='butt'
                               style='position:absolute;right:22%' onclick='increase({$row['ID']}, `rice`)'>+</button></span>
                   </div><br>
-                  <button type='button' class='btn btn-danger'
-                      onclick='addToCart({$row['ID']})'>เพิ่มลงตะกร้า</button>
+                  <button type='button' class='btn btn-danger' id='button-rice-{$row['ID']}'
+                      onclick='addToCart({$row['ID']}, `{$row['NAME']}`, {$row['PRICE']}, {$row['AMOUNT']}, `{$row['IMG']}`, `rice`)'>เพิ่มลงตะกร้า</button>
               </div><br>
           </div>
       </div>
   </div>";
-}
+                                    } else {
+                                        echo "<div class='col-md-4'>
+      <div class='card' style='width: 100%;'>
+          <img src='{$row['IMG']}'
+              class='card-img-top'>
+          <div class='card-body'>
+              <h3 class='card-title'>{$row['NAME']}</h3>
+              <h6 class='card-subtitle mb-2 text-muted'>{$row['PRICE']} บาท</h6>
+              <div><br>
+                  <div class='amount'>
+                      <span class='decrease'><button type='button' class='butt'
+                              style='position:absolute;left:22%;' onclick='decrease({$row['ID']}, `rice`)'>-</button></span>
+                      <span class='num' style='font-size:22px' id='rice-{$row['ID']}'>{$row['AMOUNT']}</span>
+                      <span class='increase'><button type='button' class='butt'
+                              style='position:absolute;right:22%' onclick='increase({$row['ID']}, `rice`)'>+</button></span>
+                  </div><br>
+                  <button type='button' class='btn btn-danger' disabled id='button-rice-{$row['ID']}'>เพิ่มลงในตะกร้าแล้ว</button>
+              </div><br>
+          </div>
+      </div>
+  </div>";
+                                    }
+                                }
                                 // Close database
                                 $db->close();
                                 ?>
@@ -299,7 +492,7 @@
                 </div>
 
                 <div class="tab-pane fade" id="salad" role="tabpanel" aria-labelledby="salad-tab">
-                <div class="salad-page page">
+                    <div class="salad-page page">
                         <div class="container mx-auto mt-4">
                             <div class="row" id="listSalads">
                                 <?php
@@ -313,7 +506,8 @@
                                 // Query process
                                 $ret = $db->query("SELECT * from salad");
                                 while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-                                    echo "<div class='col-md-4'>
+                                    if ($row['INCART'] == "NO") {
+                                        echo "<div class='col-md-4'>
       <div class='card' style='width: 100%;'>
           <img src='{$row['IMG']}'
               class='card-img-top'>
@@ -328,13 +522,35 @@
                       <span class='increase'><button type='button' class='butt'
                               style='position:absolute;right:22%' onclick='increase({$row['ID']}, `salad`)'>+</button></span>
                   </div><br>
-                  <button type='button' class='btn btn-danger'
-                      onclick='addToCart({$row['ID']})'>เพิ่มลงตะกร้า</button>
+                  <button type='button' class='btn btn-danger' id='button-salad-{$row['ID']}'
+                      onclick='addToCart({$row['ID']}, `{$row['NAME']}`, {$row['PRICE']}, {$row['AMOUNT']}, `{$row['IMG']}`, `salad`)'>เพิ่มลงตะกร้า</button>
               </div><br>
           </div>
       </div>
   </div>";
-}
+                                    } else {
+                                        echo "<div class='col-md-4'>
+      <div class='card' style='width: 100%;'>
+          <img src='{$row['IMG']}'
+              class='card-img-top'>
+          <div class='card-body'>
+              <h3 class='card-title'>{$row['NAME']}</h3>
+              <h6 class='card-subtitle mb-2 text-muted'>{$row['PRICE']} บาท</h6>
+              <div><br>
+                  <div class='amount'>
+                      <span class='decrease'><button type='button' class='butt'
+                              style='position:absolute;left:22%;' onclick='decrease({$row['ID']}, `salad`)'>-</button></span>
+                      <span class='num' style='font-size:22px' id='salad-{$row['ID']}'>{$row['AMOUNT']}</span>
+                      <span class='increase'><button type='button' class='butt'
+                              style='position:absolute;right:22%' onclick='increase({$row['ID']}, `salad`)'>+</button></span>
+                  </div><br>
+                  <button type='button' class='btn btn-danger' disabled id='button-salad-{$row['ID']}'>เพิ่มลงในตะกร้าแล้ว</button>
+              </div><br>
+          </div>
+      </div>
+  </div>";
+                                    }
+                                }
                                 // Close database
                                 $db->close();
                                 ?>
@@ -343,7 +559,7 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="drink" role="tabpanel" aria-labelledby="drink-tab">
-                <div class="drink-page page">
+                    <div class="drink-page page">
                         <div class="container mx-auto mt-4">
                             <div class="row" id="listDrinks">
                                 <?php
@@ -357,7 +573,8 @@
                                 // Query process
                                 $ret = $db->query("SELECT * from drink");
                                 while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-                                    echo "<div class='col-md-4'>
+                                    if ($row['INCART'] == "NO") {
+                                        echo "<div class='col-md-4'>
       <div class='card' style='width: 100%;'>
           <img src='{$row['IMG']}'
               class='card-img-top'>
@@ -372,13 +589,35 @@
                       <span class='increase'><button type='button' class='butt'
                               style='position:absolute;right:22%' onclick='increase({$row['ID']}, `drink`)'>+</button></span>
                   </div><br>
-                  <button type='button' class='btn btn-danger'
-                      onclick='addToCart({$row['ID']})'>เพิ่มลงตะกร้า</button>
+                  <button type='button' class='btn btn-danger' id='button-drink-{$row['ID']}'
+                      onclick='addToCart({$row['ID']}, `{$row['NAME']}`, {$row['PRICE']}, {$row['AMOUNT']}, `{$row['IMG']}`, `drink`)'>เพิ่มลงตะกร้า</button>
               </div><br>
           </div>
       </div>
   </div>";
-}
+                                    } else {
+                                        echo "<div class='col-md-4'>
+      <div class='card' style='width: 100%;'>
+          <img src='{$row['IMG']}'
+              class='card-img-top'>
+          <div class='card-body'>
+              <h3 class='card-title'>{$row['NAME']}</h3>
+              <h6 class='card-subtitle mb-2 text-muted'>{$row['PRICE']} บาท</h6>
+              <div><br>
+                  <div class='amount'>
+                      <span class='decrease'><button type='button' class='butt'
+                              style='position:absolute;left:22%;' onclick='decrease({$row['ID']}, `drink`)'>-</button></span>
+                      <span class='num' style='font-size:22px' id='drink-{$row['ID']}'>{$row['AMOUNT']}</span>
+                      <span class='increase'><button type='button' class='butt'
+                              style='position:absolute;right:22%' onclick='increase({$row['ID']}, `drink`)'>+</button></span>
+                  </div><br>
+                  <button type='button' class='btn btn-danger' disabled id='button-drink-{$row['ID']}'>เพิ่มลงในตะกร้าแล้ว</button>
+              </div><br>
+          </div>
+      </div>
+  </div>";
+                                    }
+                                }
                                 // Close database
                                 $db->close();
                                 ?>
@@ -399,7 +638,7 @@
     const updateProduct = (id, type, newAmount) => {
         $.ajax({
             type: "POST",
-            url: "./UpdateMenu.php",
+            url: "../Database/UpdateMenu.php",
             data: {
                 id: id,
                 type: type,
@@ -427,7 +666,7 @@
         let select = document.querySelector(`#${type}-${id}`)
         let newAmount = parseInt(select.innerText) - 1
 
-        if (newAmount < 0) return
+        if (newAmount < 1) return
 
         select.innerText = newAmount
 
@@ -436,9 +675,31 @@
 
     }
 
-    const addToCart = (id) => {
+    const addToCart = (id, name, price, amount, img, type) => {
 
-        console.log(id)
+        $.ajax({
+            type: "POST",
+            url: "../Database/AddToCart.php",
+            data: {
+                Cartid: id,
+                Cartname: name,
+                Cartprice: price,
+                Cartamount: amount,
+                Cartimg: img,
+                Carttype: type
+            },
+            error: (result) => {
+                console.log(result)
+            },
+            success: (result) => {
+
+                const selectButton = document.querySelector(`#button-${type}-${id}`)
+                console.log(selectButton)
+                selectButton.onclick = null
+                selectButton.innerText = "เพิ่มลงในตะกร้าแล้ว"
+                selectButton.disabled = true
+            }
+        });
 
     }
 </script>

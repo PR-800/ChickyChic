@@ -22,15 +22,117 @@
 </head>
 
 <style>
-    body {
-        background: url('https://www.kfc.co.th/Content/OnlineOrderingImages/Shared/bg.jpg');
+    /* home.css */
+    * {
+        font-family: 'Kanit', sans-serif;
     }
+
+    body {
+        background: url('../IMG/bg.png');
+        background-size: cover;
+    }
+
+    .container-fluid {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .header-area {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .header {
+        width: 94%;
+        height: 140px;
+        position: relative;
+        background-color: rgb(254, 254, 254, 70%);
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        border-radius: 20px;
+        font-size: 30px;
+    }
+
+    .logo-img {
+        position: absolute;
+        top: 15px;
+        left: 25px;
+        width: 110px;
+    }
+
+    .logo-word {
+        position: absolute;
+        top: 30px;
+        left: 175px;
+        width: 130px;
+    }
+
+    .line {
+        position: absolute;
+        top: 20px;
+        left: 330px;
+        border-left: 3px solid rgb(253 165 39);
+        height: 100px;
+    }
+
+    .nav {
+        position: absolute;
+        top: 30px;
+    }
+
+    .nav:link, .nav:visited {
+        color: black;
+        text-decoration: none;
+    }
+
+    .nav:hover {
+        color: rgb(136, 136, 136);
+    }
+
+    .logo-basket {
+        position: absolute;
+        top: 45px;
+        right: 400px;
+        width: 50px;
+        filter: brightness(100);
+    }
+
+    .basket-bg {
+        position: absolute;
+        top: 35px;
+        right: 170px;
+        width: 310px;
+        height: 70px;
+        border-radius: 35px;
+        background-color: rgb(241 72 34);
+    }
+
+    .basket-num {
+        position: absolute;
+        top: 25px;
+        right: 455px;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background-color: rgb(253 165 39);
+        text-align: center;
+    }
+
+    .logo-user {
+        position: absolute;
+        top: 40px;
+        right: 70px;
+        width: 60px;
+    }
+
 
     .half-top-content {
         position: relative;
         z-index: -2;
         display: flex;
-        background-image: url('./IMG/menu/chicken/10.jpg');
+        background-image: url('../IMG/menu/chicken/10.jpg');
         background-position: center;
         background-size: cover;
         left: 10%;
@@ -145,60 +247,44 @@
         /* border:1px solid black; */
     }
 
-
-.logo-img-bottom {
-    position: absolute;
-    bottom:0%;
-    right: -60px;
-    width: 140px;
-}
+    .logo-img-bottom {
+        position: absolute;
+        bottom:0%;
+        right: -60px;
+        width: 140px;
+    }
 </style>
 
 <body>
     <div class="container-fluid">
         <div class="header-area">
             <div class="header">
-                <img class="logo-img"
-                    src="./IMG/logo/logo-img.png">
-                <img class="logo-word"
-                    src="./IMG/logo/logo-word.png">
+                <a href="../Home/Home.php">
+                    <img class="logo-img"
+                        src="../IMG/logo/logo-img.png">
+                    <img class="logo-word"
+                        src="../IMG/logo/logo-word.png">
+                </a>
                 <div class="bar">
                     <a class="line"></a>
-                    <a class="nav" href="Home.php" style="left: 235px; color: rgb(253 165 39);">หน้าหลัก</a>
-                    <a class="nav" href="Menu.php" style="left: 320px;">เมนู</a>
-                    <a class="nav" href="Promotion.php" style="left: 380px;">โปรโมชั่น</a>
+                    <a class="nav" href="../Home/Home.php" style="top: 50px; left: 380px; color: rgb(253 165 39);">หน้าหลัก</a>
+                    <a class="nav" href="../Menu/Menu.php" style="top: 50px; left: 530px;">เมนู</a>
+                    <a class="nav" href="../Promotion/Promotion.php" style="top: 50px; left: 630px;">โปรโมชั่น</a>
                 </div>
-                <div class="bar-basket">
-                    <a class="basket-bg"></a>
-                    <img class="logo-basket"
-                        src="./IMG/logo/logo-basket.png">
-                    <a class="nav" href="Purchase.php" style="right: 95px; color: white;">ออเดอร์ของคุณ</a>
-                    <a class="basket-num">
-                        <p style="color: white;">55</p>
-                    </a>
-                </div>
-                <div class="bar-dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="Home.php" style="color: rgb(253 165 39);">หน้าหลัก</a>
-                        <a class="dropdown-item" href="Menu.php">เมนู</a>
-                        <a class="dropdown-item" href="Promotion.php">โปรโมชั่น</a>
-                        <div class="bar-dropdown-plus">
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="Purchase.php">ออเดอร์ของคุณ</a>
-                        </div>
+                <a href="">
+                    <div class="bar-basket">
+                        <a class="basket-bg"></a>
+                        <img class="logo-basket"
+                            src="../IMG/logo/logo-basket.png">
+                        <a class="nav" style="top: 45px; right: 195px; color: white;">ออเดอร์ของคุณ</a>
+                        <a class="basket-num">
+                            <p style="color: white; font-size: 28px;">55</p>
+                        </a>
+                        <a class="basket-bg" href="../Purchase/Purchase.php" style="background-color: transparent;"></a>
                     </div>
-                </div>
-                <div class="dropdown">
-                    <img src = "https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png"
-                        aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" type="button" class="dropdown-toggle" id="logo-user">
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="SignIn.php">Sign in</a>
-                        <a class="dropdown-item" href="SignUp.php">Sign up</a>
-                        <a class="dropdown-item" href="Profile.php">Profile</a>
-                    </div>
-                </div>
+                </a>
+                <a href="../User/SignIn.php"><img class="logo-user"
+                    src="../IMG/logo/logo-user.png"></a>
             </div>
         </div>
 
@@ -207,9 +293,9 @@
             <div class="half-top-content">
                 <div class="half-top-left-content">
                     <img class="logo-img-content"
-                        src="./IMG/logo/logo-img.png">
+                        src="../IMG/logo/logo-img.png">
                     <img class="logo-word-content"
-                        src="./IMG/logo/logo-word.png">
+                        src="../IMG/logo/logo-word.png">
                     <div class="slogan">
                         <p>ยืนหนึ่งเรื่องความกรอบ</p>
                         <p>สะอาด ปลอดภัย น่าไว้ใจ</p>
@@ -228,17 +314,17 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img class="d-block"
-                                src="./IMG/menu/chicken/11.jpg"
+                                src="../IMG/menu/chicken/11.jpg"
                                 alt="First slide">
                         </div>
                         <div class="carousel-item">
                             <img class="d-block"
-                                src="./IMG/menu/chicken/12.jpg"
+                                src="../IMG/menu/chicken/12.jpg"
                                 alt="Second slide">
                         </div>
                         <div class="carousel-item">
                             <img class="d-block"
-                                src="./IMG/menu/chicken/13.jpg"
+                                src="../IMG/menu/chicken/13.jpg"
                                 alt="Third slide">
                         </div>
                     </div>
@@ -260,7 +346,7 @@
                                 {
                                     function __construct()
                                     {
-                                        $this->open('./currentMenu.db');
+                                        $this->open('../Database/currentMenu.db');
                                     }
                                 }
 
@@ -278,11 +364,9 @@
                                         echo "
     <div class='col-md-4'>
       <div class='card' style='width:70%;'>
-      <img class='logo-img-bottom'
-                        src='./IMG/logo/logo-img.png'>
-      <a href='Menu.php'>
+      <a href='../Menu/Menu.php'>
       <img src='{$row['IMG']}'class='card-img-top'>
-      <img class='try-now' src='./IMG/logo/try-now.png'>
+      <img class='try-now' src='../IMG/logo/try-now.png'>
       </a>
           <div class='card-body'>
               <h3 class='card-title'>{$row['NAME']}</h3>
@@ -313,11 +397,9 @@
                                     if($row['ID'] == 41){
 echo "<div class='col-md-4'>
       <div class='card' style='width: 70%;'>
-      <img class='logo-img-bottom'
-                        src='./IMG/logo/logo-img.png'>
-      <a href='Promotion.php #burger'>
+      <a href='../Promotion/Promotion.php #burger'>
       <img src='{$row['IMG']}'class='card-img-top'>
-      <img class='try-now' src='./IMG/logo/try-now.png'>
+      <img class='try-now' src='../IMG/logo/try-now.png'>
       </a>
 
           <div class='card-body'>
@@ -348,12 +430,10 @@ echo "<div class='col-md-4'>
                                     if($row['ID'] == 37){
                                         echo "<div class='col-md-4'>
       <div class='card' style='width: 70%;'>
-      <img class='logo-img-bottom'
-                        src='./IMG/logo/logo-img.png'>
-              <a href='Promotion.php'>
+              <a href='../Promotion/Promotion.php'>
               <img src='{$row['IMG']}'
               class='card-img-top'>
-              <img class='try-now' src='./IMG/logo/try-now.png'>
+              <img class='try-now' src='../IMG/logo/try-now.png'>
               </a>
 
           <div class='card-body'>
