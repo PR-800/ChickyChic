@@ -159,7 +159,6 @@
             height: 22rem;
             top: 5%;
             position: sticky;
-            z-index: -10;
         }
 
         .butt {
@@ -274,13 +273,14 @@
                             echo "<td style='text-align: left;'>" .$row['NAME'] . "</td>";
                             echo "<td>"
                             . "<span class='decrease'><button type='button' class='butt' style='right:20%;'
-                            onclick='decrease({$row['ID']})'>-</button></span>"
-                            . "<span class='num' style='font-size:25px' id='{$row['ID']}'>{$row['AMOUNT']}</span>"
+                            onclick='decrease({$row['ID']}, `selectMenu`)'>-</button></span>"
+                            . "<span class='num' style='font-size:25px' id='selectMenu-{$row['ID']}'>{$row['AMOUNT']}</span>"
                             . "<span class='increase'><button type='button' class='butt' style='left:20%;'
-                            onclick='increase({$row['ID']})'>+</button></span>"
+                            onclick='increase({$row['ID']}, `selectMenu`)'>+</button></span>"
                             . "</td>";
                             echo "<td>" . (+$row['PRICE'])*(+$row['AMOUNT']) . "</td>";
-                            echo "<td></td>";
+                            echo "<td><span class='delete'><button type='button' class='butt' style='background-color:grey; font-size:20px; right:20%;'
+                            onclick='deleteDB({$row['ID']}, `selectMenu`)'>x</button></span></td>";
                             echo "</tr>";
                         }
                     ?>
@@ -297,7 +297,7 @@
                                 $ret = $db->query($sql);
                                 $total = 0;
                                 while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
-                                    +$total += +$row['PRICE'];
+                                    +$total += +$row['PRICE'] * +$row['AMOUNT'];
                                 }
                                 echo $total;
                             ?> บาท</span><br>
@@ -306,33 +306,20 @@
                             <?php
                                 $sql ="SELECT * from selectMenu";
                                 $ret = $db->query($sql);
-                                if (empty($ret)) {
+                                if (empty($ret) || $total == 0) {
                                     $ship = 0;
                                 }
                                 else {
-                                    $ship = 25;
-                                }
-                                while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
-                                    +$ship += 5;
+                                    $ship = 17.5;
+                                    while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
+                                        +$ship += 2.5 * +$row['AMOUNT'];
+                                    }
                                 }
                                 echo $ship ;
                             ?> บาท</span><br><br>
                             <b><span style="float: left;">ยอดรวม</span>
                             <span style="float: right;">
                             <?php
-                                $sql ="SELECT * from selectMenu";
-                                $ret = $db->query($sql);
-                                $total = 0;
-                                if (empty($ret)) {
-                                    $ship = 0;
-                                }
-                                else {
-                                    $ship = 25;
-                                }
-                                while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
-                                    +$total += +$row['PRICE'];
-                                    +$ship += 5;
-                                }
                                 echo +$total + +$ship ;
                             ?> บาท</span><br></b>
                         </p>
@@ -435,40 +422,81 @@
 </body>
 
 <script>
-    const updateProduct = (id, newAmount) => {
+
+    const updateProduct = (id, type, newAmount) => {
         $.ajax({
             type: "POST",
             url: "../Database/UpdateOrder.php",
             data: {
                 id: id,
+                type: type,
                 amount: newAmount
             },
             error: (result) => {
                 console.log(result)
             },
         });
+
+        window.location = window.location
     }
 
-    const increase = (id) => {
 
-        let select = document.querySelector(`#${id}`)
+    const increase = (id, type) => {
+
+        let select = document.querySelector(`#${type}-${id}`)
 
         let newAmount = parseInt(select.innerText) + 1
 
         select.innerText = newAmount
 
-        updateProduct(id, newAmount)
+        updateProduct(id, type, newAmount)
+
     }
 
-    const decrease = (id) => {
-        let select = document.querySelector(`#${id}`)
+    const decrease = (id, type) => {
+
+        let select = document.querySelector(`#${type}-${id}`)
+
         let newAmount = parseInt(select.innerText) - 1
 
         if (newAmount < 1) return
 
         select.innerText = newAmount
 
-        updateProduct(id, newAmount)
+        updateProduct(id, type, newAmount)
+
+    }
+
+    const deleteDB = (id, type) => {
+
+        let select = document.querySelector(`#${type}-${id}`)
+
+        $.ajax({
+            type: "POST",
+            url: "../Database/DeleteOrder.php",
+            data: {
+                id: id,
+                type: type,
+            },
+            error: (result) => {
+                console.log(result)
+            },
+            success: (result) => {
+                // module.exports.change=function(btnOnclick) {
+                //     return ;
+                // }
+                // const selectButton = document.querySelector(`#button-${type}-${id}`)
+                // console.log(selectButton)
+                // global.btnOnclick = selectButton.onclick
+                // btnOnclick = null;
+                // global.btnText = selectButton.innerText
+                // btnText = "เพิ่มลงในตะกร้าแล้ว"
+                // global.btnDisabled = selectButton.disabled
+                // btnDisabled = true
+            }
+        });
+
+        window.location = window.location
     }
 </script>
 </html>

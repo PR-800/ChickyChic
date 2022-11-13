@@ -351,6 +351,7 @@
             }
         });
 
+        window.location = window.location
     }
 </script>
 

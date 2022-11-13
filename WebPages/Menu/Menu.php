@@ -657,9 +657,6 @@
         </div>
     </div>
 
-
-
-
 </body>
 
 <script>
@@ -720,7 +717,6 @@
                 console.log(result)
             },
             success: (result) => {
-
                 const selectButton = document.querySelector(`#button-${type}-${id}`)
                 console.log(selectButton)
                 selectButton.onclick = null
@@ -729,7 +725,10 @@
             }
         });
 
+        window.location = window.location
+
     }
+
 </script>
 
 
