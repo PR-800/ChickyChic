@@ -117,12 +117,13 @@ label{
 }
 
 .kaitae{
-    top: 70%;
+    top: 90%;
+    width: 180px;
 }
 
 .button{
     margin: 0;
-    top: 77%;
+    top: 80%;
     width: 200px;
     height: 40px;
     background-color: #F24822;
@@ -137,7 +138,7 @@ label{
     font-size: medium;
     color: white;
     font-weight: 100;
-    top: 90%;
+    top: 95%;
     width: 100%;
     display: flex;
     justify-content: center;

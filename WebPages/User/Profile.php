@@ -208,14 +208,20 @@
         </div>
     </div>
 
-    <div class="modal fade" id="popUp">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body" align="center">
-                    <h4><b>You have successfully registered.<b></h4>
-                    <p>Let's go order food !</p>
+    <!-- POP UP WARNING -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" id="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content" id="modal-contents">
+                <div class="modal-header" id="modal-headers">
+                    <h3 class="modal-title">Account Was Registered!</h3>
                 </div>
-                <button type="button" class="backToHome"><a href = "" style="color: white">Home</a></button>
+                <div class="modal-body" id="modal-bodys">
+                    <h4>Please Sign In.</h4>
+                </div>
+                <div class="modal-footer" id="modal-footer">
+                    <button type="button" id="close" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
@@ -307,6 +313,22 @@
             }
             $db = new UserData();
 
+            ///////////////////////// Warning pop up if the Account in Sign Up was registered///////////////////////////
+            $userName = $_POST['userName'];
+            $password = $_POST['password'];
+            $select = "select * from UserData2";
+            $allData = $db->query($select);
+            while($row = $allData->fetchArray(SQLITE3_ASSOC)){
+                
+                if((($userName === $row['UserName']) || ($userName === $row['Email'])) && ($password === $row['Password'])){
+                    echo    '<script type="text/javascript">
+                                $( document ).ready(function() {
+                                $("#myModal").modal("show")
+                                });
+                            </script>';
+                }
+            }
+
             /////////////////////////////Create Table UserData//////////////////////////////////
             // $table = <<<EOF
             // CREATE TABLE UserData
@@ -332,6 +354,7 @@
 
             $db->close();
         }
+
 
         if (isset($_POST['save'])){
             class UserData extends SQLite3{

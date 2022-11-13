@@ -206,8 +206,8 @@
                 <div class="right">
                     <div class="inRight">
                         <div class="brand">
-                            <img class = "logo" src="https://cdn.discordapp.com/attachments/969070208729899008/1038387054402355210/logo.png" alt="logo">
-                            <img class = "kaitae" src="https://cdn.discordapp.com/attachments/969070208729899008/1038387053802557460/kaitae.png" alt="brand">
+                            <img class = "logo" src="../IMG/logo/logo-img.png" alt="logo">
+                            <img class = "kaitae" src="../IMG/logo/logo-word.png" alt="brand">
                         </div>
                         <div class="btnAndlabel">
                             <button class="button" name="createData">สร้างบัญชีผู้ใช้</button>
