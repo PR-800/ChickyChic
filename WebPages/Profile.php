@@ -19,6 +19,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: url('https://www.kfc.co.th/Content/OnlineOrderingImages/Shared/bg.jpg');
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -78,28 +84,28 @@
                 <div class="modal-body">
                     <div class="md-form" id="name">
                         <label>ชื่อ</label>
-                        <input type="text" class="form-control" name="fname" value="Pornpilin">
+                        <input type="text" class="form-control" name="fname" id="fname" value="Pornpilin">
                         <label>นามสกุล</label>
-                        <input type="text" class="form-control" name="lname" value="Wongsritrang">
+                        <input type="text" class="form-control" name="lname" id="lname" value="Wongsritrang">
                     </div>
 
                     <div class="md-form">
                         <label>ที่อยู่</label>
-                        <textarea rows="3" class="form-control" name="address" value="Maung Trang"></textarea><br>
+                        <textarea rows="3" class="form-control" name="address" id="address" value="Maung Trang"></textarea><br>
                     </div>
 
                     <div class="md-form" id="location">
                         <label>จังหวัด</label>
-                        <input type="text" class="form-control" name="province" value="TRANG">
+                        <input type="text" class="form-control" name="province" id="province" value="TRANG">
                         <label>แขวง/เขต</label>
-                        <input type="text" class="form-control" name="zone" value="Tubteang"><br>
+                        <input type="text" class="form-control" name="zone" id="zone" value="Tubteang"><br>
                     </div>
 
                     <div class="md-form" id="number">
                         <label>รหัสไปรษณีย์</label>
-                        <input type="text" class="form-control" name="post" value="92000">
+                        <input type="text" class="form-control" name="post" id="post" value="92000">
                         <label>เบอร์โทรศัพท์</label>
-                        <input type="text" class="form-control" name="tel" value="075555555">
+                        <input type="text" class="form-control" name="tel" id="tel" value="075555555">
                     </div>
                 </div>
                 <button type="submit" class="submit" name="save" data-toggle="modal" data-target="#myModal">บันทึก</button>
@@ -156,14 +162,14 @@
                 alert("Telephone Number must fill out.");
                 return false;
             }
-            // else{
-            //     $(document).ready(function(){
-            //     $('#myForm').on('submit', function(e){
-            //         $('#popUp').modal('show');
-            //         e.preventDefault(); // prevent to link to next page after submit form
-            //     });
-            // })
-            // }
+            else{
+                $(document).ready(function(){
+                $('#myForm').on('submit', function(e){
+                    $('#popUp').modal('show');
+                    e.preventDefault(); // prevent to link to next page after submit form
+                });
+            })
+            }
         }
     </script>
 
@@ -239,6 +245,9 @@
                 }
             }
             $db = new UserData();
+            echo "<script type='text/javascript'>";
+                echo "window.location='SignIn.php'";
+            echo "</script>";
 
             /////////////////////////////Create Table UserData2//////////////////////////////////
             // $table2 = <<<EOF

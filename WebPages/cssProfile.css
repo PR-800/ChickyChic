@@ -8,17 +8,17 @@
 }
 
 .modal-dialog{
-    position: relative;
-    transform: translateY(5%);
+    /* position: relative;
+    transform: translateY(-5%);
     display: flex;
     justify-content: center;
-    align-items: center;
-    /* display: flex;
+    align-items: center; */
+    display: flex;
     justify-content: center;
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
 }
 
 .modal-header{

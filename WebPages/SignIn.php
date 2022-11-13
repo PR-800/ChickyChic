@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+    session_start();
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,6 +23,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: url('https://www.kfc.co.th/Content/OnlineOrderingImages/Shared/bg.jpg');
+        }
+    </style>
 </head>
 
 <body>
@@ -74,7 +83,7 @@
 
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
-            <form class="form-row" action="signIn.php" method="POST">
+            <form class="form-row" action="SignIn.php" method="POST">
                 <div class="left">
                     <div class="inLeft">
                         <div class="modal-header">
@@ -84,12 +93,12 @@
                         <div class="modal-body"> 
                             <div class="md-form">
                                 <label>ชื่อผู้ใช้ / อีเมลล์</label><br>
-                                <input type="text" class="form-control" name="userName">
+                                <input type="text" class="form-control" name="userName" id="userName">
                             </div>
         
                             <div class="md-form">
                                 <label>รหัสผ่าน</label><br>
-                                <input type="text" class="form-control" name="password">
+                                <input type="text" class="form-control" name="password" id="password">
                             </div>
                         </div>
                     </div>
@@ -129,20 +138,31 @@
             $password = $_POST['password'];
             $select = "select * from UserData2";
             $allData = $db->query($select);
-            $checkLast = false;
             while($row = $allData->fetchArray(SQLITE3_ASSOC)){
+
                 if((($userName === $row['UserName']) || ($userName === $row['Email'])) && ($password === $row['Password'])){
-                    $checkLast = true;
                     echo "<script type='text/javascript'>";
                         echo "window.location='Home.php'";
                     echo "</script>";
+
+                    // setItem sol.2
+                    $_SESSION["FirstName"] = $row["FirstName"];
+                    $_SESSION["LastName"] = $row["LastName"];
+                    $_SESSION["Address"] = $row["Address"];
+                    $_SESSION["Province"] = $row["Province"];
+                    $_SESSION["Zone"] = $row["Zone"];
+                    $_SESSION["PostNumber"] = $row["PostNumber"];
+                    $_SESSION["Tel"] = $row["Tel"];
+
+                    echo $_SESSION["FirstName"];
+
                     break;
                 }
             }
-            
             $db->close();
         }
     ?>
+    
 </body>
 
 </html>
