@@ -192,8 +192,15 @@
                         <a class="basket-bg" href="../Purchase/Purchase.php" style="background-color: transparent;"></a>
                     </div>
                 </a>
-                <a href="../User/SignIn.php"><img class="logo-user"
-                    src="../IMG/logo/logo-user.png"></a>
+                <div class="dropdown">
+                    <img src = "https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png" 
+                        aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" type="button" class="logo-user" class="dropdown-toggle">
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="../User/SignIn.php">Sign in</a>
+                        <a class="dropdown-item" href="../User/SignUp.php">Sign up</a>
+                        <a class="dropdown-item" href="../User/Profile.php">Profile</a>
+                    </div>
+                </div>
             </div>
         </div>
 

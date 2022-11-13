@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Profile</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -14,14 +14,116 @@
     <link href="css/bootstrap.css" rel="stylesheet" media="all">
 
     <link rel="stylesheet" href="cssProfile.css">
+    <link rel="stylesheet" href="../Home/Home.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 
     <style>
+        /* home.css */
+        * {
+            font-family: 'Kanit', sans-serif;
+        }
+
         body {
-            background: url('https://www.kfc.co.th/Content/OnlineOrderingImages/Shared/bg.jpg');
+            background: url('../IMG/bg.png');
+            background-size: cover;
+        }
+
+        .container-fluid {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .header-area {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .header {
+            width: 94%;
+            height: 140px;
+            position: relative;
+            background-color: rgb(254, 254, 254, 70%);
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            border-radius: 20px;
+            font-size: 30px;
+        }
+
+        .logo-img {
+            position: absolute;
+            top: 15px;
+            left: 25px;
+            width: 110px;
+        }
+
+        .logo-word {
+            position: absolute;
+            top: 30px;
+            left: 175px;
+            width: 130px;
+        }
+
+        .line {
+            position: absolute;
+            top: 20px;
+            left: 330px;
+            border-left: 3px solid rgb(253 165 39);
+            height: 100px;
+        }
+
+        .nav {
+            position: absolute;
+            top: 30px;
+        }
+
+        .nav:link, .nav:visited {
+            color: black;
+            text-decoration: none;
+        }
+
+        .nav:hover {
+            color: rgb(136, 136, 136);
+        }
+
+        .logo-basket {
+            position: absolute;
+            top: 45px;
+            right: 400px;
+            width: 50px;
+            filter: brightness(100);
+        }
+
+        .basket-bg {
+            position: absolute;
+            top: 35px;
+            right: 170px;
+            width: 310px;
+            height: 70px;
+            border-radius: 35px;
+            background-color: rgb(241 72 34);
+        }
+
+        .basket-num {
+            position: absolute;
+            top: 25px;
+            right: 455px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background-color: rgb(253 165 39);
+            text-align: center;
+        }
+
+        .logo-user {
+            position: absolute;
+            top: 40px;
+            right: 70px;
+            width: 60px;
         }
     </style>
 </head>
@@ -53,12 +155,22 @@
                         <a class="basket-bg" href="../Purchase/Purchase.php" style="background-color: transparent;"></a>
                     </div>
                 </a>
-                <a href="../User/SignIn.php"><img class="logo-user"
-                    src="../IMG/logo/logo-user.png"></a>
+                
+                <div class="dropdown">
+                    <img src = "https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png" 
+                        aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" type="button" class="logo-user" class="dropdown-toggle">
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="SignIn.php">Sign in</a>
+                        <a class="dropdown-item" href="SignUp.php">Sign up</a>
+                        <a class="dropdown-item" href="Profile.php">Profile</a>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
-    <div class="modal-dialog modal-md">
+
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title">ข้อมูลผู้ใช้</h1>

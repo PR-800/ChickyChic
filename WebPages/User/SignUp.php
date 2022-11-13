@@ -7,10 +7,14 @@
     <title>Register SignUp</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link href="css/bootstrap.css" rel="stylesheet" media="all">
 
     <link rel="stylesheet" href="cssSignIn_Up.css">
+    <link rel="stylesheet" href="../Home/Home.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -121,9 +125,7 @@
             right: 70px;
             width: 60px;
         }
-
     </style>
-
 </head>
 <body>
     <div class="container-fluid">
@@ -153,10 +155,19 @@
                         <a class="basket-bg" href="../Purchase/Purchase.php" style="background-color: transparent;"></a>
                     </div>
                 </a>
-                <a href="../User/SignIn.php"><img class="logo-user"
-                    src="../IMG/logo/logo-user.png"></a>
+                
+                <div class="dropdown">
+                    <img src = "https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png" 
+                        aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" type="button" class="logo-user" class="dropdown-toggle">
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="SignIn.php">Sign in</a>
+                        <a class="dropdown-item" href="SignUp.php">Sign up</a>
+                        <a class="dropdown-item" href="Profile.php">Profile</a>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
 
     <div class="modal-dialog modal-xl">
@@ -171,22 +182,22 @@
                         <div class="modal-body">
                             <div class="md-form">
                                 <label>ชื่อผู้ใช้</label><br>
-                                <input type="text" class="form-control validate" name="userName" value="LINGLING">
+                                <input type="text" class="form-control validate" name="userName" value="LINGLING" size="50">
                             </div>
 
                             <div class="md-form">
                                 <label>อีเมลล์</label><br>
-                                <input type="text" class="form-control validate" name="eMail" value="linglingppl@gmail.com">
+                                <input type="text" class="form-control validate" name="eMail" value="linglingppl@gmail.com" size="50">
                             </div>
 
                             <div class="md-form">
                                 <label>รหัสผ่าน</label><br>
-                                <input type="text" class="form-control validate" name="password" value="1122">
+                                <input type="text" class="form-control validate" name="password" value="1122" size="50">
                             </div>
 
                             <div class="md-form">
                                 <label>ยืนยันรหัสผ่าน</label><br>
-                                <input type="text" class="form-control validate" name="confirmPass" value="1122">
+                                <input type="text" class="form-control validate" name="confirmPass" value="1122" size="50">
                             </div>
                         </div>
                     </div>
