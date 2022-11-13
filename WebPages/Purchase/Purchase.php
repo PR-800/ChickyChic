@@ -41,36 +41,36 @@
 
         .header {
             width: 94%;
-            height: 140px;
+            height: 110px;
             position: relative;
             background-color: rgb(254, 254, 254, 70%);
             top: 10%;
             left: 50%;
             transform: translate(-50%, 0%);
             border-radius: 20px;
-            font-size: 30px;
+            font-size: 25px;
         }
 
         .logo-img {
             position: absolute;
-            top: 15px;
-            left: 25px;
-            width: 110px;
+            top: 11px;
+            left: 35px;
+            width: 90px;
         }
 
         .logo-word {
             position: absolute;
-            top: 30px;
-            left: 175px;
-            width: 130px;
+            top: 23px;
+            left: 160px;
+            width: 110px;
         }
 
         .line {
             position: absolute;
             top: 20px;
-            left: 330px;
+            left: 310px;
             border-left: 3px solid rgb(253 165 39);
-            height: 100px;
+            height: 70px;
         }
 
         .nav {
@@ -89,28 +89,28 @@
 
         .logo-basket {
             position: absolute;
-            top: 45px;
-            right: 400px;
-            width: 50px;
+            top: 35px;
+            right: 380px;
+            width: 38px;
             filter: brightness(100);
         }
 
         .basket-bg {
             position: absolute;
-            top: 35px;
+            top: 25px;
             right: 170px;
-            width: 310px;
-            height: 70px;
+            width: 280px;
+            height: 60px;
             border-radius: 35px;
             background-color: rgb(241 72 34);
         }
 
         .basket-num {
             position: absolute;
-            top: 25px;
-            right: 455px;
-            width: 46px;
-            height: 46px;
+            top: 18px;
+            right: 430px;
+            width: 35px;
+            height: 35px;
             border-radius: 50%;
             background-color: rgb(253 165 39);
             text-align: center;
@@ -118,9 +118,9 @@
 
         .logo-user {
             position: absolute;
-            top: 40px;
+            top: 32px;
             right: 70px;
-            width: 60px;
+            width: 50px;
         }
 
         .btn, .btn:hover {
@@ -159,6 +159,7 @@
             height: 22rem;
             top: 5%;
             position: sticky;
+            z-index: -10;
         }
 
     </style>
@@ -176,24 +177,45 @@
                 </a>
                 <div class="bar">
                     <a class="line"></a>
-                    <a class="nav" href="../Home/Home.php" style="top: 50px; left: 380px;">หน้าหลัก</a>
-                    <a class="nav" href="../Menu/Menu.php" style="top: 50px; left: 530px;">เมนู</a>
-                    <a class="nav" href="../Promotion/Promotion.php" style="top: 50px; left: 630px;">โปรโมชั่น</a>
+                    <a class="nav" href="../Home/Home.php" style="top: 40px; left: 360px;">หน้าหลัก</a>
+                    <a class="nav" href="../Menu/Menu.php" style="top: 40px; left: 505px;">เมนู</a>
+                    <a class="nav" href="../Promotion/Promotion.php" style="top: 40px; left: 610px;">โปรโมชั่น</a>
                 </div>
-                <a href="">
-                    <div class="bar-basket">
-                        <a class="basket-bg"></a>
-                        <img class="logo-basket"
-                            src="../IMG/logo/logo-basket.png">
-                        <a class="nav" style="top: 45px; right: 195px; color: white;">ออเดอร์ของคุณ</a>
-                        <a class="basket-num">
-                            <p style="color: white; font-size: 28px;">55</p>
-                        </a>
-                        <a class="basket-bg" href="../Purchase/Purchase.php" style="background-color: transparent;"></a>
-                    </div>
-                </a>
+                <div class="bar-basket">
+                    <a class="basket-bg"></a>
+                    <img class="logo-basket"
+                        src="../IMG/logo/logo-basket.png">
+                    <a class="nav" style="top: 38px; right: 205px; color: white;">ออเดอร์ของคุณ</a>
+                    <a class="basket-num">
+                        <p style="color: white; font-size: 23px;">
+                        <?php
+                            class NumDB extends SQLite3{
+                                function __construct(){
+                                    $this->open('../Database/selectMenu.db');
+                                }
+                            }
+
+                            $db = new NumDB();
+                            if(!$db){
+                                echo $db->lastErrorMsg();
+                            }
+                            $sql ="SELECT * from selectMenu";
+                            $ret = $db->query($sql);
+                            $num = 0;
+                            while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
+                                +$num += +$row['AMOUNT'];
+                            }
+                            echo $num;
+
+                            $db->close();
+                        ?>
+                        </p>
+                    </a>
+                    <a class="basket-bg" href="../Purchase/Purchase.php" style="background-color: transparent;"></a>
+                </div>
+
                 <div class="dropdown">
-                    <img src = "https://cdn.discordapp.com/attachments/1008922955494989965/1033046179614830622/logo-user.png" 
+                    <img src = "../IMG/logo/logo-user.png"
                         aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" type="button" class="logo-user" class="dropdown-toggle">
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="../User/SignIn.php">Sign in</a>
