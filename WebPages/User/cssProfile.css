@@ -93,28 +93,33 @@ label{
 
 /* POP UP */
 #modal-dialog{
+    display: flex;
+    justify-content: center;
     position: absolute;
-    top: 50%;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
 }
-
 #modal-contents{
     height: 200px;
     width: 400px;
     border-radius: 15px;
 }
 
-#modal-headers, #modal-bodys h4, #modal-footer{
+#modal-headers, #modal-bodys h5, #modal-footer{
     display: flex;
     justify-content: center;
     color: #F24822;
 }
 
+#modal-bodys h5{
+    margin-top: 10px;
+    color: #FEA628;
+}
+
 #modal-headers{
     margin-top: 10px;
     padding: 0;
-    border: none;
 }
 
 #modal-footer{
@@ -124,7 +129,7 @@ label{
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     position: relative;
-    top: 12px;
+    top: 20px;
     left: -13px;
 }
 

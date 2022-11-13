@@ -182,22 +182,22 @@
                         <div class="modal-body">
                             <div class="md-form">
                                 <label>ชื่อผู้ใช้</label><br>
-                                <input type="text" class="form-control validate" name="userName" value="LINGLING" size="50">
+                                <input type="text" class="form-control validate" name="userName" size="50">
                             </div>
 
                             <div class="md-form">
                                 <label>อีเมลล์</label><br>
-                                <input type="text" class="form-control validate" name="eMail" value="linglingppl@gmail.com" size="50">
+                                <input type="text" class="form-control validate" name="eMail" size="50">
                             </div>
 
                             <div class="md-form">
                                 <label>รหัสผ่าน</label><br>
-                                <input type="text" class="form-control validate" name="password" value="1122" size="50">
+                                <input type="text" class="form-control validate" name="password" size="50">
                             </div>
 
                             <div class="md-form">
                                 <label>ยืนยันรหัสผ่าน</label><br>
-                                <input type="text" class="form-control validate" name="confirmPass" value="1122" size="50">
+                                <input type="text" class="form-control validate" name="confirmPass" size="50">
                             </div>
                         </div>
                     </div>

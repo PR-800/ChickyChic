@@ -179,28 +179,28 @@
                 <div class="modal-body">
                     <div class="md-form" id="name">
                         <label>ชื่อ</label>
-                        <input type="text" class="form-control" name="fname" id="fname" value="Pornpilin">
+                        <input type="text" class="form-control" name="fname" id="fname">
                         <label>นามสกุล</label>
-                        <input type="text" class="form-control" name="lname" id="lname" value="Wongsritrang">
+                        <input type="text" class="form-control" name="lname" id="lname">
                     </div>
 
                     <div class="md-form">
                         <label>ที่อยู่</label>
-                        <textarea rows="3" class="form-control" name="address" id="address" value="Maung Trang"></textarea><br>
+                        <textarea rows="3" class="form-control" name="address" id="address"></textarea><br>
                     </div>
 
                     <div class="md-form" id="location">
                         <label>จังหวัด</label>
-                        <input type="text" class="form-control" name="province" id="province" value="TRANG">
+                        <input type="text" class="form-control" name="province" id="province">
                         <label>แขวง/เขต</label>
-                        <input type="text" class="form-control" name="zone" id="zone" value="Tubteang"><br>
+                        <input type="text" class="form-control" name="zone" id="zone"><br>
                     </div>
 
                     <div class="md-form" id="number">
                         <label>รหัสไปรษณีย์</label>
-                        <input type="text" class="form-control" name="post" id="post" value="92000">
+                        <input type="text" class="form-control" name="post" id="post">
                         <label>เบอร์โทรศัพท์</label>
-                        <input type="text" class="form-control" name="tel" id="tel" value="075555555">
+                        <input type="text" class="form-control" name="tel" id="tel">
                     </div>
                 </div>
                 <button type="submit" class="submit" name="save" data-toggle="modal" data-target="#myModal">บันทึก</button>
@@ -208,16 +208,15 @@
         </div>
     </div>
 
-    <!-- POP UP WARNING -->
     <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog" id="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content" id="modal-contents">
                 <div class="modal-header" id="modal-headers">
-                    <h3 class="modal-title">Account Was Registered!</h3>
+                    <h3 class="modal-title">Please fill out all data.</h3>
                 </div>
                 <div class="modal-body" id="modal-bodys">
-                    <h4>Please Sign In.</h4>
+                    <h5 id="nameData">Please try again.</h5>
                 </div>
                 <div class="modal-footer" id="modal-footer">
                     <button type="button" id="close" data-dismiss="modal">Close</button>
@@ -235,41 +234,55 @@
             let zone = document.forms["Form"]["zone"].value;
             let post = document.forms["Form"]["post"].value;
             let tel = document.forms["Form"]["tel"].value;
+            let nameData = document.getElementById("nameData");
             if (fname == ""){
-                alert("First Name must fill out.");
+                nameData.textContent = "Please fill out your first name.";
+                $( document ).ready(function() {
+                    $("#myModal").modal("show")
+                });
                 return false;
             }
             else if (lname == ""){
-                alert("Last Name must fill out.");
+                nameData.textContent = "Please fill out your last name.";
+                $( document ).ready(function() {
+                    $("#myModal").modal("show")
+                });
                 return false;
             }
             else if (address == ""){
-                alert("Address must fill out.");
+                nameData.textContent = "Please fill out your address.";
+                $( document ).ready(function() {
+                    $("#myModal").modal("show")
+                });
                 return false;
             }
             else if (province == ""){
-                alert("Province must fill out.");
+                nameData.textContent = "Please fill out your province.";
+                $( document ).ready(function() {
+                    $("#myModal").modal("show")
+                });
                 return false;
             }
             else if (zone == ""){
-                alert("Zone must fill out.");
+                nameData.textContent = "Please fill out your zone.";
+                $( document ).ready(function() {
+                    $("#myModal").modal("show")
+                });
                 return false;
             }
             else if (post == ""){
-                alert("Postcode must fill out.");
+                nameData.textContent = "Please fill out your post number.";
+                $( document ).ready(function() {
+                    $("#myModal").modal("show")
+                });
                 return false;
             }
             else if (tel == ""){
-                alert("Telephone Number must fill out.");
-                return false;
-            }
-            else{
-                $(document).ready(function(){
-                $('#myForm').on('submit', function(e){
-                    $('#popUp').modal('show');
-                    e.preventDefault(); // prevent to link to next page after submit form
+                nameData.textContent = "Please fill out your telephone number.";
+                $( document ).ready(function() {
+                    $("#myModal").modal("show")
                 });
-            })
+                return false;
             }
         }
     </script>
@@ -312,23 +325,6 @@
                 }
             }
             $db = new UserData();
-
-            ///////////////////////// Warning pop up if the Account in Sign Up was registered///////////////////////////
-            $userName = $_POST['userName'];
-            $password = $_POST['password'];
-            $select = "select * from UserData2";
-            $allData = $db->query($select);
-            while($row = $allData->fetchArray(SQLITE3_ASSOC)){
-                
-                if((($userName === $row['UserName']) || ($userName === $row['Email'])) && ($password === $row['Password'])){
-                    echo    '<script type="text/javascript">
-                                $( document ).ready(function() {
-                                $("#myModal").modal("show")
-                                });
-                            </script>';
-                }
-            }
-
             /////////////////////////////Create Table UserData//////////////////////////////////
             // $table = <<<EOF
             // CREATE TABLE UserData
@@ -354,7 +350,6 @@
 
             $db->close();
         }
-
 
         if (isset($_POST['save'])){
             class UserData extends SQLite3{
