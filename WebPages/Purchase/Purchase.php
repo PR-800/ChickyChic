@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="../Home/Home.css">
     <link rel="stylesheet" href="Purchase.css">
 
     <style>
@@ -162,6 +162,22 @@
             z-index: -10;
         }
 
+        .butt {
+            position:relative;
+            background-color: rgb(253 165 39);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 25px;
+        }
+
+        .butt:focus {
+            border: none;
+            outline: none;
+        }
+
     </style>
 
 </head>
@@ -256,7 +272,13 @@
                             echo "<tr>";
                             echo "<td>" . "<img src='" . $row['IMG'] . "' width='100%'></td>";
                             echo "<td style='text-align: left;'>" .$row['NAME'] . "</td>";
-                            echo "<td>" . $row['AMOUNT'] . "</td>";
+                            echo "<td>"
+                            . "<span class='decrease'><button type='button' class='butt' style='right:20%;'
+                            onclick='decrease({$row['ID']})'>-</button></span>"
+                            . "<span class='num' style='font-size:25px' id='{$row['ID']}'>{$row['AMOUNT']}</span>"
+                            . "<span class='increase'><button type='button' class='butt' style='left:20%;'
+                            onclick='increase({$row['ID']})'>+</button></span>"
+                            . "</td>";
                             echo "<td>" . (+$row['PRICE'])*(+$row['AMOUNT']) . "</td>";
                             echo "<td></td>";
                             echo "</tr>";
@@ -411,4 +433,42 @@
         ?>
     </div>
 </body>
+
+<script>
+    const updateProduct = (id, newAmount) => {
+        $.ajax({
+            type: "POST",
+            url: "../Database/UpdateOrder.php",
+            data: {
+                id: id,
+                amount: newAmount
+            },
+            error: (result) => {
+                console.log(result)
+            },
+        });
+    }
+
+    const increase = (id) => {
+
+        let select = document.querySelector(`#${id}`)
+
+        let newAmount = parseInt(select.innerText) + 1
+
+        select.innerText = newAmount
+
+        updateProduct(id, newAmount)
+    }
+
+    const decrease = (id) => {
+        let select = document.querySelector(`#${id}`)
+        let newAmount = parseInt(select.innerText) - 1
+
+        if (newAmount < 1) return
+
+        select.innerText = newAmount
+
+        updateProduct(id, newAmount)
+    }
+</script>
 </html>

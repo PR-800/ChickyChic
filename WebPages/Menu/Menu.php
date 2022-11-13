@@ -200,8 +200,8 @@
             color: white;
             border: none;
             border-radius: 50%;
-            width: 35px;
-            height: 35px;
+            width: 40px;
+            height: 40px;
             font-size: 25px;
         }
 
