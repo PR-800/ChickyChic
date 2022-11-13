@@ -209,6 +209,23 @@
         </div>
     </div>
 
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" id="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content" id="modal-content">
+                <div class="modal-header" id="modal-header">
+                    <h3 class="modal-title">Your Account Was Not Found!</h3>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <h4>Please try again.</h4>
+                </div>
+                <div class="modal-footer" id="modal-footer">
+                    <button type="button" id="close" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <?php
         if(isset($_POST['checkData'])){
             class SignIn extends SQLite3{
@@ -227,6 +244,7 @@
             $password = $_POST['password'];
             $select = "select * from UserData2";
             $allData = $db->query($select);
+            $checkLast = false;
             while($row = $allData->fetchArray(SQLITE3_ASSOC)){
 
                 if((($userName === $row['UserName']) || ($userName === $row['Email'])) && ($password === $row['Password'])){
@@ -236,6 +254,13 @@
                     echo "</script>";
                     break;
                 }
+            }
+            if($checkLast == false){
+                echo    '<script type="text/javascript">
+                                $( document ).ready(function() {
+                                $("#myModal").modal("show")
+                                });
+                            </script>';
             }
             
             $db->close();
