@@ -223,12 +223,12 @@
 
                             <div class="md-form">
                                 <label>รหัสผ่าน</label><br>
-                                <input type="text" class="form-control validate" name="password" size="50">
+                                <input type="password" class="form-control validate" name="password" size="50">
                             </div>
 
                             <div class="md-form">
                                 <label>ยืนยันรหัสผ่าน</label><br>
-                                <input type="text" class="form-control validate" name="confirmPass" size="50">
+                                <input type="password" class="form-control validate" name="confirmPass" size="50">
                             </div>
                         </div>
                     </div>

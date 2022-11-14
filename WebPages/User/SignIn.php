@@ -138,6 +138,10 @@
             transform: translate(-50%, 0);
         }
 
+        #showPassword{
+            margin-top:15px;
+            margin-left: 20px;
+        }
     </style>
 </head>
 <body>
@@ -219,6 +223,17 @@
                             <div class="md-form">
                                 <label>รหัสผ่าน</label><br>
                                 <input type="password" class="form-control" name="password" id="password">
+                                <input type="checkbox" id="showPassword" onclick="myFunction()">แสดงรหัสผ่าน
+                                <script>
+function myFunction() {
+  let x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
                             </div>
                         </div>
                     </div>
