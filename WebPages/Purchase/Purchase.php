@@ -134,7 +134,10 @@
         }
         .modal-title {
             color: rgb(253 165 39);
+            margin-top: 2%;
             margin-bottom: 2%;
+            margin-left: 4%;
+            font-size:25px;
         }
 
         .table {
@@ -158,9 +161,10 @@
         .pay {
             padding: 1rem;
             width: 25rem;
-            height: 22rem;
+            height: 20rem;
             top: 5%;
             position: sticky;
+            font-size: 25px;
         }
 
         .butt {
@@ -177,6 +181,17 @@
         .butt:focus {
             border: none;
             outline: none;
+        }
+
+        .form-check-input {
+            position:relative;
+            top:4%;
+            width:16.5px;
+            height:16.5px;
+        }
+
+        .form-check-label, .input-group-text, .form-control, textarea {
+            font-size:25px;
         }
 
     </style>
@@ -271,7 +286,7 @@
                         $ret = $db->query($sql);
                         while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
                             echo "<tr>";
-                            echo "<td>" . "<img src='" . $row['IMG'] . "' width='100%'></td>";
+                            echo "<td>" . "<img src='" . $row['IMG'] . "' width='100%' style='aspect-ratio: 1/1; object-fit: contain;'></td>";
                             echo "<td style='text-align: left;'>" .$row['NAME'] . "</td>";
                             echo "<td>"
                             . "<span class='decrease'><button type='button' class='butt' style='right:20%;'
@@ -326,28 +341,28 @@
                             ?> บาท</span><br></b>
                         </p>
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderConfirm"
-                            style="font-size: 30px; border-radius: 30px;">ดำเนินการต่อ</button>
+                            style="border-radius: 30px; font-size: 25px;">ดำเนินการต่อ</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="modal fade" id="orderConfirm" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document" style="font-size: 30px;">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <h5 class="modal-title"><b>ที่อยู่สำหรับการจัดส่ง</b></h5>
-                        <form>
+                        <form method="POST">
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">ชื่อ</span>
                                         </div>
-                                        <input type="text" class="form-control" aria-label="fname">
+                                        <input type="text" class="form-control" aria-label="fname" name="fname" id="fname">
                                     </div>
                                 </div>
                                 <div class="col">
@@ -359,11 +374,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-group mb-3">
+                            <div class="input-group mb-3" style="max-width:86%; margin-left: 5%;">
                                 <div class="input-group-prepend" >
                                     <span class="input-group-text">ที่อยู่</span>
                                 </div>
-                                <textarea class="form-control rounded-0" rows="2"></textarea>
+                                <textarea class="form-control rounded-0" rows="2" ></textarea>
                             </div>
                             <div class="row">
                                 <div class="col">
@@ -408,10 +423,30 @@
                                 <input class="form-check-input" type="radio" name="payment">
                                 <label class="form-check-label">บัญชีธนาคาร</label>
                             </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderFinish" data-dismiss="modal"
+                                style="font-size: 25px; border-radius:30px; width:90%; margin-top:2%;">ดำเนินการต่อ</button>
+                            </div>
                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                        <button type="button" class="btn btn-primary">ดำเนินการต่อ</button>
-
+        <div class="modal fade" id="orderFinish" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h5 class="modal-title" style="text-align:center;"><b>ขอบคุณสำหรับคำสั่งซื้อของคุณ ! <br> รอรับอาหารภายใน 30 นาทีได้เลย</b></h5>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close"
+                            style="font-size: 25px; border-radius:30px; width:80%; margin-top:2%; margin-bottom:2%;"
+                            onclick="refreshPage()">ตกลง</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -483,22 +518,21 @@
             error: (result) => {
                 console.log(result)
             },
-            success: (result) => {
-                // module.exports.change=function(btnOnclick) {
-                //     return ;
-                // }
-                // const selectButton = document.querySelector(`#button-${type}-${id}`)
-                // console.log(selectButton)
-                // global.btnOnclick = selectButton.onclick
-                // btnOnclick = null;
-                // global.btnText = selectButton.innerText
-                // btnText = "เพิ่มลงในตะกร้าแล้ว"
-                // global.btnDisabled = selectButton.disabled
-                // btnDisabled = true
-            }
         });
 
         window.location = window.location
     }
+
+    const refreshPage = () => {
+        $.ajax({
+            type: "POST",
+            url: "../Database/DeleteAll.php",
+            error: (result) => {
+                console.log(result)
+            },
+        }),
+        window.location = window.location
+    }
+
 </script>
 </html>
