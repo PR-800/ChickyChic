@@ -134,10 +134,7 @@
         }
         .modal-title {
             color: rgb(253 165 39);
-            margin-top: 2%;
             margin-bottom: 2%;
-            margin-left: 4%;
-            font-size:25px;
         }
 
         .table {
@@ -161,10 +158,9 @@
         .pay {
             padding: 1rem;
             width: 25rem;
-            height: 20rem;
+            height: 22rem;
             top: 5%;
             position: sticky;
-            font-size: 25px;
         }
 
         .butt {
@@ -181,30 +177,6 @@
         .butt:focus {
             border: none;
             outline: none;
-        }
-
-        .form-check-input {
-            position:relative;
-            top:4%;
-            width:16.5px;
-            height:16.5px;
-        }
-
-        .form-check-label, .input-group-text, .form-control, textarea {
-            font-size:25px;
-        }
-
-        .invalid input:required:invalid {
-            background: #BE4C54;
-        }
-
-        .invalid input:required:valid {
-            background: #17D654;
-        }
-
-        .btn-primary:disabled {
-            background-color: rgb(241 72 34);
-            border: none;
         }
 
     </style>
@@ -299,7 +271,7 @@
                         $ret = $db->query($sql);
                         while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
                             echo "<tr>";
-                            echo "<td>" . "<img src='" . $row['IMG'] . "' width='100%' style='aspect-ratio: 1/1; object-fit: contain;'></td>";
+                            echo "<td>" . "<img src='" . $row['IMG'] . "' width='100%'></td>";
                             echo "<td style='text-align: left;'>" .$row['NAME'] . "</td>";
                             echo "<td>"
                             . "<span class='decrease'><button type='button' class='butt' style='right:20%;'
@@ -354,31 +326,28 @@
                             ?> บาท</span><br></b>
                         </p>
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderConfirm"
-                            style="border-radius: 30px; font-size: 25px;">ดำเนินการต่อ</button>
+                            style="font-size: 30px; border-radius: 30px;">ดำเนินการต่อ</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="modal fade" id="orderConfirm" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-dialog modal-dialog-centered" role="document" style="font-size: 30px;">
                 <div class="modal-content">
                     <div class="modal-body">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <h5 class="modal-title"><b>ที่อยู่สำหรับการจัดส่ง</b></h5>
-                        <form class="needs-validation" novalidate>
+                        <form>
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">ชื่อ</span>
                                         </div>
-                                        <input type="text" class="form-control" aria-label="fname" required>
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Please enter a valid email address
+                                        <input type="text" class="form-control" aria-label="fname">
                                     </div>
                                 </div>
                                 <div class="col">
@@ -386,15 +355,15 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">นามสกุล</span>
                                         </div>
-                                        <input type="text" class="form-control" aria-label="lname" required>
+                                        <input type="text" class="form-control" aria-label="lname">
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-group mb-3" style="max-width:86%; margin-left: 5%;">
+                            <div class="input-group mb-3">
                                 <div class="input-group-prepend" >
                                     <span class="input-group-text">ที่อยู่</span>
                                 </div>
-                                <textarea class="form-control rounded-0" rows="2" required></textarea>
+                                <textarea class="form-control rounded-0" rows="2"></textarea>
                             </div>
                             <div class="row">
                                 <div class="col">
@@ -402,7 +371,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">ตำบล/แขวง</span>
                                         </div>
-                                        <input type="text" class="form-control" aria-label="district" required>
+                                        <input type="text" class="form-control" aria-label="district">
                                     </div>
                                 </div>
                                 <div class="col">
@@ -410,7 +379,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">จังหวัด</span>
                                         </div>
-                                        <input type="text" class="form-control" aria-label="province" required>
+                                        <input type="text" class="form-control" aria-label="province" >
                                     </div>
                                 </div>
                             </div>
@@ -420,7 +389,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">รหัสไปรษณีย์</span>
                                         </div>
-                                        <input type="text" class="form-control" aria-label="postnum" required>
+                                        <input type="text" class="form-control" aria-label="postnum">
                                     </div>
                                 </div>
                                 <div class="col">
@@ -428,44 +397,21 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">เบอร์โทรศัพท์</span>
                                         </div>
-                                        <input type="text" class="form-control" aria-label="phone" required>
+                                        <input type="text" class="form-control" aria-label="phone">
                                     </div>
                                 </div>
                             </div>
                             <h5 class="modal-title" style="margin-bottom: 1%;"><b>รูปแบบการชำระเงิน</b></h5>
                             <div class="form-check" style="margin-left: 5%;">
-                                <input class="form-check-input" type="radio" name="payment" required>
-                                <label class="form-check-label" style="color:black;">เก็บเงินปลายทาง</label><br>
-                                <input class="form-check-input" type="radio" name="payment" required>
-                                <label class="form-check-label" style="color:black;">บัญชีธนาคาร</label>
-                            </div>
-
-                            <div class="d-flex justify-content-center">
-                                <button type="submit" class="btn btn-primary" id="modalSaveBtn" data-backdrop="static"
-                                style="font-size: 25px; border-radius:30px; width:40%; margin-top:2%; background-color:white; color:rgb(241 72 34);" >บันทึก</button>
-                                <span style="width: 5%;"></span>
-                                <button type="button" class="btn btn-primary" id="modalConBtn" disabled=true data-toggle="modal" data-target="#orderFinish" data-dismiss="modal"
-                                style="font-size: 25px; border-radius:30px; width:40%; margin-top:2%;">ดำเนินการต่อ</button>
+                                <input class="form-check-input" type="radio" name="payment">
+                                <label class="form-check-label">เก็บเงินปลายทาง</label><br>
+                                <input class="form-check-input" type="radio" name="payment">
+                                <label class="form-check-label">บัญชีธนาคาร</label>
                             </div>
                         </form>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="modal fade" id="orderFinish" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-md" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h5 class="modal-title" style="text-align:center;"><b>ขอบคุณสำหรับคำสั่งซื้อของคุณ ! <br> รอรับอาหารภายใน 30 นาทีได้เลย</b></h5>
-                        <div class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close"
-                            style="font-size: 25px; border-radius:30px; width:80%; margin-top:2%; margin-bottom:2%;"
-                            onclick="refreshPage()">ตกลง</button>
-                        </div>
+                        <button type="button" class="btn btn-primary">ดำเนินการต่อ</button>
+
                     </div>
                 </div>
             </div>
@@ -478,29 +424,6 @@
 </body>
 
 <script>
-
-    (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.getElementsByClassName('needs-validation');
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-            if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-            else {
-                let btn = document.getElementById("modalConBtn")
-                btn.disabled = false;
-            }
-            event.preventDefault();
-            form.classList.add('was-validated');
-            }, false);
-        });
-        }, false);
-    })();
 
     const updateProduct = (id, type, newAmount) => {
         $.ajax({
@@ -560,21 +483,22 @@
             error: (result) => {
                 console.log(result)
             },
+            success: (result) => {
+                // module.exports.change=function(btnOnclick) {
+                //     return ;
+                // }
+                // const selectButton = document.querySelector(`#button-${type}-${id}`)
+                // console.log(selectButton)
+                // global.btnOnclick = selectButton.onclick
+                // btnOnclick = null;
+                // global.btnText = selectButton.innerText
+                // btnText = "เพิ่มลงในตะกร้าแล้ว"
+                // global.btnDisabled = selectButton.disabled
+                // btnDisabled = true
+            }
         });
 
         window.location = window.location
     }
-
-    const refreshPage = () => {
-        $.ajax({
-            type: "POST",
-            url: "../Database/DeleteAll.php",
-            error: (result) => {
-                console.log(result)
-            },
-        }),
-        window.location = window.location
-    }
-
 </script>
 </html>
