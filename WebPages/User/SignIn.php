@@ -200,6 +200,7 @@
                         <a class="dropdown-item" href="../User/SignIn.php">Sign in</a>
                         <a class="dropdown-item" href="../User/SignUp.php">Sign up</a>
                         <a class="dropdown-item" href="../User/Profile.php">Profile</a>
+                        <a class="dropdown-item" href="../Home/Home.php">Log out</a>
                     </div>
                 </div>
             </div>
