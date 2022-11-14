@@ -32,7 +32,6 @@
     width: 900px;
     height: 520px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    border-radius: 15px;
 }
 
 .modal-body{
@@ -41,7 +40,6 @@
 
 .form-control{
     border: 1px solid rgb(174, 174, 174);
-    border-radius: 20px;
     width: 100%;
     height: 80%;
 }
@@ -91,8 +89,6 @@ label{
     width:100%;
     height: 520px;
     background-color: #FEA628;
-    border-bottom-right-radius: 15px;
-    border-top-right-radius: 15px;
 }
 
 .brand, .btnAndlabel{
@@ -149,84 +145,6 @@ input, label, textarea{
     font-size: 20px;
 }
 
-@media screen and (max-width:990px){
-    .logo, .kaitae, button, .label{
-        top: 10%;
-        width: 200px;
-    }
-    .kaitae{
-        top: 60%;
-    }
-    .button{
-        top: 65%;
-        width: 150px;
-    }
-    .label{
-        top: 75%;
-    }
-}
-
-@media screen and (max-width:770px){
-    .modal-content{
-        width: 400px;
-        height: 100%;
-    }
-    .form-row{
-        display: block;
-    }
-    .left{
-        width: 100%;
-        height: 50%;
-        padding-bottom: 25px;
-    }
-    .right{
-        width: 100%;
-        height: 100px;
-    }
-    .inLeft{
-        height: fit-content;
-    }
-    .inRight{
-        left: 1.2%;
-        position: relative;
-        border-top-right-radius: 0px;
-        border-bottom-left-radius: 5px;
-    }
-    .logo, .kaitae, button, .label{
-        top: 3%;
-        width: 60px;
-    }
-    .kaitae{
-        top: 18%;
-    }
-    .button{
-        font-size: 20px;
-        width: 100px;
-        height: 30px;
-        top: 65%;
-    }
-    .label{
-        font-size: 20px;
-        top: 90%;
-        margin-top: 5px;
-        top: 75%;
-        width: 120px;
-    }
-    label{
-        font-size: small;
-    }
-    .brand{
-        position: relative;
-        top: 0%;
-        left: 65%;
-    }
-    .btnAndlabel{
-        position: relative;
-        top: -465%;
-        left: 40%;
-        margin-right: 10px;
-    }
-}
 
 /* POP UP */
 #modal-dialog{
@@ -254,8 +172,6 @@ input, label, textarea{
 #modal-footer{
     background-color: #FEA628;
     height: 50px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
 }
 
 #close{
