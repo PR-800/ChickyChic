@@ -43,6 +43,8 @@
         .header-area {
             padding-top: 10px;
             padding-bottom: 10px;
+            position: relative;
+            z-index: 10;
         }
 
         .header {
