@@ -194,6 +194,19 @@
             font-size:25px;
         }
 
+        .invalid input:required:invalid {
+            background: #BE4C54;
+        }
+
+        .invalid input:required:valid {
+            background: #17D654;
+        }
+
+        .btn-primary:disabled {
+            background-color: rgb(241 72 34);
+            border: none;
+        }
+
     </style>
 
 </head>
@@ -355,14 +368,17 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <h5 class="modal-title"><b>ที่อยู่สำหรับการจัดส่ง</b></h5>
-                        <form method="POST">
+                        <form class="needs-validation" novalidate>
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">ชื่อ</span>
                                         </div>
-                                        <input type="text" class="form-control" aria-label="fname" name="fname" id="fname">
+                                        <input type="text" class="form-control" aria-label="fname" required>
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter a valid email address
                                     </div>
                                 </div>
                                 <div class="col">
@@ -370,7 +386,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">นามสกุล</span>
                                         </div>
-                                        <input type="text" class="form-control" aria-label="lname">
+                                        <input type="text" class="form-control" aria-label="lname" required>
                                     </div>
                                 </div>
                             </div>
@@ -378,7 +394,7 @@
                                 <div class="input-group-prepend" >
                                     <span class="input-group-text">ที่อยู่</span>
                                 </div>
-                                <textarea class="form-control rounded-0" rows="2" ></textarea>
+                                <textarea class="form-control rounded-0" rows="2" required></textarea>
                             </div>
                             <div class="row">
                                 <div class="col">
@@ -386,7 +402,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">ตำบล/แขวง</span>
                                         </div>
-                                        <input type="text" class="form-control" aria-label="district">
+                                        <input type="text" class="form-control" aria-label="district" required>
                                     </div>
                                 </div>
                                 <div class="col">
@@ -394,7 +410,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">จังหวัด</span>
                                         </div>
-                                        <input type="text" class="form-control" aria-label="province" >
+                                        <input type="text" class="form-control" aria-label="province" required>
                                     </div>
                                 </div>
                             </div>
@@ -404,7 +420,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">รหัสไปรษณีย์</span>
                                         </div>
-                                        <input type="text" class="form-control" aria-label="postnum">
+                                        <input type="text" class="form-control" aria-label="postnum" required>
                                     </div>
                                 </div>
                                 <div class="col">
@@ -412,21 +428,24 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">เบอร์โทรศัพท์</span>
                                         </div>
-                                        <input type="text" class="form-control" aria-label="phone">
+                                        <input type="text" class="form-control" aria-label="phone" required>
                                     </div>
                                 </div>
                             </div>
                             <h5 class="modal-title" style="margin-bottom: 1%;"><b>รูปแบบการชำระเงิน</b></h5>
                             <div class="form-check" style="margin-left: 5%;">
-                                <input class="form-check-input" type="radio" name="payment">
-                                <label class="form-check-label">เก็บเงินปลายทาง</label><br>
-                                <input class="form-check-input" type="radio" name="payment">
-                                <label class="form-check-label">บัญชีธนาคาร</label>
+                                <input class="form-check-input" type="radio" name="payment" required>
+                                <label class="form-check-label" style="color:black;">เก็บเงินปลายทาง</label><br>
+                                <input class="form-check-input" type="radio" name="payment" required>
+                                <label class="form-check-label" style="color:black;">บัญชีธนาคาร</label>
                             </div>
 
                             <div class="d-flex justify-content-center">
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderFinish" data-dismiss="modal"
-                                style="font-size: 25px; border-radius:30px; width:90%; margin-top:2%;">ดำเนินการต่อ</button>
+                                <button type="submit" class="btn btn-primary" id="modalSaveBtn" data-backdrop="static"
+                                style="font-size: 25px; border-radius:30px; width:40%; margin-top:2%; background-color:white; color:rgb(241 72 34);" >บันทึก</button>
+                                <span style="width: 5%;"></span>
+                                <button type="button" class="btn btn-primary" id="modalConBtn" disabled=true data-toggle="modal" data-target="#orderFinish" data-dismiss="modal"
+                                style="font-size: 25px; border-radius:30px; width:40%; margin-top:2%;">ดำเนินการต่อ</button>
                             </div>
                         </form>
                     </div>
@@ -459,6 +478,29 @@
 </body>
 
 <script>
+
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            else {
+                let btn = document.getElementById("modalConBtn")
+                btn.disabled = false;
+            }
+            event.preventDefault();
+            form.classList.add('was-validated');
+            }, false);
+        });
+        }, false);
+    })();
 
     const updateProduct = (id, type, newAmount) => {
         $.ajax({
