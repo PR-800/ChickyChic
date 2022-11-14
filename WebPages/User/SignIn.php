@@ -218,7 +218,7 @@
 
                             <div class="md-form">
                                 <label>รหัสผ่าน</label><br>
-                                <input type="text" class="form-control" name="password" id="password">
+                                <input type="password" class="form-control" name="password" id="password">
                             </div>
                         </div>
                     </div>
