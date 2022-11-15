@@ -247,6 +247,23 @@
         </div>
     </div>
 
+    <div id="backSignIn" class="modal fade" role="dialog">
+        <div class="modal-dialog" id="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content" id="modal-contents">
+                <div class="modal-header" id="modal-headers">
+                    <h3 class="modal-title">You already have an account.</h3>
+                </div>
+                <div class="modal-body" id="modal-bodys">
+                    <h5 id="nameData">Please go back to sign in.</h5>
+                </div>
+                <div class="modal-footer" id="modal-footer">
+                    <button type="button" id="close" data-dismiss="modal" onclick="location.href='SignIn.php'">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         function validate(){
             let fname = document.forms["Form"]["fname"].value;
@@ -369,6 +386,23 @@
             EOF;
 
             $record = $db->exec($table);
+
+            /////////////////////////////Check if has account/////////////////////////
+            $select = "select * from UserData2";
+            $allData = $db->query($select);
+            $checkLast = false;
+            while($row = $allData->fetchArray(SQLITE3_ASSOC)){
+
+                if((($userName === $row['UserName']) || ($userName === $row['Email'])) && ($password === $row['Password'])){
+                    $checkLast = true;
+                    echo    '<script type="text/javascript">
+                                $( document ).ready(function() {
+                                $("#backSignIn").modal("show")
+                                });
+                            </script>';
+                    break;
+                }
+            }
 
             $db->close();
         }
