@@ -310,7 +310,7 @@
     </script>
 
     <?php
-
+        error_reporting(0);
         /////////////////Create Table///////////////////
         // $table = <<<EOF
         // CREATE TABLE UserData
