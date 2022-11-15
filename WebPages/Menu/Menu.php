@@ -215,7 +215,7 @@
         .page {
             position: absolute;
             top: 100px;
-            left: 350px;
+            left: 300px;
         }
 
         h3 {

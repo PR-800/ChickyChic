@@ -201,28 +201,31 @@
                 <div class="modal-body">
                     <div class="md-form" id="name">
                         <label>ชื่อ</label>
-                        <input type="text" class="form-control" name="fname" id="fname">
+                        <input type="text" value="LingLing" class="form-control" name="fname" id="fname">
                         <label>นามสกุล</label>
-                        <input type="text" class="form-control" name="lname" id="lname">
+                        <input type="text" value="PPL" class="form-control" name="lname" id="lname">
                     </div>
 
                     <div class="md-form">
                         <label>ที่อยู่</label>
                         <textarea rows="3" class="form-control" name="address" id="address"></textarea><br>
+                        <script>
+                            document.getElementById("address").value = "KMITL";
+                        </script>
                     </div>
 
                     <div class="md-form" id="location">
                         <label>จังหวัด</label>
-                        <input type="text" class="form-control" name="province" id="province">
+                        <input type="text" value="Bangkok" class="form-control" name="province" id="province">
                         <label>แขวง/เขต</label>
-                        <input type="text" class="form-control" name="zone" id="zone"><br>
+                        <input type="text" value="Ladkrabang" class="form-control" name="zone" id="zone"><br>
                     </div>
 
                     <div class="md-form" id="number">
                         <label>รหัสไปรษณีย์</label>
-                        <input type="text" class="form-control" name="post" id="post">
+                        <input type="text" value="10510" class="form-control" name="post" id="post">
                         <label>เบอร์โทรศัพท์</label>
-                        <input type="text" class="form-control" name="tel" id="tel">
+                        <input type="text" value="063xxxxxxx" class="form-control" name="tel" id="tel">
                     </div>
                 </div>
                 <button type="submit" class="submit" name="save" data-toggle="modal" data-target="#myModal">บันทึก</button>

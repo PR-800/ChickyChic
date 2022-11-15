@@ -214,22 +214,22 @@
                         <div class="modal-body">
                             <div class="md-form">
                                 <label>ชื่อผู้ใช้</label><br>
-                                <input type="text" class="form-control validate" name="userName" size="50">
+                                <input type="text" class="form-control validate" name="userName" size="50" value="LINGLING">
                             </div>
 
                             <div class="md-form">
                                 <label>อีเมลล์</label><br>
-                                <input type="text" class="form-control validate" name="eMail" size="50">
+                                <input type="text" class="form-control validate" name="eMail" size="50" value="linglingppl@gmail.com">
                             </div>
 
                             <div class="md-form">
                                 <label>รหัสผ่าน</label><br>
-                                <input type="text" class="form-control validate" name="password" size="50">
+                                <input type="text" class="form-control validate" name="password" size="50" value="1122">
                             </div>
 
                             <div class="md-form">
                                 <label>ยืนยันรหัสผ่าน</label><br>
-                                <input type="text" class="form-control validate" name="confirmPass" size="50">
+                                <input type="text" class="form-control validate" name="confirmPass" size="50" value="1122">
                             </div>
                         </div>
                     </div>
