@@ -4,7 +4,8 @@
     background: rgba(255, 255, 255, 0.9);
     display: block;
     border-radius: 30px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     height: 450px;
     width: 1200px;
     color: grey;
@@ -58,9 +59,9 @@
     background-color: rgb(242, 100, 68);
 }
 
-.add:active {
+/* .add:active {
     transform: translateY(2px);
-}
+} */
 
 .plus {
     position: absolute;
