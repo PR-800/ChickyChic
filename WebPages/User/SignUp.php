@@ -214,12 +214,12 @@
                         <div class="modal-body">
                             <div class="md-form">
                                 <label>ชื่อผู้ใช้</label><br>
-                                <input type="text" class="form-control validate" name="userName" size="50" value="LINGLING">
+                                <input type="text" class="form-control validate" name="userName" size="50" value="ascii">
                             </div>
 
                             <div class="md-form">
                                 <label>อีเมลล์</label><br>
-                                <input type="text" class="form-control validate" name="eMail" size="50" value="linglingppl@gmail.com">
+                                <input type="text" class="form-control validate" name="eMail" size="50" value="ascii@gmail.com">
                             </div>
 
                             <div class="md-form">

@@ -201,28 +201,28 @@
                 <div class="modal-body">
                     <div class="md-form" id="name">
                         <label>ชื่อ</label>
-                        <input type="text" class="form-control" name="fname" id="fname">
+                        <input type="text" class="form-control" name="fname" id="fname" value="ascii">
                         <label>นามสกุล</label>
-                        <input type="text" class="form-control" name="lname" id="lname">
+                        <input type="text" class="form-control" name="lname" id="lname" value="ascii">
                     </div>
 
                     <div class="md-form">
                         <label>ที่อยู่</label>
-                        <textarea rows="3" class="form-control" name="address" id="address"></textarea><br>
+                        <textarea rows="3" class="form-control" name="address" id="address">computer</textarea><br>
                     </div>
 
                     <div class="md-form" id="location">
                         <label>จังหวัด</label>
-                        <input type="text" class="form-control" name="province" id="province">
+                        <input type="text" class="form-control" name="province" id="province" value="bkk">
                         <label>แขวง/เขต</label>
-                        <input type="text" class="form-control" name="zone" id="zone"><br>
+                        <input type="text" class="form-control" name="zone" id="zone" value="ladkrabang"><br>
                     </div>
 
                     <div class="md-form" id="number">
                         <label>รหัสไปรษณีย์</label>
-                        <input type="text" class="form-control" name="post" id="post">
+                        <input type="text" class="form-control" name="post" id="post" value="92000">
                         <label>เบอร์โทรศัพท์</label>
-                        <input type="text" class="form-control" name="tel" id="tel">
+                        <input type="text" class="form-control" name="tel" id="tel" value="095000000">
                     </div>
                 </div>
                 <button type="submit" class="submit" name="save" data-toggle="modal" data-target="#myModal">บันทึก</button>
