@@ -50,7 +50,7 @@
             left: 50%;
             transform: translate(-50%, 0%);
             border-radius: 20px;
-            font-size: 25px;
+            font-size: 23.5px;
         }
 
         .logo-img {
@@ -62,9 +62,9 @@
 
         .logo-word {
             position: absolute;
-            top: 23px;
-            left: 160px;
-            width: 110px;
+            top: 21px;
+            left: 158px;
+            width: 115px;
         }
 
         .line {
@@ -99,10 +99,10 @@
 
         .basket-bg {
             position: absolute;
-            top: 25px;
-            right: 170px;
-            width: 280px;
-            height: 60px;
+            top: 28px;
+            right: 177px;
+            width: 270px;
+            height: 55px;
             border-radius: 35px;
             background-color: rgb(241 72 34);
         }
@@ -141,11 +141,11 @@
         }
 
         .table {
-            font-size: 30px;
+            font-size: 28px;
         }
 
         .row {
-            font-size: 30px;
+            font-size: 28px;
             position: relative;
             top: 0;
             left: 50%;

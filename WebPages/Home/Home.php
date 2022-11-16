@@ -54,7 +54,7 @@
         left: 50%;
         transform: translate(-50%, 0%);
         border-radius: 20px;
-        font-size: 25px;
+        font-size: 23.5px;
     }
 
     .logo-img {
@@ -66,9 +66,9 @@
 
     .logo-word {
         position: absolute;
-        top: 23px;
-        left: 160px;
-        width: 110px;
+        top: 21px;
+        left: 158px;
+        width: 115px;
     }
 
     .line {
@@ -103,10 +103,10 @@
 
     .basket-bg {
         position: absolute;
-        top: 25px;
-        right: 170px;
-        width: 280px;
-        height: 60px;
+        top: 28px;
+        right: 177px;
+        width: 270px;
+        height: 55px;
         border-radius: 35px;
         background-color: rgb(241 72 34);
     }
@@ -255,6 +255,19 @@
         right: -60px;
         width: 140px;
     }
+    .card-title {
+        font-size: 27px;
+        color:black;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .card-subtitle {
+        font-size: 20px;
+        text-decoration: none;
+    }
 </style>
 
 <body>
@@ -398,13 +411,13 @@
       <a href='../Menu/Menu.php'>
       <img src='{$row['IMG']}'class='card-img-top'>
       <img class='try-now' src='../IMG/logo/try-now.png'>
-      </a>
           <div class='card-body'>
               <h3 class='card-title'>{$row['NAME']}</h3>
               <h6 class='card-subtitle mb-2 text-muted'>{$row['PRICE']} บาท</h6>
               <div><br>
               </div><br>
           </div>
+      </a>
       </div>
       </div>";
     }
@@ -431,7 +444,6 @@ echo "<div class='col-md-4'>
       <a href='../Promotion/Promotion.php #burger'>
       <img src='{$row['IMG']}'class='card-img-top'>
       <img class='try-now' src='../IMG/logo/try-now.png'>
-      </a>
 
           <div class='card-body'>
               <h3 class='card-title'>{$row['NAME']}</h3>
@@ -439,6 +451,7 @@ echo "<div class='col-md-4'>
               <div><br>
               </div><br>
           </div>
+        </a>
       </div>
   </div>";
                                     }
@@ -465,7 +478,6 @@ echo "<div class='col-md-4'>
               <img src='{$row['IMG']}'
               class='card-img-top'>
               <img class='try-now' src='../IMG/logo/try-now.png'>
-              </a>
 
           <div class='card-body'>
               <h3 class='card-title'>{$row['NAME']}</h3>
@@ -473,6 +485,7 @@ echo "<div class='col-md-4'>
               <div><br>
               </div><br>
           </div>
+          </a>
       </div>
   </div>";
                                     }

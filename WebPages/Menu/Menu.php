@@ -58,7 +58,7 @@
             left: 50%;
             transform: translate(-50%, 0%);
             border-radius: 20px;
-            font-size: 25px;
+            font-size: 23.5px;
         }
 
         .logo-img {
@@ -70,10 +70,10 @@
 
         .logo-word {
             position: absolute;
-            top: 23px;
-            left: 160px;
-            width: 110px;
-        }
+            top: 21px;
+            left: 158px;
+            width: 115px;
+        }  
 
         .line {
             position: absolute;
@@ -88,7 +88,8 @@
             top: 30px;
         }
 
-        .nav:link, .nav:visited {
+        .nav:link,
+        .nav:visited {
             color: black;
             text-decoration: none;
         }
@@ -107,10 +108,10 @@
 
         .basket-bg {
             position: absolute;
-            top: 25px;
-            right: 170px;
-            width: 280px;
-            height: 60px;
+            top: 28px;
+            right: 177px;
+            width: 270px;
+            height: 55px;
             border-radius: 35px;
             background-color: rgb(241 72 34);
         }
@@ -147,7 +148,8 @@
             width: 100%;
         }
 
-        .nav-link, .nav-link:hover {
+        .nav-link,
+        .nav-link:hover {
             text-decoration: none;
             border-radius: 8px;
             color: white;
@@ -215,13 +217,12 @@
         .page {
             position: absolute;
             top: 100px;
-            left: 350px;
+            left: 300px;
         }
 
         h3 {
             font-size: 25px;
         }
-
     </style>
 </head>
 
@@ -230,10 +231,8 @@
         <div class="header-area">
             <div class="header">
                 <a href="../Home/Home.php">
-                    <img class="logo-img"
-                        src="../IMG/logo/logo-img.png">
-                    <img class="logo-word"
-                        src="../IMG/logo/logo-word.png">
+                    <img class="logo-img" src="../IMG/logo/logo-img.png">
+                    <img class="logo-word" src="../IMG/logo/logo-word.png">
                 </a>
                 <div class="bar">
                     <a class="line"></a>
@@ -243,40 +242,40 @@
                 </div>
                 <div class="bar-basket">
                     <a class="basket-bg"></a>
-                    <img class="logo-basket"
-                        src="../IMG/logo/logo-basket.png">
+                    <img class="logo-basket" src="../IMG/logo/logo-basket.png">
                     <a class="nav" style="top: 38px; right: 205px; color: white;">ออเดอร์ของคุณ</a>
                     <a class="basket-num">
                         <p style="color: white; font-size: 23px;">
-                        <?php
-                            class NumDB extends SQLite3{
-                                function __construct(){
+                            <?php
+                            class NumDB extends SQLite3
+                            {
+                                function __construct()
+                                {
                                     $this->open('../Database/selectMenu.db');
                                 }
                             }
 
                             $db = new NumDB();
-                            if(!$db){
+                            if (!$db) {
                                 echo $db->lastErrorMsg();
                             }
-                            $sql ="SELECT * from selectMenu";
+                            $sql = "SELECT * from selectMenu";
                             $ret = $db->query($sql);
                             $num = 0;
-                            while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
+                            while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
                                 +$num += +$row['AMOUNT'];
                             }
                             echo $num;
 
                             $db->close();
-                        ?>
+                            ?>
                         </p>
                     </a>
                     <a class="basket-bg" href="../Purchase/Purchase.php" style="background-color: transparent;"></a>
                 </div>
 
                 <div class="dropdown">
-                    <img src = "../IMG/logo/logo-user.png"
-                        aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" type="button" class="logo-user" class="dropdown-toggle">
+                    <img src="../IMG/logo/logo-user.png" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" type="button" class="logo-user" class="dropdown-toggle">
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="../User/SignIn.php">Sign in</a>
                         <a class="dropdown-item" href="../User/SignUp.php">Sign up</a>
@@ -731,7 +730,6 @@
         window.location = window.location
 
     }
-
 </script>
 
 

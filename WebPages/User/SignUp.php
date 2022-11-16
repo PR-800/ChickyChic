@@ -53,7 +53,7 @@
             left: 50%;
             transform: translate(-50%, 0%);
             border-radius: 20px;
-            font-size: 25px;
+            font-size: 23.5px;
         }
 
         .logo-img {
@@ -65,9 +65,9 @@
 
         .logo-word {
             position: absolute;
-            top: 23px;
-            left: 160px;
-            width: 110px;
+            top: 21px;
+            left: 158px;
+            width: 115px;
         }
 
         .line {
@@ -102,10 +102,10 @@
 
         .basket-bg {
             position: absolute;
-            top: 25px;
-            right: 170px;
-            width: 280px;
-            height: 60px;
+            top: 28px;
+            right: 177px;
+            width: 270px;
+            height: 55px;
             border-radius: 35px;
             background-color: rgb(241 72 34);
         }
@@ -214,22 +214,22 @@
                         <div class="modal-body">
                             <div class="md-form">
                                 <label>ชื่อผู้ใช้</label><br>
-                                <input type="text" class="form-control validate" name="userName" size="50">
+                                <input type="text" class="form-control validate" name="userName" size="50" value="LINGLING">
                             </div>
 
                             <div class="md-form">
                                 <label>อีเมลล์</label><br>
-                                <input type="text" class="form-control validate" name="eMail" size="50">
+                                <input type="text" class="form-control validate" name="eMail" size="50" value="linglingppl@gmail.com">
                             </div>
 
                             <div class="md-form">
                                 <label>รหัสผ่าน</label><br>
-                                <input type="text" class="form-control validate" name="password" size="50">
+                                <input type="text" class="form-control validate" name="password" size="50" value="1122">
                             </div>
 
                             <div class="md-form">
                                 <label>ยืนยันรหัสผ่าน</label><br>
-                                <input type="text" class="form-control validate" name="confirmPass" size="50">
+                                <input type="text" class="form-control validate" name="confirmPass" size="50" value="1122">
                             </div>
                         </div>
                     </div>
