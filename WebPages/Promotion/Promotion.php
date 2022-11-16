@@ -130,9 +130,21 @@
             right: 70px;
             width: 50px;
         }
+
+        .footer{
+        width: 1500px;
+        height: 110px;
+        position: relative;
+        background-color: rgb(254, 254, 254, 70%);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        border-radius: 20px;
+        font-size: 23.5px;
+    }
     </style>
 
     <div class="container-fluid">
+    <header>
         <div class="header-area">
             <div class="header">
                 <a href="../Home/Home.php">
@@ -192,6 +204,7 @@
                 </div>
             </div>
         </div>
+                        </header>
 
         <div class="container">
             <div class="content">
@@ -278,11 +291,31 @@
                     // Close database
                     $db->close();
                     ?>
-
+                    
 
                 </div>
             </div>
         </div>
+        <div class="footer">
+                <footer>
+                    <a href="../Home/Home.php">
+                        <img class="logo-img"
+                            src="../IMG/logo/logo-img.png">
+                        <img class="logo-word"
+                            src="../IMG/logo/logo-word.png">
+                    </a>
+                        <a class="line"></a>
+                        <p class="nav" style="top: 40px; left: 360px;">ผู้จัดทำ</p>
+                        <p class="nav" style="top: 20px; left: 505px;">จิรโรจน์ เลิศอัครนานนท์</p>
+                        <p class="nav" style="top: 20px; left: 740px;">(64070014)</p>
+                        <p class="nav" style="top: 20px; left: 900px;">ฐิติภา เอี่ยมสิริวงศ์</p>
+                        <p class="nav" style="top: 20px; left: 1120px;">(64070025)</p>
+                        <p class="nav" style="top: 60px; left: 505px;">พงศ์พันธุ์ แสงพล</p>
+                        <p class="nav" style="top: 60px; left: 740px;">(64070191)</p>
+                        <p class="nav" style="top: 60px; left: 900px;">พรไพลิน วงศ์ศรีตรัง</p>
+                        <p class="nav" style="top: 60px; left: 1120px;">(64070196)</p>
+                </footer>
+            </dvi>
     </div>
 </body>
 
