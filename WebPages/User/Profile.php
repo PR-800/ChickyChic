@@ -232,7 +232,6 @@
 
     <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog" id="modal-dialog">
-            <!-- Modal content-->
             <div class="modal-content" id="modal-contents">
                 <div class="modal-header" id="modal-headers">
                     <h3 class="modal-title">Please fill out all data.</h3>
@@ -249,7 +248,6 @@
 
     <div id="backSignIn" class="modal fade" role="dialog">
         <div class="modal-dialog" id="modal-dialog">
-            <!-- Modal content-->
             <div class="modal-content" id="modal-contents">
                 <div class="modal-header" id="modal-headers">
                     <h3 class="modal-title">You already have an account.</h3>
@@ -328,34 +326,6 @@
 
     <?php
         error_reporting(0);
-        /////////////////Create Table///////////////////
-        // $table = <<<EOF
-        // CREATE TABLE UserData
-        // (Id INTEGER PRIMARY KEY AUTOINCREMENT,
-        // UserName CHAR(50) NOT NULL,
-        // Email CHAR(80) NOT NULL,
-        // Password CHAR(30) NOT NULL);
-        // CREATE UNIQUE INDEX unique_username ON "UserData" ("UserName");
-        // CREATE UNIQUE INDEX unique_email ON "UserData" ("Email");
-        // EOF;
-        // $record = $db->exec($table);
-
-        // $table2 = <<<EOF
-        // CREATE TABLE UserData2
-        // (UserName CHAR(50) NOT NULL,
-        // Email CHAR(80) NOT NULL,
-        // Password CHAR(30) NOT NULL,
-        // FirstName CHAR(50) NOT NULL,
-        // LastName CHAR(50) NOT NULL,
-        // Address CHAR(150) NOT NULL,
-        // Province CHAR(50) NOT NULL,
-        // Zone CHAR(50) NOT NULL,
-        // PostNumber INT NOT NULL,
-        // Tel INT NOT NULL,
-        // PRIMARY KEY (UserName, Email));
-        // EOF;
-        // $record = $db->exec($table2);
-
         ///////////////////Insert Data//////////////////////
         if (isset($_POST['createData'])){
             class UserData extends SQLite3{
@@ -387,14 +357,12 @@
 
             $record = $db->exec($table);
 
-            /////////////////////////////Check if has account/////////////////////////
+            ////////////////////////////Check if has account////////////////////////////
             $select = "select * from UserData2";
             $allData = $db->query($select);
             $checkLast = false;
             while($row = $allData->fetchArray(SQLITE3_ASSOC)){
-
-                if((($userName === $row['UserName']) || ($userName === $row['Email'])) && ($password === $row['Password'])){
-                    $checkLast = true;
+                if((($userName === $row['UserName']) || ($userName === $row['Email']))){
                     echo    '<script type="text/javascript">
                                 $( document ).ready(function() {
                                 $("#backSignIn").modal("show")
