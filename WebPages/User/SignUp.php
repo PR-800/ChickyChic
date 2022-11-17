@@ -149,6 +149,28 @@
         font-size: 23.5px;
     }
 
+    .logo-img-footer {
+        position: absolute;
+        top: 11px;
+        left: 250px;
+        width: 90px;
+    }
+
+    .logo-word-footer {
+        position: absolute;
+        top: 21px;
+        left: 380px;
+        width: 115px;
+    }
+
+    .line-footer {
+        position: absolute;
+        top: 20px;
+        left: 530px;
+        border-left: 3px solid rgb(253 165 39);
+        height: 70px;
+    }
+
     </style>
 </head>
 <body>
@@ -265,21 +287,21 @@
             <div class="footer">
                 <footer>
                     <a href="../Home/Home.php">
-                        <img class="logo-img"
+                        <img class="logo-img-footer"
                             src="../IMG/logo/logo-img.png">
-                        <img class="logo-word"
+                        <img class="logo-word-footer"
                             src="../IMG/logo/logo-word.png">
                     </a>
-                        <a class="line"></a>
-                        <p class="nav" style="top: 40px; left: 360px;">ผู้จัดทำ</p>
-                        <p class="nav" style="top: 20px; left: 505px;">จิรโรจน์ เลิศอัครนานนท์</p>
-                        <p class="nav" style="top: 20px; left: 740px;">(64070014)</p>
-                        <p class="nav" style="top: 20px; left: 900px;">ฐิติภา เอี่ยมสิริวงศ์</p>
-                        <p class="nav" style="top: 20px; left: 1120px;">(64070025)</p>
-                        <p class="nav" style="top: 60px; left: 505px;">พงศ์พันธุ์ แสงพล</p>
-                        <p class="nav" style="top: 60px; left: 740px;">(64070191)</p>
-                        <p class="nav" style="top: 60px; left: 900px;">พรไพลิน วงศ์ศรีตรัง</p>
-                        <p class="nav" style="top: 60px; left: 1120px;">(64070196)</p>
+                    <a class="line-footer"></a>
+                        <p class="nav" style="top: 40px; left: 560px;">ผู้จัดทำ</p>
+                        <p class="nav" style="top: 20px; left: 705px;">จิรโรจน์ เลิศอัครนานนท์</p>
+                        <p class="nav" style="top: 20px; left: 940px;">(64070014)</p>
+                        <p class="nav" style="top: 20px; left: 1100px;">ฐิติภา เอี่ยมสิริวงศ์</p>
+                        <p class="nav" style="top: 20px; left: 1320px;">(64070025)</p>
+                        <p class="nav" style="top: 60px; left: 705px;">พงศ์พันธุ์ แสงพล</p>
+                        <p class="nav" style="top: 60px; left: 940px;">(64070191)</p>
+                        <p class="nav" style="top: 60px; left: 1100px;">พรไพลิน วงศ์ศรีตรัง</p>
+                        <p class="nav" style="top: 60px; left: 1320px;">(64070196)</p>
                 </footer>
             </dvi>
         </div>
