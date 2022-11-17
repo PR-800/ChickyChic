@@ -269,16 +269,19 @@
         text-decoration: none;
     }
 
-
     .footer{
-        width: 94%;
+        margin: 0;
+        width: 1902px;
         height: 110px;
+        bottom:20px;
+        left:-15px;
         position: relative;
         background-color: rgb(254, 254, 254, 70%);
-        left: 60%;
-        transform: translate(-50%, 0%);
-        border-radius: 20px;
         font-size: 23.5px;
+    }
+
+    .footer-area{
+        left:2000px;
     }
 </style>
 
@@ -514,7 +517,9 @@ echo "<div class='col-md-4'>
             </div>
         </div>
 
-            <div class="footer">
+        
+        <div class="footer">
+            <div class="footer-area">
                 <footer>
                     <a href="../Home/Home.php">
                         <img class="logo-img"
@@ -534,6 +539,8 @@ echo "<div class='col-md-4'>
                         <p class="nav" style="top: 60px; left: 1120px;">(64070196)</p>
                 </footer>
             </dvi>
+        </div>
+
     </div>
 
 </body>

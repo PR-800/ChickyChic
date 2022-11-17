@@ -138,15 +138,14 @@
             transform: translate(-50%, 0);
         }
 
-    .footer{
-        width: 1500px;
+        .footer{
+        margin: 0;
+        width: 1929px;
         height: 110px;
+        margin-top:630px;
+        left:-520px;
         position: absolute;
         background-color: rgb(254, 254, 254, 70%);
-        margin-top: 620px;
-        left: 50%;
-        transform: translate(-50%, 0%);
-        border-radius: 20px;
         font-size: 23.5px;
     }
 

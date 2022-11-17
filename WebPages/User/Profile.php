@@ -128,15 +128,15 @@
             width: 50px;
         }
 
+        
         .footer{
-        width: 1500px;
+        margin: 0;
+        width: 1902px;
         height: 110px;
+        margin-top:820px;
+        left:-15px;
         position: absolute;
         background-color: rgb(254, 254, 254, 70%);
-        margin-top: 880px;
-        left: 50%;
-        transform: translate(-50%, 0%);
-        border-radius: 20px;
         font-size: 23.5px;
     }
 

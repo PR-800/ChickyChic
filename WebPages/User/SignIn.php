@@ -144,14 +144,13 @@
         }
 
         .footer{
-        width: 1500px;
+        margin: 0;
+        width: 1929px;
         height: 110px;
+        margin-top:725px;
+        left:-15px;
         position: absolute;
         background-color: rgb(254, 254, 254, 70%);
-        margin-top: 730px;
-        left: 50%;
-        transform: translate(-50%, 0%);
-        border-radius: 20px;
         font-size: 23.5px;
     }
     </style>

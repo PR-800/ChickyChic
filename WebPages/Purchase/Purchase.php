@@ -208,14 +208,13 @@
         }
 
         .footer{
-        width: 1500px;
+        margin: 0;
+        width: 1929px;
         height: 110px;
-        position: relative;
-        z-index: 10;
+        bottom:0px;
+        left:-20px;
+        position: absolute;
         background-color: rgb(254, 254, 254, 70%);
-        left: 50%;
-        transform: translate(-50%, 0%);
-        border-radius: 20px;
         font-size: 23.5px;
     }
     </style>
