@@ -417,7 +417,8 @@
                                 // Close database
                                 $db->close();
                                 ?>
-                            </div><div class="footer">
+                            </div>
+            <div class="footer">
                 <footer>
                     <a href="../Home/Home.php">
                         <img class="logo-img-footer"
@@ -437,10 +438,9 @@
                         <p class="nav" style="top: 80px; left: 1200px;">พรไพลิน วงศ์ศรีตรัง</p>
                         <p class="nav" style="top: 80px; left: 1420px;">(64070196)</p>
                 </footer>
-            </dvi>
+            </div>
                         </div>
                     </div>
-                    
                 </div>
                 <div name="burger" class="tab-pane fade" id="burger" role="tabpanel" aria-labelledby="burger-tab">
                     <div class="burger-page page">
@@ -506,6 +506,27 @@
                                 $db->close();
                                 ?>
                             </div>
+                            <div class="footer">
+                <footer>
+                    <a href="../Home/Home.php">
+                        <img class="logo-img-footer"
+                            src="../IMG/logo/logo-img.png">
+                        <img class="logo-word-footer"
+                            src="../IMG/logo/logo-word.png">
+                    </a>
+                    <a class="line-footer"></a>
+                        <a class="line-footer"></a>
+                        <p class="nav" style="top: 60px; left: 680px;">ผู้จัดทำ</p>
+                        <p class="nav" style="top: 40px; left: 805px;">จิรโรจน์ เลิศอัครนานนท์</p>
+                        <p class="nav" style="top: 40px; left: 1040px;">(64070014)</p>
+                        <p class="nav" style="top: 40px; left: 1200px;">ฐิติภา เอี่ยมสิริวงศ์</p>
+                        <p class="nav" style="top: 40px; left: 1420px;">(64070025)</p>
+                        <p class="nav" style="top: 80px; left: 805px;">พงศ์พันธุ์ แสงพล</p>
+                        <p class="nav" style="top: 80px; left: 1040px;">(64070191)</p>
+                        <p class="nav" style="top: 80px; left: 1200px;">พรไพลิน วงศ์ศรีตรัง</p>
+                        <p class="nav" style="top: 80px; left: 1420px;">(64070196)</p>
+                </footer>
+            </div>
                         </div>
                     </div>
                 </div>
@@ -574,6 +595,27 @@
                                 $db->close();
                                 ?>
                             </div>
+                            <div class="footer">
+                <footer>
+                    <a href="../Home/Home.php">
+                        <img class="logo-img-footer"
+                            src="../IMG/logo/logo-img.png">
+                        <img class="logo-word-footer"
+                            src="../IMG/logo/logo-word.png">
+                    </a>
+                    <a class="line-footer"></a>
+                        <a class="line-footer"></a>
+                        <p class="nav" style="top: 60px; left: 680px;">ผู้จัดทำ</p>
+                        <p class="nav" style="top: 40px; left: 805px;">จิรโรจน์ เลิศอัครนานนท์</p>
+                        <p class="nav" style="top: 40px; left: 1040px;">(64070014)</p>
+                        <p class="nav" style="top: 40px; left: 1200px;">ฐิติภา เอี่ยมสิริวงศ์</p>
+                        <p class="nav" style="top: 40px; left: 1420px;">(64070025)</p>
+                        <p class="nav" style="top: 80px; left: 805px;">พงศ์พันธุ์ แสงพล</p>
+                        <p class="nav" style="top: 80px; left: 1040px;">(64070191)</p>
+                        <p class="nav" style="top: 80px; left: 1200px;">พรไพลิน วงศ์ศรีตรัง</p>
+                        <p class="nav" style="top: 80px; left: 1420px;">(64070196)</p>
+                </footer>
+            </div>
                         </div>
                     </div>
                 </div>
@@ -642,6 +684,27 @@
                                 $db->close();
                                 ?>
                             </div>
+                            <div class="footer">
+                <footer>
+                    <a href="../Home/Home.php">
+                        <img class="logo-img-footer"
+                            src="../IMG/logo/logo-img.png">
+                        <img class="logo-word-footer"
+                            src="../IMG/logo/logo-word.png">
+                    </a>
+                    <a class="line-footer"></a>
+                        <a class="line-footer"></a>
+                        <p class="nav" style="top: 60px; left: 680px;">ผู้จัดทำ</p>
+                        <p class="nav" style="top: 40px; left: 805px;">จิรโรจน์ เลิศอัครนานนท์</p>
+                        <p class="nav" style="top: 40px; left: 1040px;">(64070014)</p>
+                        <p class="nav" style="top: 40px; left: 1200px;">ฐิติภา เอี่ยมสิริวงศ์</p>
+                        <p class="nav" style="top: 40px; left: 1420px;">(64070025)</p>
+                        <p class="nav" style="top: 80px; left: 805px;">พงศ์พันธุ์ แสงพล</p>
+                        <p class="nav" style="top: 80px; left: 1040px;">(64070191)</p>
+                        <p class="nav" style="top: 80px; left: 1200px;">พรไพลิน วงศ์ศรีตรัง</p>
+                        <p class="nav" style="top: 80px; left: 1420px;">(64070196)</p>
+                </footer>
+            </div>
                         </div>
                     </div>
                 </div>
@@ -709,6 +772,27 @@
                                 $db->close();
                                 ?>
                             </div>
+                            <div class="footer">
+                <footer>
+                    <a href="../Home/Home.php">
+                        <img class="logo-img-footer"
+                            src="../IMG/logo/logo-img.png">
+                        <img class="logo-word-footer"
+                            src="../IMG/logo/logo-word.png">
+                    </a>
+                    <a class="line-footer"></a>
+                        <a class="line-footer"></a>
+                        <p class="nav" style="top: 60px; left: 680px;">ผู้จัดทำ</p>
+                        <p class="nav" style="top: 40px; left: 805px;">จิรโรจน์ เลิศอัครนานนท์</p>
+                        <p class="nav" style="top: 40px; left: 1040px;">(64070014)</p>
+                        <p class="nav" style="top: 40px; left: 1200px;">ฐิติภา เอี่ยมสิริวงศ์</p>
+                        <p class="nav" style="top: 40px; left: 1420px;">(64070025)</p>
+                        <p class="nav" style="top: 80px; left: 805px;">พงศ์พันธุ์ แสงพล</p>
+                        <p class="nav" style="top: 80px; left: 1040px;">(64070191)</p>
+                        <p class="nav" style="top: 80px; left: 1200px;">พรไพลิน วงศ์ศรีตรัง</p>
+                        <p class="nav" style="top: 80px; left: 1420px;">(64070196)</p>
+                </footer>
+            </div>
                         </div>
                     </div>
                 </div>
