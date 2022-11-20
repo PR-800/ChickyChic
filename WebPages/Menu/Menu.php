@@ -226,7 +226,7 @@
 
         .footer{
         margin: 0;
-        width: 1907px;
+        width: 1920px;
         height: 110px;
         top:50px;
         left:-400px;

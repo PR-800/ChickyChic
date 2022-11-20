@@ -143,35 +143,36 @@
             margin-left: 20px;
         }
 
-        .footer{
+    .footer{
         margin: 0;
-        width: 1929px;
-        height: 110px;
+        width: 1920px;
+        height: 150px;
         margin-top:725px;
-        left:-15px;
-        position: absolute;
+        left: -15px;
+        bottom: 0;
+        position: fixed;
         background-color: rgb(254, 254, 254, 70%);
         font-size: 23.5px;
     }
 
     .logo-img-footer {
         position: absolute;
-        top: 11px;
-        left: 250px;
+        top: 31px;
+        left: 350px;
         width: 90px;
     }
 
     .logo-word-footer {
         position: absolute;
-        top: 21px;
-        left: 380px;
+        top: 41px;
+        left: 480px;
         width: 115px;
     }
 
     .line-footer {
         position: absolute;
-        top: 20px;
-        left: 530px;
+        top: 40px;
+        left: 630px;
         border-left: 3px solid rgb(253 165 39);
         height: 70px;
     }
@@ -291,25 +292,25 @@ function myFunction() {
         </div>
     </div>
     <div class="footer">
-                <footer>
-                    <a href="../Home/Home.php">
-                        <img class="logo-img-footer"
-                            src="../IMG/logo/logo-img.png">
-                        <img class="logo-word-footer"
-                            src="../IMG/logo/logo-word.png">
-                    </a>
-                    <a class="line-footer"></a>
-                        <p class="nav" style="top: 40px; left: 560px;">ผู้จัดทำ</p>
-                        <p class="nav" style="top: 20px; left: 705px;">จิรโรจน์ เลิศอัครนานนท์</p>
-                        <p class="nav" style="top: 20px; left: 940px;">(64070014)</p>
-                        <p class="nav" style="top: 20px; left: 1100px;">ฐิติภา เอี่ยมสิริวงศ์</p>
-                        <p class="nav" style="top: 20px; left: 1320px;">(64070025)</p>
-                        <p class="nav" style="top: 60px; left: 705px;">พงศ์พันธุ์ แสงพล</p>
-                        <p class="nav" style="top: 60px; left: 940px;">(64070191)</p>
-                        <p class="nav" style="top: 60px; left: 1100px;">พรไพลิน วงศ์ศรีตรัง</p>
-                        <p class="nav" style="top: 60px; left: 1320px;">(64070196)</p>
-                </footer>
-            </dvi>
+        <footer>
+            <a href="../Home/Home.php">
+                <img class="logo-img-footer"
+                    src="../IMG/logo/logo-img.png">
+                <img class="logo-word-footer"
+                    src="../IMG/logo/logo-word.png">
+            </a>
+            <a class="line-footer"></a>
+                <p class="nav" style="top: 60px; left: 680px;">ผู้จัดทำ</p>
+                <p class="nav" style="top: 40px; left: 805px;">จิรโรจน์ เลิศอัครนานนท์</p>
+                <p class="nav" style="top: 40px; left: 1040px;">(64070014)</p>
+                <p class="nav" style="top: 40px; left: 1200px;">ฐิติภา เอี่ยมสิริวงศ์</p>
+                <p class="nav" style="top: 40px; left: 1420px;">(64070025)</p>
+                <p class="nav" style="top: 80px; left: 805px;">พงศ์พันธุ์ แสงพล</p>
+                <p class="nav" style="top: 80px; left: 1040px;">(64070191)</p>
+                <p class="nav" style="top: 80px; left: 1200px;">พรไพลิน วงศ์ศรีตรัง</p>
+                <p class="nav" style="top: 80px; left: 1420px;">(64070196)</p>
+        </footer>
+    </div>
 
     <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog" id="modal-dialog">

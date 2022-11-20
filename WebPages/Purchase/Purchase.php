@@ -210,7 +210,7 @@
         .footer{
             margin: 0;
             margin-top: 50px;
-            width: 1902px;
+            width: 1920px;
             height: 150px;
             bottom:20px;
             left:-15px;
