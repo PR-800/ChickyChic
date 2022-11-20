@@ -208,37 +208,38 @@
         }
 
         .footer{
-        margin: 0;
-        width: 1929px;
-        height: 110px;
-        bottom:0px;
-        left:-20px;
-        position: absolute;
-        background-color: rgb(254, 254, 254, 70%);
-        font-size: 23.5px;
-    }
+            margin: 0;
+            margin-top: 50px;
+            width: 1902px;
+            height: 150px;
+            bottom:20px;
+            left:-15px;
+            position: relative;
+            background-color: rgb(254, 254, 254, 70%);
+            font-size: 23.5px;
+        }
 
-    .logo-img-footer {
-        position: absolute;
-        top: 11px;
-        left: 250px;
-        width: 90px;
-    }
+        .logo-img-footer {
+            position: absolute;
+            top: 31px;
+            left: 350px;
+            width: 90px;
+        }
 
-    .logo-word-footer {
-        position: absolute;
-        top: 21px;
-        left: 380px;
-        width: 115px;
-    }
+        .logo-word-footer {
+            position: absolute;
+            top: 41px;
+            left: 480px;
+            width: 115px;
+        }
 
-    .line-footer {
-        position: absolute;
-        top: 20px;
-        left: 530px;
-        border-left: 3px solid rgb(253 165 39);
-        height: 70px;
-    }
+        .line-footer {
+            position: absolute;
+            top: 40px;
+            left: 630px;
+            border-left: 3px solid rgb(253 165 39);
+            height: 70px;
+        }
     </style>
 
 </head>
@@ -509,28 +510,28 @@
         <?php
             $db->close();
         ?>
-        
+
     </div>
     <div class="footer">
-                <footer>
-                    <a href="../Home/Home.php">
-                        <img class="logo-img-footer"
-                            src="../IMG/logo/logo-img.png">
-                        <img class="logo-word-footer"
-                            src="../IMG/logo/logo-word.png">
-                    </a>
-                    <a class="line-footer"></a>
-                        <p class="nav" style="top: 40px; left: 560px;">ผู้จัดทำ</p>
-                        <p class="nav" style="top: 20px; left: 705px;">จิรโรจน์ เลิศอัครนานนท์</p>
-                        <p class="nav" style="top: 20px; left: 940px;">(64070014)</p>
-                        <p class="nav" style="top: 20px; left: 1100px;">ฐิติภา เอี่ยมสิริวงศ์</p>
-                        <p class="nav" style="top: 20px; left: 1320px;">(64070025)</p>
-                        <p class="nav" style="top: 60px; left: 705px;">พงศ์พันธุ์ แสงพล</p>
-                        <p class="nav" style="top: 60px; left: 940px;">(64070191)</p>
-                        <p class="nav" style="top: 60px; left: 1100px;">พรไพลิน วงศ์ศรีตรัง</p>
-                        <p class="nav" style="top: 60px; left: 1320px;">(64070196)</p>
-                </footer>
-            </dvi>
+        <footer>
+            <a href="../Home/Home.php">
+                <img class="logo-img-footer"
+                    src="../IMG/logo/logo-img.png">
+                <img class="logo-word-footer"
+                    src="../IMG/logo/logo-word.png">
+            </a>
+            <a class="line-footer"></a>
+                <p class="nav" style="top: 60px; left: 680px;">ผู้จัดทำ</p>
+                <p class="nav" style="top: 40px; left: 805px;">จิรโรจน์ เลิศอัครนานนท์</p>
+                <p class="nav" style="top: 40px; left: 1040px;">(64070014)</p>
+                <p class="nav" style="top: 40px; left: 1200px;">ฐิติภา เอี่ยมสิริวงศ์</p>
+                <p class="nav" style="top: 40px; left: 1420px;">(64070025)</p>
+                <p class="nav" style="top: 80px; left: 805px;">พงศ์พันธุ์ แสงพล</p>
+                <p class="nav" style="top: 80px; left: 1040px;">(64070191)</p>
+                <p class="nav" style="top: 80px; left: 1200px;">พรไพลิน วงศ์ศรีตรัง</p>
+                <p class="nav" style="top: 80px; left: 1420px;">(64070196)</p>
+        </footer>
+    </div>
 </body>
 
 <script>
