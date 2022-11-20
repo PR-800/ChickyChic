@@ -32,6 +32,7 @@
         body {
             background: url('../IMG/bg.png');
             background-size: cover;
+            overflow-x: hidden;
         }
 
         .container-fluid {
