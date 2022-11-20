@@ -131,12 +131,14 @@
         
     .footer{
         margin: 0;
-        width: 1920px;
+        width: 1910px;
         height: 150px;
         margin-top:725px;
         left: -15px;
         bottom: 0;
-        position: fixed;
+        /* position: fixed; */
+        position: absolute;
+        top:200px;
         background-color: rgb(254, 254, 254, 70%);
         font-size: 23.5px;
     }
